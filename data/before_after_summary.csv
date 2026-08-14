@@ -1,0 +1,5 @@
+Metric,Before (Manual),After (AI-assisted first pass)
+"Flow time, peak (days)",14,3
+"Flow rate, peak (submissions/week)",15,45
+Grading consistency (%),72,96
+"Feedback depth, avg (words)",40,120
