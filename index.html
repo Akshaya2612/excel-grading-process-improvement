@@ -12,6 +12,17 @@
 </head>
 <body>
   <div id="root"></div>
-  <script type="text/babel" data-presets="react" src="./src/main.jsx"></script>
+  <script>
+    fetch('./src/main.jsx')
+      .then(response => response.text())
+      .then(source => {
+        const compiled = Babel.transform(source, { presets: ['react'] }).code;
+        new Function('React', 'ReactDOM', compiled)(React, ReactDOM);
+      })
+      .catch(error => {
+        document.getElementById('root').innerHTML = '<p style="padding:24px;color:#b42318">The interactive page could not load. Please refresh the page.</p>';
+        console.error(error);
+      });
+  </script>
 </body>
 </html>
