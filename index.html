@@ -16,7 +16,7 @@
     fetch('./src/main.jsx')
       .then(response => response.text())
       .then(source => {
-        const compiled = Babel.transform(source, { presets: ['react'] }).code
+        const compiled = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code
           .replace(/^\s*import[\s\S]*?;\s*/gm, '')
           .replace(/^\s*export\s+(default\s+)?/gm, '');
         new Function('React', 'ReactDOM', compiled)(React, ReactDOM);
