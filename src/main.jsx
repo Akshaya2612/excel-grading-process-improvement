@@ -1,7 +1,4 @@
-import React, { useMemo, useState } from 'react';
-import { createRoot } from 'react-dom/client';
-import './styles.css';
-import './analysis.css';
+const { useMemo, useState } = React;
 
 const DEFAULTS = { automation: 0, manualMinutes: 24, quickMinutes: 6, hours: 6, accuracy: 85 };
 const arrivals = [5,5,5,40,5,5,5,40,5,5,5,40,5,5];
@@ -38,4 +35,4 @@ function App() { const [state, setState] = useState(DEFAULTS); const model = use
   <section id="section-4" className="section"><span className="eyebrow">04 · Redesign</span><h2>Maker–checker: automate the first pass, preserve judgment</h2><p>Files flow linearly from submission to automated formula/logic checks, then to instructor review for exceptions and personalization.</p><div className="pipeline"><div>Student upload</div><div className="auto">Automated formula & logic check<br /><small>{auto}% auto-triaged</small></div><div className="human">Instructor checker<br /><small>{100 - auto}% full review + sign-off</small></div><div>Feedback returned</div></div><div className="metrics"><Metric label="Average handling time" value={`${model.avgMinutes.toFixed(1)} min`} note={`vs ${before.avgMinutes} min manual`} tone="green" /><Metric label="Capacity" value={`${model.capacity} / week`} note="synthetic model" tone="green" /><Metric label="Flow time" value={`${model.flowTime.toFixed(1)} days`} note="peak week" tone="green" /></div></section>
   <section id="section-5" className="section"><span className="eyebrow">05 · Results</span><h2>Before / after, controlled by the same model</h2><p>Move the automation slider above. “Before” stays fixed at 0% automation so the comparison remains fair.</p><div className="compare"><div><small>Peak flow time</small><b>{before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days</b></div><div><small>Weekly capacity</small><b>{before.capacity} → {model.capacity}</b></div><div><small>Consistency</small><b>{before.consistency}% → {model.consistency}%</b></div><div><small>Feedback depth</small><b>{before.feedback} → {model.feedback} words</b></div></div><h3>Takeaway</h3><p className="callout">The tool does not replace instructor judgment. It removes repetitive technical checking so the instructor can spend more time on specific, individualized mentorship.</p></section><DetailedAnalysis model={model} before={before} /></main><footer>All data is synthetic. See <code>data/disco_import_guide.md</code> for the Disco workflow.</footer></>; }
 
-createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);

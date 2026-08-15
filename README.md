@@ -6,7 +6,7 @@ assessments a year, and redesigned that flow using models and tools from class.
 
 ## View it
 
-For the editable React version, install dependencies and run `npm run dev`. The source is in `src/App.jsx` and `src/styles.css`. To host on GitHub Pages, build the Vite app and publish the generated `dist` folder (or connect the repo to a GitHub Pages action):
+The site is a no-build React page. Open `index.html` directly, or publish the repository root through GitHub Pages. React and Babel load from CDNs, while the editable source stays in `src/main.jsx`.
 
 1. Push this folder's contents to a repo.
 2. Repo Settings → Pages → Deploy from branch → `main` / root.
@@ -27,7 +27,6 @@ For the editable React version, install dependencies and run `npm run dev`. The 
   comparison stays fair as you change other inputs.
 - **`src/App.jsx`** — editable React components and the live queueing model.
 - **`src/styles.css`** — editable presentation styling and responsive layout.
-- **`package.json`** — Vite/React scripts for local development and production builds.
 - **`index_v1_static_backup.html`** — the earlier static version, kept for
   reference only; not part of the presentation.
 - **`data/event_log_synthetic.csv`** — synthetic Disco-ready event log
