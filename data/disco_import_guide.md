@@ -5,4 +5,4 @@
 3. Map `Case ID` to the case identifier, `Activity` to the activity, and `Timestamp` to the timestamp.
 4. Use the process map and performance view to inspect the delay between `Submission Received` and `Opened for Review`.
 
-This synthetic log is intentionally shaped to show the manual-review bottleneck: submissions arrive in deadline clusters, while the instructor opens files serially. The React presentation uses the same story in its interactive model; Disco is the process-mining evidence layer.
+This synthetic log is intentionally shaped to show the manual-review bottleneck: submissions arrive in deadline clusters, while the instructor opens files serially. The interactive model uses the same story; Disco is the process-mining evidence layer.

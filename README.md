@@ -1,8 +1,6 @@
 # Process Improvement Case Study — Automating Excel Project Grading
 
-Group submission for the process-improvement assignment. We selected a teammate's
-discussion post about manually grading ~120 Excel projects and technology
-assessments a year, and redesigned that flow using models and tools from class.
+Interactive process-improvement site for automating Excel project grading.
 
 ## View it
 
@@ -17,7 +15,7 @@ The site is a no-build React page. Open `index.html` directly, or publish the re
 - **`index.html`** — the full case study (single page, six "sheets"):
   current-state process map, baseline metrics (flow time, flow rate, feedback
   depth, grading consistency), diagnosis (queueing theory + process mining),
-  the redesigned maker–checker flow, how each class tool (Disco, Power
+  the redesigned maker–checker flow, how each tool (Disco, Power
   Automate, Extend/simulation, Tableau) fits in, and before/after results.
   Sheets 2, 3, 4, and 6 are a small interactive React app (loaded from a CDN,
   no build step) sharing one control panel and one linear queueing model
@@ -26,9 +24,9 @@ The site is a no-build React page. Open `index.html` directly, or publish the re
   re-running the same model with automation coverage forced to 0%, so the
   comparison stays fair as you change other inputs.
 - **`src/App.jsx`** — editable React components and the live queueing model.
-- **`src/styles.css`** — editable presentation styling and responsive layout.
+- **`src/styles.css`** — editable site styling and responsive layout.
 - **`index_v1_static_backup.html`** — the earlier static version, kept for
-  reference only; not part of the presentation.
+  reference only; not part of the live site.
 - **`data/event_log_synthetic.csv`** — synthetic Disco-ready event log
   (Case ID, Activity, Timestamp) covering a 14-week term, four activities per
   submission: *Submission Received → Opened for Review → Graded → Feedback
@@ -47,7 +45,7 @@ The site is a no-build React page. Open `index.html` directly, or publish the re
 All data is synthetic, built to illustrate direction and method rather than
 reproduce a real term's grading records.
 
-## Class connections at a glance
+## Process methods at a glance
 
 | Concept / tool | Where it shows up |
 |---|---|
