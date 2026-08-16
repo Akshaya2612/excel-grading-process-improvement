@@ -1,6 +1,6 @@
 Activity,Median duration from prior activity (hours),Bottleneck type,Interpretation
 Submission Received,,Entry,Student upload enters the flow
 Initial Review Started,71.1,Waiting,Queue before the instructor starts work
-Formula and Logic Check,0.9,Repeated work,Formula checking and re-checking against the rubric
-Comment Drafting,2.0,Repeated work,Repeated individualized comment drafting and revision
+Formula Check Rework,0.8,Repeated work,Formula checking and re-checking against the rubric
+Comment Draft Rework,0.7,Repeated work,Repeated individualized comment drafting and revision
 Feedback Returned,3.1,Return,Feedback packaging and LMS return
