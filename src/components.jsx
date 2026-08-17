@@ -145,7 +145,7 @@ function DynamicFlowChart({ arrivals, model, automation, eventData }) {
 }
 
 
-function Controls({ state, setState, model }) {
+function Controls({ state, setState, model, defaults }) {
   return (
     <section className="control-panel sticky-controls">
       <div>
@@ -199,7 +199,7 @@ function Controls({ state, setState, model }) {
         <b>{model.flowTime.toFixed(1)} d</b>
         <span>scenario peak flow time</span>
       </div>
-      <button onClick={() => setState(DEFAULTS)}>Reset</button>
+      <button type="button" onClick={() => setState({ ...defaults })}>Reset</button>
     </section>
   );
 }

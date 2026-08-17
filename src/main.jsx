@@ -503,7 +503,7 @@ function App() {
             </p>
           </section>
         )}
-        <Controls state={state} setState={setState} model={model} />
+        <Controls state={state} setState={setState} model={model} defaults={DEFAULTS} />
         <section id="section-4" className="section">
           <span className="eyebrow">04 · Diagnosis</span>
           <h2>Process mining shows where formula work is concentrated</h2>
