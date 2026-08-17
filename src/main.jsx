@@ -12,6 +12,12 @@ const DEFAULTS = {
 const arrivals = [120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const TA_RATE = 22;
 
+function automationTone(automation) {
+  if (automation >= 70) return "result-good";
+  if (automation >= 30) return "result-watch";
+  return "result-risk";
+}
+
 function simulate({
   automation,
   manualMinutes,
@@ -29,10 +35,7 @@ function simulate({
   );
   let backlog = 0;
   const weekly = arrivals.map((base, i) => {
-    const incoming =
-      i === 3 || i === 7 || i === 11
-        ? Math.round(5 + (35 * variability) / 100)
-        : Math.max(1, Math.round(5 + (1 - variability / 100) * (i % 2)));
+    const incoming = base;
     const available = backlog + incoming;
     const graded = Math.min(available, capacity);
     backlog = available - graded;
@@ -44,7 +47,7 @@ function simulate({
     capacity,
     weekly,
     peakBacklog,
-    flowTime: (peakBacklog / capacity) * 7,
+    flowTime: (120 / capacity) * 7,
     consistency: Math.min(
       99,
       Math.round(72 + (((automation / 100) * accuracy) / 100) * 27)
@@ -56,7 +59,7 @@ function simulate({
     productivity: 120 / ((120 * avgMinutes) / 60),
     utilization: Math.min(100, (((120 * avgMinutes) / 60) / (resources * hours)) * 100),
     inventory: peakBacklog,
-    waitingHours: Math.max(0, (peakBacklog / capacity) * 7 * 24 - avgMinutes / 60),
+    waitingHours: Math.max(0, ((120 / capacity) * 7 * 24) - avgMinutes / 60),
     qualityAccuracy: accuracy,
     hours,
   };
@@ -303,6 +306,17 @@ function DetailedAnalysis({ model, before }) {
             </p>
           </article>
         </div>
+        <div className="table">
+          <div className="table-row head"><b>Criterion</b><b>Why formula checking fits</b></div>
+          {[
+            ["S · Structured", "The checker compares known cells, formulas, named ranges, and expected outputs."],
+            ["A · Algorithmic", "Rules can evaluate correctness consistently without interpreting presentation quality."],
+            ["F · Frequent", "The same technical checks repeat across every submitted workbook."],
+            ["E · Enduring", "The rubric and reference workbook can be reused across assignments and terms."],
+            ["R · Reversible", "Flags can be audited, corrected, and routed back to a human reviewer."],
+            ["V · Valuable", "Students receive faster, more consistent technical feedback while instructor time shifts to coaching."],
+          ].map(([criterion, reason]) => <div className="table-row" key={criterion}><b>{criterion}</b><span>{reason}</span></div>)}
+        </div>
         <div className="guardrails">
           <b>Guardrails</b>
           <span>Show the exact cell/formula that triggered a flag.</span>
@@ -345,6 +359,7 @@ function App() {
           "Diagnosis",
           "Redesign",
           "Results",
+          "Conclusion",
         ].map((x, i) => (
           <a href={`#section-${i + 1}`} key={x}>
             {i + 1}. {x}
@@ -419,7 +434,6 @@ function App() {
             approval.
           </div>
         </section>
-        <Controls state={state} setState={setState} model={model} />
         {eventData && (
           <section id="section-3" className="section">
             <span className="eyebrow">03 · Baseline</span>
@@ -465,12 +479,7 @@ function App() {
               <span>formula check {`${eventData.percentages.formula.toFixed(1)}%`}</span>
               <b>human judgment {`${(eventData.percentages.visual + eventData.percentages.approval).toFixed(1)}%`}</b>
             </div>
-            <DynamicFlowChart
-              arrivals={eventData.daily}
-              model={model}
-              automation={state.automation}
-              eventData={eventData}
-            />
+            <DynamicFlowChart arrivals={eventData.daily} model={before} automation={0} eventData={eventData} />
             <div className="formula">
               Observed submissions are the deadline burst. Automated checks
               launch with that burst; only the remaining manual-check line is
@@ -494,6 +503,7 @@ function App() {
             </p>
           </section>
         )}
+        <Controls state={state} setState={setState} model={model} />
         <section id="section-4" className="section">
           <span className="eyebrow">04 · Diagnosis</span>
           <h2>Process mining shows where formula work is concentrated</h2>
@@ -503,6 +513,12 @@ function App() {
             the repeated Formula Check activity and the human-owned review
             activities that follow it.
           </p>
+          <h3>Interactive scenario: change the automation coverage</h3>
+          <p>
+            This scenario chart is separate from the fixed baseline. The sticky
+            controls change this view and the results below.
+          </p>
+          {eventData && <DynamicFlowChart arrivals={eventData.daily} model={model} automation={state.automation} eventData={eventData} />}
           <div className="disco-media">
             <video
               controls
@@ -576,18 +592,19 @@ function App() {
               label="Average handling time"
               value={`${model.avgMinutes.toFixed(1)} min`}
               note={`vs ${before.avgMinutes} min manual`}
-              tone="green"
+              tone={automationTone(state.automation)}
             />
             <Metric
               label="Capacity"
               value={`${model.capacity} / week`}
               note="synthetic model"
-              tone="green"
+              tone={automationTone(state.automation)}
             />
             <Metric
               label="Flow time"
               value={`${model.flowTime.toFixed(1)} days`}
               note="peak week"
+              tone={automationTone(state.automation)}
               tone="green"
             />
           </div>
@@ -602,25 +619,25 @@ function App() {
           <div className="compare">
             <div>
               <small>Peak flow time</small>
-              <b>
+              <b className={automationTone(state.automation)}>
                 {before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days
               </b>
             </div>
             <div>
               <small>Weekly capacity</small>
-              <b>
+              <b className={automationTone(state.automation)}>
                 {before.capacity} → {model.capacity}
               </b>
             </div>
             <div>
               <small>Consistency</small>
-              <b>
+              <b className={automationTone(state.automation)}>
                 {before.consistency}% → {model.consistency}%
               </b>
             </div>
             <div>
               <small>Feedback depth</small>
-              <b>
+              <b className={automationTone(state.automation)}>
                 {before.feedback} → {model.feedback} words
               </b>
             </div>
@@ -631,6 +648,21 @@ function App() {
             technical checking so the instructor can spend more time on
             specific, individualized mentorship.
           </p>
+        </section>
+        <section id="section-7" className="section">
+          <span className="eyebrow">07 · Conclusion</span>
+          <h2>Automate the repeatable work; protect the judgment</h2>
+          <p>
+            The deadline burst is predictable, but the immediate opportunity is
+            the repeated formula and logic check on every workbook. Automating
+            that structured first pass reduces cost and effort while preserving
+            human review for presentation quality, exceptions, and individualized
+            feedback.
+          </p>
+          <div className="callout">
+            Success means formula-check hours fall, the seven-day feedback target
+            remains protected, and grading quality does not decline.
+          </div>
         </section>
         <DetailedAnalysis model={model} before={before} />
       </main>

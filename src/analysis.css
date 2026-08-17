@@ -8,3 +8,4 @@
 .disco-media{background:#fff;border:1px solid var(--grid);border-radius:8px;padding:16px;margin:22px 0}.disco-media video{display:block;width:100%;max-height:520px;background:#111;border-radius:6px}.disco-media p{font-size:.78rem;margin:10px 0 0;color:var(--muted)}
 .section:has(.mermaid-map){display:none}
 .efficiency-formula{background:var(--green)}.efficiency-visual{background:#3454d1}.efficiency-approval{background:#7b61a8}
+.result-good{color:#18794e!important;background:#e7f5ed;border-radius:6px;padding:4px 8px}.result-watch{color:#9a6700!important;background:#fff4cc;border-radius:6px;padding:4px 8px}.result-risk{color:#b42318!important;background:#fde9e7;border-radius:6px;padding:4px 8px}
