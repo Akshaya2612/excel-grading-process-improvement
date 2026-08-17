@@ -605,7 +605,6 @@ function App() {
               value={`${model.flowTime.toFixed(1)} days`}
               note="peak week"
               tone={automationTone(state.automation)}
-              tone="green"
             />
           </div>
         </section>
