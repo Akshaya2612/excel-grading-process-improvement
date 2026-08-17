@@ -14,7 +14,18 @@
 <body>
   <div id="root"></div>
   <script>
-    fetch('./src/main.jsx')
+    fetch('./src/data-loader.js')
+      .then(response => response.text())
+      .then(source => {
+        window.eval(source);
+        return fetch('./src/components.jsx');
+      })
+      .then(response => response.text())
+      .then(source => {
+        const compiled = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code;
+        new Function('React', 'ReactDOM', compiled)(React, ReactDOM);
+        return fetch('./src/main.jsx');
+      })
       .then(response => response.text())
       .then(source => {
         const compiled = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code

@@ -1,48 +1,594 @@
 const { useEffect, useMemo, useState } = React;
 
-const DEFAULTS = { automation: 0, manualMinutes: 24, quickMinutes: 6, hours: 6, accuracy: 85, resources: 1, variability: 100 };
-const arrivals = [5,5,5,40,5,5,5,40,5,5,5,40,5,5];
+const DEFAULTS = {
+  automation: 0,
+  manualMinutes: 24,
+  quickMinutes: 6,
+  hours: 6,
+  accuracy: 85,
+  resources: 1,
+  variability: 100,
+};
+const arrivals = [5, 5, 5, 40, 5, 5, 5, 40, 5, 5, 5, 40, 5, 5];
 
-function simulate({ automation, manualMinutes, quickMinutes, hours, accuracy, resources = 1, variability = 100 }) {
-  const avgMinutes = (automation / 100) * quickMinutes + (1 - automation / 100) * manualMinutes;
-  const capacity = Math.max(1, Math.floor((resources * hours * 60) / avgMinutes));
+function simulate({
+  automation,
+  manualMinutes,
+  quickMinutes,
+  hours,
+  accuracy,
+  resources = 1,
+  variability = 100,
+}) {
+  const avgMinutes =
+    (automation / 100) * quickMinutes + (1 - automation / 100) * manualMinutes;
+  const capacity = Math.max(
+    1,
+    Math.floor((resources * hours * 60) / avgMinutes)
+  );
   let backlog = 0;
-  const weekly = arrivals.map((base, i) => { const incoming = i === 3 || i === 7 || i === 11 ? Math.round(5 + 35 * variability / 100) : Math.max(1, Math.round(5 + (1 - variability / 100) * (i % 2))) ; const available = backlog + incoming; const graded = Math.min(available, capacity); backlog = available - graded; return { week: i + 1, incoming, graded, backlog }; });
-  const peakBacklog = Math.max(...weekly.map(x => x.backlog));
-  return { avgMinutes, capacity, weekly, peakBacklog, flowTime: (peakBacklog / capacity) * 7, consistency: Math.min(99, Math.round(72 + automation / 100 * accuracy / 100 * 27)), feedback: Math.round(40 + automation / 100 * 80), autoFrac: automation / 100 };
+  const weekly = arrivals.map((base, i) => {
+    const incoming =
+      i === 3 || i === 7 || i === 11
+        ? Math.round(5 + (35 * variability) / 100)
+        : Math.max(1, Math.round(5 + (1 - variability / 100) * (i % 2)));
+    const available = backlog + incoming;
+    const graded = Math.min(available, capacity);
+    backlog = available - graded;
+    return { week: i + 1, incoming, graded, backlog };
+  });
+  const peakBacklog = Math.max(...weekly.map((x) => x.backlog));
+  return {
+    avgMinutes,
+    capacity,
+    weekly,
+    peakBacklog,
+    flowTime: (peakBacklog / capacity) * 7,
+    consistency: Math.min(
+      99,
+      Math.round(72 + (((automation / 100) * accuracy) / 100) * 27)
+    ),
+    feedback: Math.round(40 + (automation / 100) * 80),
+    autoFrac: automation / 100,
+  };
 }
 
-function Metric({ label, value, note, tone = '' }) { return <div className="metric"><small>{label}</small><strong className={tone}>{value}</strong><span>{note}</span></div>; }
+function NetlifyInspiredSections({ model, before }) {
+  const waiting = Math.max(0, before.flowTime * 24 * 60 - before.avgMinutes);
+  return (
+    <>
+      <section className="section">
+        <span className="eyebrow">04 · Time breakdown</span>
+        <h2>
+          {before.avgMinutes.toFixed(0)} minutes of work trapped inside a{" "}
+          {before.flowTime.toFixed(1)}-day flow
+        </h2>
+        <p>
+          The active work is small compared with the time a submission waits.
+          That contrast is the central Disco insight and the reason a faster
+          first pass matters.
+        </p>
+        <div className="breakdown">
+          <div className="breakdown-row">
+            <b>Waiting before review</b>
+            <div
+              className="breakdown-bar queue"
+              style={{ width: "100%" }}
+            ></div>
+            <strong>{(waiting / 1440).toFixed(1)} days</strong>
+          </div>
+          <div className="breakdown-row">
+            <b>Formula / logic check</b>
+            <div
+              className="breakdown-bar work"
+              style={{
+                width: `${Math.max(
+                  8,
+                  (before.avgMinutes / (before.flowTime * 24 * 60)) * 100
+                )}%`,
+              }}
+            ></div>
+            <strong>{Math.max(0, before.avgMinutes - 6).toFixed(0)} min</strong>
+          </div>
+          <div className="breakdown-row">
+            <b>Feedback writing</b>
+            <div
+              className="breakdown-bar feedback"
+              style={{
+                width: `${Math.max(
+                  5,
+                  (6 / (before.flowTime * 24 * 60)) * 100
+                )}%`,
+              }}
+            ></div>
+            <strong>6 min</strong>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <span className="eyebrow">05 · Improvement ideas</span>
+        <h2>Remove repetition, keep the teaching</h2>
+        <div className="idea-grid">
+          <article>
+            <span className="idea-tag">Priority 01</span>
+            <h3>Automated formula checking</h3>
+            <p>
+              Compare formulas, values, named ranges, and expected outputs
+              against a solved reference workbook.
+            </p>
+            <b>Reduces technical checking time</b>
+          </article>
+          <article>
+            <span className="idea-tag">Priority 02</span>
+            <h3>Exception triage</h3>
+            <p>
+              Route unusual workbook structures or low-confidence results to
+              full instructor review.
+            </p>
+            <b>Protects grading judgment</b>
+          </article>
+          <article>
+            <span className="idea-tag">Priority 03</span>
+            <h3>Feedback draft assistant</h3>
+            <p>
+              Turn detected errors into a specific first draft that the
+              instructor edits and personalizes.
+            </p>
+            <b>Increases feedback depth</b>
+          </article>
+          <article>
+            <span className="idea-tag">Priority 04</span>
+            <h3>Human approval gate</h3>
+            <p>
+              No grade or comment is returned until the instructor reviews and
+              approves the draft.
+            </p>
+            <b>Maintains accountability</b>
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
 
-function QueueChart({ data }) { const max = Math.max(...data.flatMap(x => [x.incoming, x.graded])); return <div className="chart"><div className="chart-grid">{data.map(x => <div className="bar-group" key={x.week}><div className="bars"><i className="incoming" style={{ height: `${x.incoming / max * 100}%` }} /><i className="graded" style={{ height: `${x.graded / max * 100}%` }} /></div><small>W{x.week}</small></div>)}</div><div className="legend"><span className="incoming-dot" /> submissions received <span className="graded-dot" /> formula checks started</div></div>; }
-function DynamicFlowChart({ arrivals, model, automation }) { const canvas = React.useRef(null); const chart = React.useRef(null); useEffect(() => { if (!window.Chart || !canvas.current) return; if (chart.current) chart.current.destroy(); const labels = model.weekly.map(item => `W${item.week}`); const observed = labels.map(label => { const row = arrivals.find(item => `W${item.week}` === label); return row ? row.incoming : 0; }); const automated = observed.map(value => value * automation / 100); const manual = model.weekly.map(item => item.graded * (1 - automation / 100)); chart.current = new Chart(canvas.current, { type: 'line', data: { labels, datasets: [{ label: 'Submissions received', data: observed, borderColor: '#d98e2c', backgroundColor: '#fbf0de', tension: .25, fill: false }, { label: 'Automated checks completed', data: automated, borderColor: '#2e8b57', backgroundColor: '#e4f3ea', tension: .25, fill: false }, { label: 'Manual checks completed', data: manual, borderColor: '#3454d1', backgroundColor: '#e9edfc', tension: .25, fill: true }] }, options: { responsive: true, maintainAspectRatio: false, animation: { duration: 250 }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Assignments' } }, x: { title: { display: true, text: 'Week' } } }, plugins: { legend: { position: 'bottom' }, tooltip: { mode: 'index', intersect: false } } } }); return () => chart.current?.destroy(); }, [arrivals, model, automation]); return <div className="chart chart-library"><canvas ref={canvas}></canvas></div>; }
+function DetailedAnalysis({ model, before }) {
+  return (
+    <>
+      <section className="section">
+        <span className="eyebrow">06 · Capacity analysis</span>
+        <h2>The average hides the burst</h2>
+        <p>
+          As automated coverage increases, the average handling time falls and
+          weekly capacity rises. The arrival burst stays the same, so the queue
+          and time-to-feedback are what change.
+        </p>
+        <div className="metrics">
+          <Metric
+            label="Handling time / file"
+            value={`${model.avgMinutes.toFixed(1)} min`}
+            note={`${before.avgMinutes} min at 0% automation`}
+          />
+          <Metric
+            label="Batch size"
+            value="120 files"
+            note="two-day arrival window"
+            tone="amber"
+          />
+          <Metric
+            label="Batch work"
+            value={`${((120 * model.avgMinutes) / 60).toFixed(1)} hours`}
+            note="live modeled workload"
+            tone="amber"
+          />
+          <Metric
+            label="Peak flow time"
+            value={`${model.flowTime.toFixed(1)} days`}
+            note="submission → feedback"
+          />
+        </div>
+        <div className="formula">
+          Capacity = 1 resource × (60 / {model.avgMinutes.toFixed(1)} minutes) ×{" "}
+          {model.capacity > before.capacity ? "6" : "6"} hours ={" "}
+          {model.capacity} files/week
+          <br />
+          <em>
+            Automation reduces work per file; the deadline burst remains visible
+            in the backlog chart.
+          </em>
+        </div>
+      </section>
+      <section className="section">
+        <span className="eyebrow">07 · Metrics and trade-offs</span>
+        <h2>Automation should improve the whole system</h2>
+        <div className="table">
+          <div className="table-row head">
+            <b>Metric</b>
+            <b>Current model</b>
+            <b>At {Math.round(model.autoFrac * 100)}% automation</b>
+          </div>
+          {[
+            [
+              "Flow time",
+              `${before.flowTime.toFixed(1)} days`,
+              `${model.flowTime.toFixed(1)} days`,
+            ],
+            [
+              "Flow rate",
+              `${before.capacity} / week`,
+              `${model.capacity} / week`,
+            ],
+            [
+              "Feedback depth",
+              `${before.feedback} words`,
+              `${model.feedback} words`,
+            ],
+            ["Consistency", `${before.consistency}%`, `${model.consistency}%`],
+          ].map((row) => (
+            <div className="table-row" key={row[0]}>
+              {row.map((cell, i) =>
+                i === 0 ? (
+                  <b key={cell}>{cell}</b>
+                ) : (
+                  <span key={cell}>{cell}</span>
+                )
+              )}
+            </div>
+          ))}
+        </div>
+        <p className="callout">
+          Rushing the manual process would reduce flow time by sacrificing
+          quality. Automation breaks that trade-off while keeping the instructor
+          as grade-of-record.
+        </p>
+      </section>
+      <section className="section">
+        <span className="eyebrow">08 · TIMWOOD waste</span>
+        <h2>Where the waste appears</h2>
+        <div className="table">
+          <div className="table-row head">
+            <b>Waste</b>
+            <b>Current-state example</b>
+            <b>Removal idea</b>
+          </div>
+          {[
+            ["Waiting", "Files sit 2–4 weeks", "Trigger auto-check on upload"],
+            ["Inventory", "170–440 files in flight", "Reduce service time"],
+            ["Motion", "Re-deriving formulas", "Diff against solved reference"],
+            [
+              "Overprocessing",
+              "Repeated comments from scratch",
+              "Draft from detected errors",
+            ],
+            [
+              "Defects / rework",
+              "Rubric drift under pressure",
+              "Apply identical rules",
+            ],
+          ].map((row) => (
+            <div className="table-row" key={row[0]}>
+              {row.map((cell, i) =>
+                i === 0 ? (
+                  <b key={cell}>{cell}</b>
+                ) : (
+                  <span key={cell}>{cell}</span>
+                )
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="section">
+        <span className="eyebrow">09 · SAFER + human in the loop</span>
+        <h2>Automate structured work, audit judgment</h2>
+        <div className="safer-grid">
+          <article>
+            <h3>Formula / logic check</h3>
+            <p className="pass">SAFER: 5 / 5 passes</p>
+            <p>
+              Structured, algorithmic, frequent, enduring, and reversible. The
+              tool can identify exact cell-level deviations.
+            </p>
+          </article>
+          <article>
+            <h3>Feedback writing</h3>
+            <p className="partial">SAFER: partial</p>
+            <p>
+              AI can draft from detected errors, but the instructor must edit
+              and approve tone, emphasis, and pedagogy.
+            </p>
+          </article>
+        </div>
+        <div className="guardrails">
+          <b>Guardrails</b>
+          <span>Show the exact cell/formula that triggered a flag.</span>
+          <span>Route low-confidence files to full manual review.</span>
+          <span>Require instructor approval before any grade is returned.</span>
+          <span>Pilot on one lab before scaling.</span>
+        </div>
+      </section>
+    </>
+  );
+}
 
-function parseCsv(text) { const lines = text.trim().split(/\r?\n/); const headers = lines.shift().split(','); return lines.map(line => { const values = line.split(','); return Object.fromEntries(headers.map((header, i) => [header.trim(), values[i]?.trim()])); }); }
-function deriveEventData(rows) { const cases = {}; rows.forEach(row => { (cases[row['Case ID']] ||= {})[row.Activity] = row; }); const caseList = Object.values(cases); const durations = name => caseList.map(c => c[name] ? (new Date(c[name]['Complete Timestamp']) - new Date(c[name]['Start Timestamp'])) / 60000 : 0); const formula = durations('Formula Check'); const visual = durations('Visual / Presentation Review'); const approval = durations('Feedback Approval'); const queue = caseList.map(c => c['Formula Check'] ? (new Date(c['Formula Check']['Start Timestamp']) - new Date(c['Submission Received']['Complete Timestamp'])) / 60000 : 0); const total = queue.reduce((a,b)=>a+b,0) + formula.reduce((a,b)=>a+b,0) + visual.reduce((a,b)=>a+b,0) + approval.reduce((a,b)=>a+b,0); const weekly = {}; caseList.forEach(c => { const arrival = new Date(c['Submission Received']['Complete Timestamp']); const check = new Date(c['Formula Check']['Start Timestamp']); const arrivalWeek = `W${Math.floor((arrival - new Date('2026-01-12T00:00:00')) / 604800000) + 1}`; const checkWeek = `W${Math.floor((check - new Date('2026-01-12T00:00:00')) / 604800000) + 1}`; (weekly[arrivalWeek] ||= { incoming: 0, graded: 0 }).incoming++; (weekly[checkWeek] ||= { incoming: 0, graded: 0 }).graded++; }); const median = values => values.slice().sort((a,b)=>a-b)[Math.floor(values.length/2)] || 0; return { weekly: Object.entries(weekly).sort(([a],[b]) => a.localeCompare(b, undefined, { numeric: true })).map(([week, values]) => ({ week: week.slice(1), ...values })), percentages: { waiting: queue.reduce((a,b)=>a+b,0)/total*100, formula: formula.reduce((a,b)=>a+b,0)/total*100, visual: visual.reduce((a,b)=>a+b,0)/total*100, approval: approval.reduce((a,b)=>a+b,0)/total*100 }, formulaMedian: median(formula), visualMedian: median(visual), approvalMedian: median(approval), queueMedian: median(queue), formulaHours: formula.reduce((a,b)=>a+b,0)/60, cases: caseList.length }; }
+function App() {
+  const [state, setState] = useState(DEFAULTS);
+  const [eventData, setEventData] = useState(null);
+  const model = useMemo(() => simulate(state), [state]);
+  const before = useMemo(() => simulate(DEFAULTS), []);
+  const auto = state.automation;
+  useEffect(() => {
+    loadGradingData().then(setEventData).catch(console.error);
+  }, []);
+  return (
+    <>
+      <header className="hero">
+        <span className="eyebrow">Process improvement · interactive</span>
+        <h1>The rubric was automatable. The judgment wasn’t.</h1>
+        <p>
+          Redesigning Excel project grading with process mining, automation,
+          queueing theory, and a human-in-the-loop checker.
+        </p>
+        <div className="byline">
+          Synthetic 14-week term · ~120 projects per year
+        </div>
+      </header>
+      <nav>
+        {[
+          "Current state",
+          "Baseline",
+          "Disco diagnosis",
+          "Redesign",
+          "Results",
+        ].map((x, i) => (
+          <a href={`#section-${i + 1}`} key={x}>
+            {i + 1}. {x}
+          </a>
+        ))}
+      </nav>
+      <main>
+        <section id="section-1" className="section">
+          <span className="eyebrow">01 · Current state</span>
+          <h2>Three steps, one single-threaded resource</h2>
+          <div className="flow">
+            <article>
+              <b>01</b>
+              <h3>Submission collection</h3>
+              <p>Students upload completed work through the LMS.</p>
+            </article>
+            <article className="bottleneck">
+              <b>02 · bottleneck</b>
+              <h3>Manual review & grading</h3>
+              <p>
+                Every workbook is opened, traced, and checked formula by
+                formula.
+              </p>
+            </article>
+            <article>
+              <b>03</b>
+              <h3>Feedback delivery</h3>
+              <p>
+                Grades and individualized comments are returned one student at a
+                time.
+              </p>
+            </article>
+          </div>
+        </section>
+        <Controls state={state} setState={setState} model={model} />
+        {eventData && (
+          <section id="section-2" className="section">
+            <span className="eyebrow">02 · Baseline</span>
+            <h2>
+              The deadline creates the burst; formula checking creates the
+              bottleneck
+            </h2>
+            <p>
+              This baseline is calculated from the 120-case event log.
+              Assignments arrive in a tight deadline burst; the capacity
+              constraint is the time required to formula-check each file.
+            </p>
+            <div className="metrics">
+              <Metric
+                label="Observed cases"
+                value={eventData.cases}
+                note="deadline-burst submissions"
+              />
+              <Metric
+                label="Formula check / file"
+                value={`${eventData.formulaMedian.toFixed(0)} min`}
+                note="repeated algorithmic work"
+                tone="amber"
+              />
+              <Metric
+                label="Formula-check workload"
+                value={`${eventData.formulaHours.toFixed(1)} h`}
+                note="total for 120 assignments"
+                tone="amber"
+              />
+              <Metric
+                label="Human review / file"
+                value={`${(
+                  eventData.visualMedian + eventData.approvalMedian
+                ).toFixed(0)} min`}
+                note="visual review + approval"
+              />
+            </div>
+            <div className="efficiency">
+              <div
+                className="efficiency-work"
+                style={{ width: `${100 - eventData.percentages.waiting}%` }}
+              ></div>
+              <span>
+                formula + human review{" "}
+                {`${(100 - eventData.percentages.waiting).toFixed(1)}%`}
+              </span>
+              <b>
+                queue consequence{" "}
+                {`${eventData.percentages.waiting.toFixed(1)}%`}
+              </b>
+            </div>
+            <DynamicFlowChart
+              arrivals={eventData.weekly}
+              model={model}
+              automation={state.automation}
+            />
+            <div className="formula">
+              Observed submissions are the deadline burst. Automated checks
+              launch with that burst; only the remaining manual-check line is
+              capacity constrained.
+              <br />
+              <em>
+                At 100% automation, the automated-check line coincides with
+                submissions.
+              </em>
+            </div>
+          </section>
+        )}
+        <section id="section-3" className="section">
+          <span className="eyebrow">03 · Diagnosis</span>
+          <h2>Process mining shows where formula work is concentrated</h2>
+          <p>
+            Import <code>data/event_log_synthetic.csv</code> into Disco using
+            Case ID, Activity, and Timestamp. The performance view should show
+            the queue before Formula Check and the active formula-check
+            bottleneck.
+          </p>
+          <div className="disco-media">
+            <video
+              controls
+              preload="metadata"
+              aria-label="Animated Disco process view"
+            >
+              <source
+                src="./data/Disco%20animation%20for%20event_log_synthetic.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support MP4 playback.{" "}
+              <a href="./data/Disco%20animation%20for%20event_log_synthetic.mp4">
+                Download the Disco animation
+              </a>
+              .
+            </video>
+            <p>Disco process view generated from the synthetic event log.</p>
+          </div>
+          <div className="evidence">
+            <div>
+              <b>Activity</b>
+              <b>Median elapsed time</b>
+              <b>Interpretation</b>
+              <span>Submission Received</span>
+              <span>—</span>
+              <span>Upload enters the flow</span>
+              <span>Formula Check</span>
+              <strong>23 min</strong>
+              <span>Manual formula and logic checking</span>
+              <span>Visual / Presentation Review</span>
+              <strong>7 min</strong>
+              <span>Human judgment remains required</span>
+              <span>Feedback Returned</span>
+              <strong>4 min</strong>
+              <span>
+                Standard formula comments plus individualized feedback
+              </span>
+            </div>
+          </div>
+          <p className="callout">
+            The processed workflow separates arrival variability from the
+            formula-check bottleneck; the sticky controls below model automating
+            that step while preserving human review.
+          </p>
+        </section>
+        <NetlifyInspiredSections model={model} before={before} />
+        <section id="section-4" className="section">
+          <span className="eyebrow">04 · Redesign</span>
+          <h2>Maker–checker: automate the first pass, preserve judgment</h2>
+          <p>
+            Files flow linearly from submission to automated formula/logic
+            checks, then to instructor review for exceptions and
+            personalization.
+          </p>
+          <div className="pipeline">
+            <div>Student upload</div>
+            <div className="auto">
+              Automated formula & logic check
+              <br />
+              <small>{auto}% auto-triaged</small>
+            </div>
+            <div className="human">
+              Instructor checker
+              <br />
+              <small>{100 - auto}% full review + sign-off</small>
+            </div>
+            <div>Feedback returned</div>
+          </div>
+          <div className="metrics">
+            <Metric
+              label="Average handling time"
+              value={`${model.avgMinutes.toFixed(1)} min`}
+              note={`vs ${before.avgMinutes} min manual`}
+              tone="green"
+            />
+            <Metric
+              label="Capacity"
+              value={`${model.capacity} / week`}
+              note="synthetic model"
+              tone="green"
+            />
+            <Metric
+              label="Flow time"
+              value={`${model.flowTime.toFixed(1)} days`}
+              note="peak week"
+              tone="green"
+            />
+          </div>
+        </section>
+        <section id="section-5" className="section">
+          <span className="eyebrow">05 · Results</span>
+          <h2>Before / after, controlled by the same model</h2>
+          <p>
+            Move the automation slider above. “Before” stays fixed at 0%
+            automation so the comparison remains fair.
+          </p>
+          <div className="compare">
+            <div>
+              <small>Peak flow time</small>
+              <b>
+                {before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days
+              </b>
+            </div>
+            <div>
+              <small>Weekly capacity</small>
+              <b>
+                {before.capacity} → {model.capacity}
+              </b>
+            </div>
+            <div>
+              <small>Consistency</small>
+              <b>
+                {before.consistency}% → {model.consistency}%
+              </b>
+            </div>
+            <div>
+              <small>Feedback depth</small>
+              <b>
+                {before.feedback} → {model.feedback} words
+              </b>
+            </div>
+          </div>
+          <h3>Takeaway</h3>
+          <p className="callout">
+            The tool does not replace instructor judgment. It removes repetitive
+            technical checking so the instructor can spend more time on
+            specific, individualized mentorship.
+          </p>
+        </section>
+        <DetailedAnalysis model={model} before={before} />
+      </main>
+      <footer>
+        All data is synthetic. See <code>data/disco_import_guide.md</code> for
+        the Disco workflow.
+      </footer>
+    </>
+  );
+}
 
-
-function Controls({ state, setState, model }) { return <section className="control-panel sticky-controls"><div><b>Scenario controls</b><span>Observed baseline stays fixed; these levers change the modeled scenario.</span></div><label>Automation coverage <output>{state.automation}%</output><input type="range" min="0" max="100" value={state.automation} onChange={e => setState({ ...state, automation: +e.target.value })} /></label><label>Resources <output>{state.resources}</output><input type="range" min="1" max="3" value={state.resources} onChange={e => setState({ ...state, resources: +e.target.value })} /></label><label>Hours / resource / week <output>{state.hours} h</output><input type="range" min="2" max="16" value={state.hours} onChange={e => setState({ ...state, hours: +e.target.value })} /></label><label>Submission variability <output>{state.variability}%</output><input type="range" min="0" max="100" value={state.variability} onChange={e => setState({ ...state, variability: +e.target.value })} /></label><div className="live-readout"><b>{model.flowTime.toFixed(1)} d</b><span>scenario peak flow time</span></div><button onClick={() => setState(DEFAULTS)}>Reset</button></section>; }
-
-function NetlifyInspiredSections({ model, before }) { const waiting = Math.max(0, before.flowTime * 24 * 60 - before.avgMinutes); return <>
-  <section className="section"><span className="eyebrow">04 · Time breakdown</span><h2>{before.avgMinutes.toFixed(0)} minutes of work trapped inside a {before.flowTime.toFixed(1)}-day flow</h2><p>The active work is small compared with the time a submission waits. That contrast is the central Disco insight and the reason a faster first pass matters.</p><div className="breakdown"><div className="breakdown-row"><b>Waiting before review</b><div className="breakdown-bar queue" style={{ width: '100%' }}></div><strong>{(waiting / 1440).toFixed(1)} days</strong></div><div className="breakdown-row"><b>Formula / logic check</b><div className="breakdown-bar work" style={{ width: `${Math.max(8, before.avgMinutes / (before.flowTime * 24 * 60) * 100)}%` }}></div><strong>{Math.max(0, before.avgMinutes - 6).toFixed(0)} min</strong></div><div className="breakdown-row"><b>Feedback writing</b><div className="breakdown-bar feedback" style={{ width: `${Math.max(5, 6 / (before.flowTime * 24 * 60) * 100)}%` }}></div><strong>6 min</strong></div></div></section>
-  <section className="section"><span className="eyebrow">05 · Improvement ideas</span><h2>Remove repetition, keep the teaching</h2><div className="idea-grid"><article><span className="idea-tag">Priority 01</span><h3>Automated formula checking</h3><p>Compare formulas, values, named ranges, and expected outputs against a solved reference workbook.</p><b>Reduces technical checking time</b></article><article><span className="idea-tag">Priority 02</span><h3>Exception triage</h3><p>Route unusual workbook structures or low-confidence results to full instructor review.</p><b>Protects grading judgment</b></article><article><span className="idea-tag">Priority 03</span><h3>Feedback draft assistant</h3><p>Turn detected errors into a specific first draft that the instructor edits and personalizes.</p><b>Increases feedback depth</b></article><article><span className="idea-tag">Priority 04</span><h3>Human approval gate</h3><p>No grade or comment is returned until the instructor reviews and approves the draft.</p><b>Maintains accountability</b></article></div></section>
-  </>; }
-
-function DetailedAnalysis({ model, before }) { return <>
-  <section className="section"><span className="eyebrow">06 · Capacity analysis</span><h2>The average hides the burst</h2><p>As automated coverage increases, the average handling time falls and weekly capacity rises. The arrival burst stays the same, so the queue and time-to-feedback are what change.</p><div className="metrics"><Metric label="Handling time / file" value={`${model.avgMinutes.toFixed(1)} min`} note={`${before.avgMinutes} min at 0% automation`} /><Metric label="Batch size" value="120 files" note="two-day arrival window" tone="amber" /><Metric label="Batch work" value={`${(120 * model.avgMinutes / 60).toFixed(1)} hours`} note="live modeled workload" tone="amber" /><Metric label="Peak flow time" value={`${model.flowTime.toFixed(1)} days`} note="submission → feedback" /></div><div className="formula">Capacity = 1 resource × (60 / {model.avgMinutes.toFixed(1)} minutes) × {model.capacity > before.capacity ? '6' : '6'} hours = {model.capacity} files/week<br /><em>Automation reduces work per file; the deadline burst remains visible in the backlog chart.</em></div></section>
-  <section className="section"><span className="eyebrow">07 · Metrics and trade-offs</span><h2>Automation should improve the whole system</h2><div className="table"><div className="table-row head"><b>Metric</b><b>Current model</b><b>At {Math.round(model.autoFrac * 100)}% automation</b></div>{[['Flow time',`${before.flowTime.toFixed(1)} days`,`${model.flowTime.toFixed(1)} days`],['Flow rate',`${before.capacity} / week`,`${model.capacity} / week`],['Feedback depth',`${before.feedback} words`,`${model.feedback} words`],['Consistency',`${before.consistency}%`,`${model.consistency}%`]].map(row => <div className="table-row" key={row[0]}>{row.map((cell, i) => i === 0 ? <b key={cell}>{cell}</b> : <span key={cell}>{cell}</span>)}</div>)}</div><p className="callout">Rushing the manual process would reduce flow time by sacrificing quality. Automation breaks that trade-off while keeping the instructor as grade-of-record.</p></section>
-  <section className="section"><span className="eyebrow">08 · TIMWOOD waste</span><h2>Where the waste appears</h2><div className="table"><div className="table-row head"><b>Waste</b><b>Current-state example</b><b>Removal idea</b></div>{[['Waiting','Files sit 2–4 weeks','Trigger auto-check on upload'],['Inventory','170–440 files in flight','Reduce service time'],['Motion','Re-deriving formulas','Diff against solved reference'],['Overprocessing','Repeated comments from scratch','Draft from detected errors'],['Defects / rework','Rubric drift under pressure','Apply identical rules']].map(row => <div className="table-row" key={row[0]}>{row.map((cell, i) => i === 0 ? <b key={cell}>{cell}</b> : <span key={cell}>{cell}</span>)}</div>)}</div></section>
-  <section className="section"><span className="eyebrow">09 · SAFER + human in the loop</span><h2>Automate structured work, audit judgment</h2><div className="safer-grid"><article><h3>Formula / logic check</h3><p className="pass">SAFER: 5 / 5 passes</p><p>Structured, algorithmic, frequent, enduring, and reversible. The tool can identify exact cell-level deviations.</p></article><article><h3>Feedback writing</h3><p className="partial">SAFER: partial</p><p>AI can draft from detected errors, but the instructor must edit and approve tone, emphasis, and pedagogy.</p></article></div><div className="guardrails"><b>Guardrails</b><span>Show the exact cell/formula that triggered a flag.</span><span>Route low-confidence files to full manual review.</span><span>Require instructor approval before any grade is returned.</span><span>Pilot on one lab before scaling.</span></div></section>
-  </>; }
-
-function App() { const [state, setState] = useState(DEFAULTS); const [eventData, setEventData] = useState(null); const model = useMemo(() => simulate(state), [state]); const before = useMemo(() => simulate(DEFAULTS), []); const auto = state.automation; useEffect(() => { fetch('./data/event_log_synthetic.csv').then(r => r.text()).then(text => setEventData(deriveEventData(parseCsv(text)))); }, []); return <>
-  <header className="hero"><span className="eyebrow">Process improvement · interactive</span><h1>The rubric was automatable. The judgment wasn’t.</h1><p>Redesigning Excel project grading with process mining, automation, queueing theory, and a human-in-the-loop checker.</p><div className="byline">Synthetic 14-week term · ~120 projects per year</div></header>
-  <nav>{['Current state','Baseline','Disco diagnosis','Redesign','Results'].map((x, i) => <a href={`#section-${i + 1}`} key={x}>{i + 1}. {x}</a>)}</nav>
-  <main><section id="section-1" className="section"><span className="eyebrow">01 · Current state</span><h2>Three steps, one single-threaded resource</h2><div className="flow"><article><b>01</b><h3>Submission collection</h3><p>Students upload completed work through the LMS.</p></article><article className="bottleneck"><b>02 · bottleneck</b><h3>Manual review & grading</h3><p>Every workbook is opened, traced, and checked formula by formula.</p></article><article><b>03</b><h3>Feedback delivery</h3><p>Grades and individualized comments are returned one student at a time.</p></article></div></section>
-  <Controls state={state} setState={setState} model={model} />
-  {eventData && <section id="section-2" className="section"><span className="eyebrow">02 · Baseline</span><h2>The deadline creates the burst; formula checking creates the bottleneck</h2><p>This baseline is calculated from the 120-case event log. Assignments arrive in a tight deadline burst; the capacity constraint is the time required to formula-check each file.</p><div className="metrics"><Metric label="Observed cases" value={eventData.cases} note="deadline-burst submissions" /><Metric label="Formula check / file" value={`${eventData.formulaMedian.toFixed(0)} min`} note="repeated algorithmic work" tone="amber" /><Metric label="Formula-check workload" value={`${eventData.formulaHours.toFixed(1)} h`} note="total for 120 assignments" tone="amber" /><Metric label="Human review / file" value={`${(eventData.visualMedian + eventData.approvalMedian).toFixed(0)} min`} note="visual review + approval" /></div><div className="efficiency"><div className="efficiency-work" style={{ width: `${100 - eventData.percentages.waiting}%` }}></div><span>formula + human review {`${(100 - eventData.percentages.waiting).toFixed(1)}%`}</span><b>queue consequence {`${eventData.percentages.waiting.toFixed(1)}%`}</b></div><DynamicFlowChart arrivals={eventData.weekly} model={model} automation={state.automation} /><div className="formula">Observed submissions are the deadline burst. Automated checks launch with that burst; only the remaining manual-check line is capacity constrained.<br /><em>At 100% automation, the automated-check line coincides with submissions.</em></div></section>}
-  <section id="section-3" className="section"><span className="eyebrow">03 · Diagnosis</span><h2>Process mining shows where formula work is concentrated</h2><p>Import <code>data/event_log_synthetic.csv</code> into Disco using Case ID, Activity, and Timestamp. The performance view should show the queue before Formula Check and the active formula-check bottleneck.</p><div className="disco-media"><video controls preload="metadata" aria-label="Animated Disco process view"><source src="./data/Disco%20animation%20for%20event_log_synthetic.mp4" type="video/mp4" />Your browser does not support MP4 playback. <a href="./data/Disco%20animation%20for%20event_log_synthetic.mp4">Download the Disco animation</a>.</video><p>Disco process view generated from the synthetic event log.</p></div><div className="evidence"><div><b>Activity</b><b>Median elapsed time</b><b>Interpretation</b><span>Submission Received</span><span>—</span><span>Upload enters the flow</span><span>Formula Check</span><strong>23 min</strong><span>Manual formula and logic checking</span><span>Visual / Presentation Review</span><strong>7 min</strong><span>Human judgment remains required</span><span>Feedback Returned</span><strong>4 min</strong><span>Standard formula comments plus individualized feedback</span></div></div><p className="callout">The processed workflow separates arrival variability from the formula-check bottleneck; the sticky controls below model automating that step while preserving human review.</p></section><NetlifyInspiredSections model={model} before={before} />
-  <section id="section-4" className="section"><span className="eyebrow">04 · Redesign</span><h2>Maker–checker: automate the first pass, preserve judgment</h2><p>Files flow linearly from submission to automated formula/logic checks, then to instructor review for exceptions and personalization.</p><div className="pipeline"><div>Student upload</div><div className="auto">Automated formula & logic check<br /><small>{auto}% auto-triaged</small></div><div className="human">Instructor checker<br /><small>{100 - auto}% full review + sign-off</small></div><div>Feedback returned</div></div><div className="metrics"><Metric label="Average handling time" value={`${model.avgMinutes.toFixed(1)} min`} note={`vs ${before.avgMinutes} min manual`} tone="green" /><Metric label="Capacity" value={`${model.capacity} / week`} note="synthetic model" tone="green" /><Metric label="Flow time" value={`${model.flowTime.toFixed(1)} days`} note="peak week" tone="green" /></div></section>
-  <section id="section-5" className="section"><span className="eyebrow">05 · Results</span><h2>Before / after, controlled by the same model</h2><p>Move the automation slider above. “Before” stays fixed at 0% automation so the comparison remains fair.</p><div className="compare"><div><small>Peak flow time</small><b>{before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days</b></div><div><small>Weekly capacity</small><b>{before.capacity} → {model.capacity}</b></div><div><small>Consistency</small><b>{before.consistency}% → {model.consistency}%</b></div><div><small>Feedback depth</small><b>{before.feedback} → {model.feedback} words</b></div></div><h3>Takeaway</h3><p className="callout">The tool does not replace instructor judgment. It removes repetitive technical checking so the instructor can spend more time on specific, individualized mentorship.</p></section><DetailedAnalysis model={model} before={before} /></main><footer>All data is synthetic. See <code>data/disco_import_guide.md</code> for the Disco workflow.</footer></>; }
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
