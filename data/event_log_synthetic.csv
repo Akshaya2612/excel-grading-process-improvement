@@ -1,1268 +1,601 @@
 Case ID,Activity,Timestamp
-SUB-0001,Submission Received,2026-01-14 18:25:00
-SUB-0001,Initial Review Started,2026-01-16 18:57:34
-SUB-0001,Formula Check Pass 1,2026-01-16 19:20:46
-SUB-0001,Formula Check Rework,2026-01-16 20:09:41
-SUB-0001,Comment Drafted,2026-01-16 21:08:24
-SUB-0001,Comment Draft Rework,2026-01-16 21:53:25
-SUB-0001,Feedback Returned,2026-01-16 22:36:29
-SUB-0002,Submission Received,2026-01-15 01:03:00
-SUB-0002,Initial Review Started,2026-01-17 18:58:55
-SUB-0002,Formula Check Pass 1,2026-01-17 19:32:23
-SUB-0002,Formula Check Rework,2026-01-17 19:41:29
-SUB-0002,Comment Drafted,2026-01-17 19:52:24
-SUB-0002,Comment Draft Rework,2026-01-17 20:00:47
-SUB-0002,Feedback Returned,2026-01-17 20:08:48
-SUB-0003,Submission Received,2026-01-15 17:15:00
-SUB-0003,Initial Review Started,2026-01-16 04:08:45
-SUB-0003,Formula Check Pass 1,2026-01-16 04:57:19
-SUB-0003,Formula Check Rework,2026-01-16 06:11:59
-SUB-0003,Comment Drafted,2026-01-16 07:41:36
-SUB-0003,Comment Draft Rework,2026-01-16 08:50:18
-SUB-0003,Feedback Returned,2026-01-16 09:56:01
-SUB-0004,Submission Received,2026-01-12 19:40:00
-SUB-0004,Initial Review Started,2026-01-14 18:37:48
-SUB-0004,Formula Check Pass 1,2026-01-14 20:04:02
-SUB-0004,Formula Check Rework,2026-01-14 20:56:36
-SUB-0004,Comment Drafted,2026-01-14 21:59:41
-SUB-0004,Comment Draft Rework,2026-01-14 22:48:04
-SUB-0004,Feedback Returned,2026-01-14 23:34:20
-SUB-0005,Submission Received,2026-01-22 16:14:00
-SUB-0005,Initial Review Started,2026-01-23 00:09:49
-SUB-0005,Formula Check Pass 1,2026-01-23 01:29:37
-SUB-0005,Formula Check Rework,2026-01-23 01:56:45
-SUB-0005,Comment Drafted,2026-01-23 02:29:18
-SUB-0005,Comment Draft Rework,2026-01-23 02:54:16
-SUB-0005,Feedback Returned,2026-01-23 03:18:09
-SUB-0006,Submission Received,2026-01-21 00:07:00
-SUB-0006,Initial Review Started,2026-01-22 19:16:55
-SUB-0006,Formula Check Pass 1,2026-01-22 20:15:15
-SUB-0006,Formula Check Rework,2026-01-22 21:17:06
-SUB-0006,Comment Drafted,2026-01-22 22:31:20
-SUB-0006,Comment Draft Rework,2026-01-22 23:28:14
-SUB-0006,Feedback Returned,2026-01-23 00:22:41
-SUB-0007,Submission Received,2026-01-20 01:36:00
-SUB-0007,Initial Review Started,2026-01-22 01:20:05
-SUB-0007,Formula Check Pass 1,2026-01-22 02:04:54
-SUB-0007,Formula Check Rework,2026-01-22 02:54:52
-SUB-0007,Comment Drafted,2026-01-22 03:54:50
-SUB-0007,Comment Draft Rework,2026-01-22 04:40:49
-SUB-0007,Feedback Returned,2026-01-22 05:24:48
-SUB-0008,Submission Received,2026-01-20 01:03:00
-SUB-0008,Initial Review Started,2026-01-21 23:26:50
-SUB-0008,Formula Check Pass 1,2026-01-22 00:20:35
-SUB-0008,Formula Check Rework,2026-01-22 01:09:08
-SUB-0008,Comment Drafted,2026-01-22 02:07:24
-SUB-0008,Comment Draft Rework,2026-01-22 02:52:05
-SUB-0008,Feedback Returned,2026-01-22 03:34:49
-SUB-0009,Submission Received,2026-01-21 23:37:00
-SUB-0009,Initial Review Started,2026-01-24 18:28:18
-SUB-0009,Formula Check Pass 1,2026-01-24 19:12:20
-SUB-0009,Formula Check Rework,2026-01-24 19:35:49
-SUB-0009,Comment Drafted,2026-01-24 20:04:00
-SUB-0009,Comment Draft Rework,2026-01-24 20:25:36
-SUB-0009,Feedback Returned,2026-01-24 20:46:17
-SUB-0010,Submission Received,2026-01-21 03:49:00
-SUB-0010,Initial Review Started,2026-01-22 01:01:11
-SUB-0010,Formula Check Pass 1,2026-01-22 02:00:33
-SUB-0010,Formula Check Rework,2026-01-22 02:48:31
-SUB-0010,Comment Drafted,2026-01-22 03:46:06
-SUB-0010,Comment Draft Rework,2026-01-22 04:30:14
-SUB-0010,Feedback Returned,2026-01-22 05:12:28
-SUB-0011,Submission Received,2026-01-29 03:28:00
-SUB-0011,Initial Review Started,2026-01-30 03:36:57
-SUB-0011,Formula Check Pass 1,2026-01-30 05:05:32
-SUB-0011,Formula Check Rework,2026-01-30 05:17:28
-SUB-0011,Comment Drafted,2026-01-30 05:31:48
-SUB-0011,Comment Draft Rework,2026-01-30 05:42:48
-SUB-0011,Feedback Returned,2026-01-30 05:53:19
-SUB-0012,Submission Received,2026-01-29 18:48:00
-SUB-0012,Initial Review Started,2026-01-30 22:35:10
-SUB-0012,Formula Check Pass 1,2026-01-31 00:00:21
-SUB-0012,Formula Check Rework,2026-01-31 00:39:10
-SUB-0012,Comment Drafted,2026-01-31 01:25:45
-SUB-0012,Comment Draft Rework,2026-01-31 02:01:28
-SUB-0012,Feedback Returned,2026-01-31 02:35:38
-SUB-0013,Submission Received,2026-01-27 04:35:00
-SUB-0013,Initial Review Started,2026-01-28 23:53:26
-SUB-0013,Formula Check Pass 1,2026-01-29 01:14:28
-SUB-0013,Formula Check Rework,2026-01-29 01:43:44
-SUB-0013,Comment Drafted,2026-01-29 02:18:51
-SUB-0013,Comment Draft Rework,2026-01-29 02:45:46
-SUB-0013,Feedback Returned,2026-01-29 03:11:32
-SUB-0014,Submission Received,2026-01-29 01:31:00
-SUB-0014,Initial Review Started,2026-01-30 21:17:08
-SUB-0014,Formula Check Pass 1,2026-01-30 22:07:59
-SUB-0014,Formula Check Rework,2026-01-30 23:23:49
-SUB-0014,Comment Drafted,2026-01-31 00:54:49
-SUB-0014,Comment Draft Rework,2026-01-31 02:04:35
-SUB-0014,Feedback Returned,2026-01-31 03:11:19
-SUB-0015,Submission Received,2026-01-28 23:44:00
-SUB-0015,Initial Review Started,2026-01-31 01:09:51
-SUB-0015,Formula Check Pass 1,2026-01-31 01:32:13
-SUB-0015,Formula Check Rework,2026-01-31 02:35:48
-SUB-0015,Comment Drafted,2026-01-31 03:52:06
-SUB-0015,Comment Draft Rework,2026-01-31 04:50:35
-SUB-0015,Feedback Returned,2026-01-31 05:46:33
-SUB-0016,Submission Received,2026-02-07 02:52:00
-SUB-0016,Initial Review Started,2026-02-13 00:30:56
-SUB-0016,Formula Check Pass 1,2026-02-13 01:40:32
-SUB-0016,Formula Check Rework,2026-02-13 03:00:32
-SUB-0016,Comment Drafted,2026-02-13 04:36:32
-SUB-0016,Comment Draft Rework,2026-02-13 05:50:08
-SUB-0016,Feedback Returned,2026-02-13 07:00:33
-SUB-0017,Submission Received,2026-02-04 16:29:00
-SUB-0017,Initial Review Started,2026-02-09 14:19:33
-SUB-0017,Formula Check Pass 1,2026-02-09 15:21:32
-SUB-0017,Formula Check Rework,2026-02-09 16:06:43
-SUB-0017,Comment Drafted,2026-02-09 17:00:57
-SUB-0017,Comment Draft Rework,2026-02-09 17:42:31
-SUB-0017,Feedback Returned,2026-02-09 18:22:18
-SUB-0018,Submission Received,2026-02-04 04:18:00
-SUB-0018,Initial Review Started,2026-02-06 14:26:44
-SUB-0018,Formula Check Pass 1,2026-02-06 15:02:34
-SUB-0018,Formula Check Rework,2026-02-06 15:38:40
-SUB-0018,Comment Drafted,2026-02-06 16:21:59
-SUB-0018,Comment Draft Rework,2026-02-06 16:55:11
-SUB-0018,Feedback Returned,2026-02-06 17:26:58
-SUB-0019,Submission Received,2026-02-05 17:10:00
-SUB-0019,Initial Review Started,2026-02-11 15:45:07
-SUB-0019,Formula Check Pass 1,2026-02-11 16:42:41
-SUB-0019,Formula Check Rework,2026-02-11 18:02:21
-SUB-0019,Comment Drafted,2026-02-11 19:37:58
-SUB-0019,Comment Draft Rework,2026-02-11 20:51:16
-SUB-0019,Feedback Returned,2026-02-11 22:01:24
-SUB-0020,Submission Received,2026-02-06 00:17:00
-SUB-0020,Initial Review Started,2026-02-14 18:46:19
-SUB-0020,Formula Check Pass 1,2026-02-14 20:15:20
-SUB-0020,Formula Check Rework,2026-02-14 21:17:15
-SUB-0020,Comment Drafted,2026-02-14 22:31:34
-SUB-0020,Comment Draft Rework,2026-02-14 23:28:32
-SUB-0020,Feedback Returned,2026-02-15 00:23:02
-SUB-0021,Submission Received,2026-02-05 19:09:00
-SUB-0021,Initial Review Started,2026-02-07 17:03:28
-SUB-0021,Formula Check Pass 1,2026-02-07 17:32:22
-SUB-0021,Formula Check Rework,2026-02-07 18:32:08
-SUB-0021,Comment Drafted,2026-02-07 19:43:52
-SUB-0021,Comment Draft Rework,2026-02-07 20:38:52
-SUB-0021,Feedback Returned,2026-02-07 21:31:29
-SUB-0022,Submission Received,2026-02-02 23:53:00
-SUB-0022,Initial Review Started,2026-02-10 11:24:42
-SUB-0022,Formula Check Pass 1,2026-02-10 12:01:38
-SUB-0022,Formula Check Rework,2026-02-10 12:03:29
-SUB-0022,Comment Drafted,2026-02-10 12:05:43
-SUB-0022,Comment Draft Rework,2026-02-10 12:07:25
-SUB-0022,Feedback Returned,2026-02-10 12:09:04
-SUB-0023,Submission Received,2026-02-06 00:23:00
-SUB-0023,Initial Review Started,2026-02-13 17:22:25
-SUB-0023,Formula Check Pass 1,2026-02-13 18:03:22
-SUB-0023,Formula Check Rework,2026-02-13 18:15:58
-SUB-0023,Comment Drafted,2026-02-13 18:31:05
-SUB-0023,Comment Draft Rework,2026-02-13 18:42:41
-SUB-0023,Feedback Returned,2026-02-13 18:53:47
-SUB-0024,Submission Received,2026-02-07 01:41:00
-SUB-0024,Initial Review Started,2026-02-15 12:12:00
-SUB-0024,Formula Check Pass 1,2026-02-15 12:33:53
-SUB-0024,Formula Check Rework,2026-02-15 13:54:59
-SUB-0024,Comment Drafted,2026-02-15 15:32:19
-SUB-0024,Comment Draft Rework,2026-02-15 16:46:56
-SUB-0024,Feedback Returned,2026-02-15 17:58:19
-SUB-0025,Submission Received,2026-02-06 22:25:00
-SUB-0025,Initial Review Started,2026-02-12 07:44:49
-SUB-0025,Formula Check Pass 1,2026-02-12 08:10:16
-SUB-0025,Formula Check Rework,2026-02-12 09:07:54
-SUB-0025,Comment Drafted,2026-02-12 10:17:04
-SUB-0025,Comment Draft Rework,2026-02-12 11:10:05
-SUB-0025,Feedback Returned,2026-02-12 12:00:49
-SUB-0026,Submission Received,2026-02-02 19:04:00
-SUB-0026,Initial Review Started,2026-02-14 15:01:08
-SUB-0026,Formula Check Pass 1,2026-02-14 15:50:51
-SUB-0026,Formula Check Rework,2026-02-14 16:02:04
-SUB-0026,Comment Drafted,2026-02-14 16:15:33
-SUB-0026,Comment Draft Rework,2026-02-14 16:25:53
-SUB-0026,Feedback Returned,2026-02-14 16:35:46
-SUB-0027,Submission Received,2026-02-06 16:06:00
-SUB-0027,Initial Review Started,2026-02-07 16:09:41
-SUB-0027,Formula Check Pass 1,2026-02-07 16:38:35
-SUB-0027,Formula Check Rework,2026-02-07 16:49:03
-SUB-0027,Comment Drafted,2026-02-07 17:01:38
-SUB-0027,Comment Draft Rework,2026-02-07 17:11:16
-SUB-0027,Feedback Returned,2026-02-07 17:20:30
-SUB-0028,Submission Received,2026-02-05 01:01:00
-SUB-0028,Initial Review Started,2026-02-06 19:34:47
-SUB-0028,Formula Check Pass 1,2026-02-06 20:07:46
-SUB-0028,Formula Check Rework,2026-02-06 20:42:33
-SUB-0028,Comment Drafted,2026-02-06 21:24:19
-SUB-0028,Comment Draft Rework,2026-02-06 21:56:19
-SUB-0028,Feedback Returned,2026-02-06 22:26:57
-SUB-0029,Submission Received,2026-02-04 21:38:00
-SUB-0029,Initial Review Started,2026-02-09 21:46:20
-SUB-0029,Formula Check Pass 1,2026-02-09 22:13:11
-SUB-0029,Formula Check Rework,2026-02-09 23:29:49
-SUB-0029,Comment Drafted,2026-02-10 01:01:46
-SUB-0029,Comment Draft Rework,2026-02-10 02:12:16
-SUB-0029,Feedback Returned,2026-02-10 03:19:43
-SUB-0030,Submission Received,2026-02-05 23:30:00
-SUB-0030,Initial Review Started,2026-02-10 09:49:44
-SUB-0030,Formula Check Pass 1,2026-02-10 10:18:07
-SUB-0030,Formula Check Rework,2026-02-10 11:25:57
-SUB-0030,Comment Drafted,2026-02-10 12:47:22
-SUB-0030,Comment Draft Rework,2026-02-10 13:49:47
-SUB-0030,Feedback Returned,2026-02-10 14:49:30
-SUB-0031,Submission Received,2026-02-04 23:53:00
-SUB-0031,Initial Review Started,2026-02-13 14:35:10
-SUB-0031,Formula Check Pass 1,2026-02-13 15:30:21
-SUB-0031,Formula Check Rework,2026-02-13 15:50:00
-SUB-0031,Comment Drafted,2026-02-13 16:13:36
-SUB-0031,Comment Draft Rework,2026-02-13 16:31:41
-SUB-0031,Feedback Returned,2026-02-13 16:49:00
-SUB-0032,Submission Received,2026-02-06 21:09:00
-SUB-0032,Initial Review Started,2026-02-15 11:19:40
-SUB-0032,Formula Check Pass 1,2026-02-15 12:43:29
-SUB-0032,Formula Check Rework,2026-02-15 13:52:04
-SUB-0032,Comment Drafted,2026-02-15 15:14:23
-SUB-0032,Comment Draft Rework,2026-02-15 16:17:30
-SUB-0032,Feedback Returned,2026-02-15 17:17:52
-SUB-0033,Submission Received,2026-02-05 02:55:00
-SUB-0033,Initial Review Started,2026-02-07 02:56:36
-SUB-0033,Formula Check Pass 1,2026-02-07 04:15:28
-SUB-0033,Formula Check Rework,2026-02-07 05:02:50
-SUB-0033,Comment Drafted,2026-02-07 05:59:42
-SUB-0033,Comment Draft Rework,2026-02-07 06:43:17
-SUB-0033,Feedback Returned,2026-02-07 07:24:59
-SUB-0034,Submission Received,2026-02-03 21:49:00
-SUB-0034,Initial Review Started,2026-02-07 08:38:02
-SUB-0034,Formula Check Pass 1,2026-02-07 09:35:01
-SUB-0034,Formula Check Rework,2026-02-07 10:21:00
-SUB-0034,Comment Drafted,2026-02-07 11:16:11
-SUB-0034,Comment Draft Rework,2026-02-07 11:58:30
-SUB-0034,Feedback Returned,2026-02-07 12:38:59
-SUB-0035,Submission Received,2026-02-04 01:51:00
-SUB-0035,Initial Review Started,2026-02-13 17:59:14
-SUB-0035,Formula Check Pass 1,2026-02-13 19:11:50
-SUB-0035,Formula Check Rework,2026-02-13 19:30:36
-SUB-0035,Comment Drafted,2026-02-13 19:53:07
-SUB-0035,Comment Draft Rework,2026-02-13 20:10:23
-SUB-0035,Feedback Returned,2026-02-13 20:26:55
-SUB-0036,Submission Received,2026-02-03 22:47:00
-SUB-0036,Initial Review Started,2026-02-13 18:51:41
-SUB-0036,Formula Check Pass 1,2026-02-13 19:24:04
-SUB-0036,Formula Check Rework,2026-02-13 20:09:10
-SUB-0036,Comment Drafted,2026-02-13 21:03:18
-SUB-0036,Comment Draft Rework,2026-02-13 21:44:49
-SUB-0036,Feedback Returned,2026-02-13 22:24:31
-SUB-0037,Submission Received,2026-02-02 16:50:00
-SUB-0037,Initial Review Started,2026-02-06 18:35:59
-SUB-0037,Formula Check Pass 1,2026-02-06 19:12:39
-SUB-0037,Formula Check Rework,2026-02-06 20:15:26
-SUB-0037,Comment Drafted,2026-02-06 21:30:46
-SUB-0037,Comment Draft Rework,2026-02-06 22:28:32
-SUB-0037,Feedback Returned,2026-02-06 23:23:48
-SUB-0038,Submission Received,2026-02-04 23:51:00
-SUB-0038,Initial Review Started,2026-02-16 07:13:24
-SUB-0038,Formula Check Pass 1,2026-02-16 08:42:33
-SUB-0038,Formula Check Rework,2026-02-16 10:08:34
-SUB-0038,Comment Drafted,2026-02-16 11:51:47
-SUB-0038,Comment Draft Rework,2026-02-16 13:10:55
-SUB-0038,Feedback Returned,2026-02-16 14:26:37
-SUB-0039,Submission Received,2026-02-04 17:14:00
-SUB-0039,Initial Review Started,2026-02-06 20:12:10
-SUB-0039,Formula Check Pass 1,2026-02-06 21:04:00
-SUB-0039,Formula Check Rework,2026-02-06 21:35:23
-SUB-0039,Comment Drafted,2026-02-06 22:13:03
-SUB-0039,Comment Draft Rework,2026-02-06 22:41:56
-SUB-0039,Feedback Returned,2026-02-06 23:09:34
-SUB-0040,Submission Received,2026-02-06 01:57:00
-SUB-0040,Initial Review Started,2026-02-13 19:03:33
-SUB-0040,Formula Check Pass 1,2026-02-13 19:21:41
-SUB-0040,Formula Check Rework,2026-02-13 20:43:38
-SUB-0040,Comment Drafted,2026-02-13 22:22:00
-SUB-0040,Comment Draft Rework,2026-02-13 23:37:24
-SUB-0040,Feedback Returned,2026-02-14 00:49:32
-SUB-0041,Submission Received,2026-02-05 04:41:00
-SUB-0041,Initial Review Started,2026-02-07 03:03:53
-SUB-0041,Formula Check Pass 1,2026-02-07 04:09:27
-SUB-0041,Formula Check Rework,2026-02-07 05:31:27
-SUB-0041,Comment Drafted,2026-02-07 07:09:52
-SUB-0041,Comment Draft Rework,2026-02-07 08:25:19
-SUB-0041,Feedback Returned,2026-02-07 09:37:30
-SUB-0042,Submission Received,2026-02-03 23:56:00
-SUB-0042,Initial Review Started,2026-02-06 23:03:47
-SUB-0042,Formula Check Pass 1,2026-02-07 00:18:36
-SUB-0042,Formula Check Rework,2026-02-07 00:49:31
-SUB-0042,Comment Drafted,2026-02-07 01:26:38
-SUB-0042,Comment Draft Rework,2026-02-07 01:55:05
-SUB-0042,Feedback Returned,2026-02-07 02:22:18
-SUB-0043,Submission Received,2026-02-05 23:25:00
-SUB-0043,Initial Review Started,2026-02-15 03:39:42
-SUB-0043,Formula Check Pass 1,2026-02-15 04:03:49
-SUB-0043,Formula Check Rework,2026-02-15 04:19:22
-SUB-0043,Comment Drafted,2026-02-15 04:38:02
-SUB-0043,Comment Draft Rework,2026-02-15 04:52:21
-SUB-0043,Feedback Returned,2026-02-15 05:06:03
-SUB-0044,Submission Received,2026-02-03 16:09:00
-SUB-0044,Initial Review Started,2026-02-11 04:07:28
-SUB-0044,Formula Check Pass 1,2026-02-11 04:58:58
-SUB-0044,Formula Check Rework,2026-02-11 05:58:30
-SUB-0044,Comment Drafted,2026-02-11 07:09:57
-SUB-0044,Comment Draft Rework,2026-02-11 08:04:44
-SUB-0044,Feedback Returned,2026-02-11 08:57:08
-SUB-0045,Submission Received,2026-02-07 01:30:00
-SUB-0045,Initial Review Started,2026-02-15 07:01:07
-SUB-0045,Formula Check Pass 1,2026-02-15 07:44:21
-SUB-0045,Formula Check Rework,2026-02-15 08:34:24
-SUB-0045,Comment Drafted,2026-02-15 09:34:28
-SUB-0045,Comment Draft Rework,2026-02-15 10:20:31
-SUB-0045,Feedback Returned,2026-02-15 11:04:35
-SUB-0046,Submission Received,2026-02-03 16:00:00
-SUB-0046,Initial Review Started,2026-02-13 11:01:48
-SUB-0046,Formula Check Pass 1,2026-02-13 12:12:06
-SUB-0046,Formula Check Rework,2026-02-13 12:22:41
-SUB-0046,Comment Drafted,2026-02-13 12:35:24
-SUB-0046,Comment Draft Rework,2026-02-13 12:45:09
-SUB-0046,Feedback Returned,2026-02-13 12:54:29
-SUB-0047,Submission Received,2026-02-03 22:55:00
-SUB-0047,Initial Review Started,2026-02-07 02:20:43
-SUB-0047,Formula Check Pass 1,2026-02-07 03:41:38
-SUB-0047,Formula Check Rework,2026-02-07 03:45:36
-SUB-0047,Comment Drafted,2026-02-07 03:50:22
-SUB-0047,Comment Draft Rework,2026-02-07 03:54:02
-SUB-0047,Feedback Returned,2026-02-07 03:57:32
-SUB-0048,Submission Received,2026-02-03 20:32:00
-SUB-0048,Initial Review Started,2026-02-07 12:02:08
-SUB-0048,Formula Check Pass 1,2026-02-07 13:02:22
-SUB-0048,Formula Check Rework,2026-02-07 13:26:49
-SUB-0048,Comment Drafted,2026-02-07 13:56:09
-SUB-0048,Comment Draft Rework,2026-02-07 14:18:39
-SUB-0048,Feedback Returned,2026-02-07 14:40:10
-SUB-0049,Submission Received,2026-02-05 18:03:00
-SUB-0049,Initial Review Started,2026-02-16 18:17:40
-SUB-0049,Formula Check Pass 1,2026-02-16 19:01:08
-SUB-0049,Formula Check Rework,2026-02-16 19:43:10
-SUB-0049,Comment Drafted,2026-02-16 20:33:38
-SUB-0049,Comment Draft Rework,2026-02-16 21:12:18
-SUB-0049,Feedback Returned,2026-02-16 21:49:19
-SUB-0050,Submission Received,2026-02-07 00:26:00
-SUB-0050,Initial Review Started,2026-02-17 02:47:53
-SUB-0050,Formula Check Pass 1,2026-02-17 04:09:07
-SUB-0050,Formula Check Rework,2026-02-17 04:22:11
-SUB-0050,Comment Drafted,2026-02-17 04:37:52
-SUB-0050,Comment Draft Rework,2026-02-17 04:49:53
-SUB-0050,Feedback Returned,2026-02-17 05:01:24
-SUB-0051,Submission Received,2026-02-04 00:32:00
-SUB-0051,Initial Review Started,2026-02-05 05:28:17
-SUB-0051,Formula Check Pass 1,2026-02-05 06:17:58
-SUB-0051,Formula Check Rework,2026-02-05 06:35:40
-SUB-0051,Comment Drafted,2026-02-05 06:56:54
-SUB-0051,Comment Draft Rework,2026-02-05 07:13:12
-SUB-0051,Feedback Returned,2026-02-05 07:28:47
-SUB-0052,Submission Received,2026-02-03 04:51:00
-SUB-0052,Initial Review Started,2026-02-05 20:23:52
-SUB-0052,Formula Check Pass 1,2026-02-05 20:52:03
-SUB-0052,Formula Check Rework,2026-02-05 21:48:20
-SUB-0052,Comment Drafted,2026-02-05 22:55:53
-SUB-0052,Comment Draft Rework,2026-02-05 23:47:40
-SUB-0052,Feedback Returned,2026-02-06 00:37:13
-SUB-0053,Submission Received,2026-02-03 00:03:00
-SUB-0053,Initial Review Started,2026-02-07 14:06:33
-SUB-0053,Formula Check Pass 1,2026-02-07 15:01:52
-SUB-0053,Formula Check Rework,2026-02-07 15:52:31
-SUB-0053,Comment Drafted,2026-02-07 16:53:18
-SUB-0053,Comment Draft Rework,2026-02-07 17:39:55
-SUB-0053,Feedback Returned,2026-02-07 18:24:30
-SUB-0054,Submission Received,2026-02-10 00:03:00
-SUB-0054,Initial Review Started,2026-02-10 21:32:55
-SUB-0054,Formula Check Pass 1,2026-02-10 22:10:52
-SUB-0054,Formula Check Rework,2026-02-10 23:20:42
-SUB-0054,Comment Drafted,2026-02-11 00:44:31
-SUB-0054,Comment Draft Rework,2026-02-11 01:48:46
-SUB-0054,Feedback Returned,2026-02-11 02:50:14
-SUB-0055,Submission Received,2026-02-13 23:35:00
-SUB-0055,Initial Review Started,2026-02-14 06:15:21
-SUB-0055,Formula Check Pass 1,2026-02-14 07:37:43
-SUB-0055,Formula Check Rework,2026-02-14 07:44:49
-SUB-0055,Comment Drafted,2026-02-14 07:53:21
-SUB-0055,Comment Draft Rework,2026-02-14 07:59:53
-SUB-0055,Feedback Returned,2026-02-14 08:06:09
-SUB-0056,Submission Received,2026-02-12 01:32:00
-SUB-0056,Initial Review Started,2026-02-13 23:03:56
-SUB-0056,Formula Check Pass 1,2026-02-13 23:36:18
-SUB-0056,Formula Check Rework,2026-02-14 00:02:19
-SUB-0056,Comment Drafted,2026-02-14 00:33:33
-SUB-0056,Comment Draft Rework,2026-02-14 00:57:30
-SUB-0056,Feedback Returned,2026-02-14 01:20:25
-SUB-0057,Submission Received,2026-02-14 00:51:00
-SUB-0057,Initial Review Started,2026-02-15 13:46:26
-SUB-0057,Formula Check Pass 1,2026-02-15 15:12:13
-SUB-0057,Formula Check Rework,2026-02-15 16:15:36
-SUB-0057,Comment Drafted,2026-02-15 17:31:39
-SUB-0057,Comment Draft Rework,2026-02-15 18:29:58
-SUB-0057,Feedback Returned,2026-02-15 19:25:45
-SUB-0058,Submission Received,2026-02-12 00:57:00
-SUB-0058,Initial Review Started,2026-02-14 21:08:15
-SUB-0058,Formula Check Pass 1,2026-02-14 22:26:43
-SUB-0058,Formula Check Rework,2026-02-14 22:40:21
-SUB-0058,Comment Drafted,2026-02-14 22:56:43
-SUB-0058,Comment Draft Rework,2026-02-14 23:09:15
-SUB-0058,Feedback Returned,2026-02-14 23:21:16
-SUB-0059,Submission Received,2026-02-09 22:28:00
-SUB-0059,Initial Review Started,2026-02-11 00:30:01
-SUB-0059,Formula Check Pass 1,2026-02-11 01:36:21
-SUB-0059,Formula Check Rework,2026-02-11 02:15:45
-SUB-0059,Comment Drafted,2026-02-11 03:03:02
-SUB-0059,Comment Draft Rework,2026-02-11 03:39:18
-SUB-0059,Feedback Returned,2026-02-11 04:13:59
-SUB-0060,Submission Received,2026-02-11 02:19:00
-SUB-0060,Initial Review Started,2026-02-13 11:47:49
-SUB-0060,Formula Check Pass 1,2026-02-13 13:10:24
-SUB-0060,Formula Check Rework,2026-02-13 13:25:34
-SUB-0060,Comment Drafted,2026-02-13 13:43:46
-SUB-0060,Comment Draft Rework,2026-02-13 13:57:43
-SUB-0060,Feedback Returned,2026-02-13 14:11:05
-SUB-0061,Submission Received,2026-02-11 18:16:00
-SUB-0061,Initial Review Started,2026-02-14 10:23:34
-SUB-0061,Formula Check Pass 1,2026-02-14 11:51:14
-SUB-0061,Formula Check Rework,2026-02-14 12:12:10
-SUB-0061,Comment Drafted,2026-02-14 12:37:17
-SUB-0061,Comment Draft Rework,2026-02-14 12:56:32
-SUB-0061,Feedback Returned,2026-02-14 13:14:58
-SUB-0062,Submission Received,2026-02-09 22:56:00
-SUB-0062,Initial Review Started,2026-02-11 12:28:38
-SUB-0062,Formula Check Pass 1,2026-02-11 13:57:54
-SUB-0062,Formula Check Rework,2026-02-11 15:13:04
-SUB-0062,Comment Drafted,2026-02-11 16:43:16
-SUB-0062,Comment Draft Rework,2026-02-11 17:52:25
-SUB-0062,Feedback Returned,2026-02-11 18:58:35
-SUB-0063,Submission Received,2026-02-18 03:27:00
-SUB-0063,Initial Review Started,2026-02-21 03:03:06
-SUB-0063,Formula Check Pass 1,2026-02-21 03:50:10
-SUB-0063,Formula Check Rework,2026-02-21 04:28:57
-SUB-0063,Comment Drafted,2026-02-21 05:15:29
-SUB-0063,Comment Draft Rework,2026-02-21 05:51:10
-SUB-0063,Feedback Returned,2026-02-21 06:25:18
-SUB-0064,Submission Received,2026-02-18 21:05:00
-SUB-0064,Initial Review Started,2026-02-21 02:24:42
-SUB-0064,Formula Check Pass 1,2026-02-21 02:44:06
-SUB-0064,Formula Check Rework,2026-02-21 03:34:38
-SUB-0064,Comment Drafted,2026-02-21 04:35:16
-SUB-0064,Comment Draft Rework,2026-02-21 05:21:45
-SUB-0064,Feedback Returned,2026-02-21 06:06:14
-SUB-0065,Submission Received,2026-02-20 03:01:00
-SUB-0065,Initial Review Started,2026-02-21 09:38:40
-SUB-0065,Formula Check Pass 1,2026-02-21 10:33:55
-SUB-0065,Formula Check Rework,2026-02-21 11:01:34
-SUB-0065,Comment Drafted,2026-02-21 11:34:44
-SUB-0065,Comment Draft Rework,2026-02-21 12:00:11
-SUB-0065,Feedback Returned,2026-02-21 12:24:31
-SUB-0066,Submission Received,2026-02-16 17:58:00
-SUB-0066,Initial Review Started,2026-02-19 03:44:40
-SUB-0066,Formula Check Pass 1,2026-02-19 05:12:38
-SUB-0066,Formula Check Rework,2026-02-19 05:23:24
-SUB-0066,Comment Drafted,2026-02-19 05:36:20
-SUB-0066,Comment Draft Rework,2026-02-19 05:46:15
-SUB-0066,Feedback Returned,2026-02-19 05:55:44
-SUB-0067,Submission Received,2026-02-18 20:02:00
-SUB-0067,Initial Review Started,2026-02-21 13:42:35
-SUB-0067,Formula Check Pass 1,2026-02-21 14:13:39
-SUB-0067,Formula Check Rework,2026-02-21 15:22:02
-SUB-0067,Comment Drafted,2026-02-21 16:44:06
-SUB-0067,Comment Draft Rework,2026-02-21 17:47:01
-SUB-0067,Feedback Returned,2026-02-21 18:47:12
-SUB-0068,Submission Received,2026-02-20 02:52:00
-SUB-0068,Initial Review Started,2026-02-22 23:14:16
-SUB-0068,Formula Check Pass 1,2026-02-23 00:01:30
-SUB-0068,Formula Check Rework,2026-02-23 00:50:29
-SUB-0068,Comment Drafted,2026-02-23 01:49:16
-SUB-0068,Comment Draft Rework,2026-02-23 02:34:20
-SUB-0068,Feedback Returned,2026-02-23 03:17:27
-SUB-0069,Submission Received,2026-02-28 01:31:00
-SUB-0069,Initial Review Started,2026-03-02 05:23:04
-SUB-0069,Formula Check Pass 1,2026-03-02 05:47:31
-SUB-0069,Formula Check Rework,2026-03-02 05:54:06
-SUB-0069,Comment Drafted,2026-03-02 06:02:01
-SUB-0069,Comment Draft Rework,2026-03-02 06:08:04
-SUB-0069,Feedback Returned,2026-03-02 06:13:53
-SUB-0070,Submission Received,2026-02-24 22:57:00
-SUB-0070,Initial Review Started,2026-02-25 08:36:58
-SUB-0070,Formula Check Pass 1,2026-02-25 10:02:32
-SUB-0070,Formula Check Rework,2026-02-25 11:00:10
-SUB-0070,Comment Drafted,2026-02-25 12:09:21
-SUB-0070,Comment Draft Rework,2026-02-25 13:02:23
-SUB-0070,Feedback Returned,2026-02-25 13:53:07
-SUB-0071,Submission Received,2026-02-25 17:38:00
-SUB-0071,Initial Review Started,2026-02-28 07:58:18
-SUB-0071,Formula Check Pass 1,2026-02-28 08:21:06
-SUB-0071,Formula Check Rework,2026-02-28 09:38:57
-SUB-0071,Comment Drafted,2026-02-28 11:12:22
-SUB-0071,Comment Draft Rework,2026-02-28 12:24:00
-SUB-0071,Feedback Returned,2026-02-28 13:32:31
-SUB-0072,Submission Received,2026-02-26 16:21:00
-SUB-0072,Initial Review Started,2026-03-01 15:58:02
-SUB-0072,Formula Check Pass 1,2026-03-01 16:46:07
-SUB-0072,Formula Check Rework,2026-03-01 18:08:37
-SUB-0072,Comment Drafted,2026-03-01 19:47:38
-SUB-0072,Comment Draft Rework,2026-03-01 21:03:33
-SUB-0072,Feedback Returned,2026-03-01 22:16:10
-SUB-0073,Submission Received,2026-02-27 18:02:00
-SUB-0073,Initial Review Started,2026-03-01 10:14:31
-SUB-0073,Formula Check Pass 1,2026-03-01 10:49:41
-SUB-0073,Formula Check Rework,2026-03-01 11:00:52
-SUB-0073,Comment Drafted,2026-03-01 11:14:17
-SUB-0073,Comment Draft Rework,2026-03-01 11:24:35
-SUB-0073,Feedback Returned,2026-03-01 11:34:26
-SUB-0074,Submission Received,2026-03-03 20:03:00
-SUB-0074,Initial Review Started,2026-03-06 19:52:21
-SUB-0074,Formula Check Pass 1,2026-03-06 21:17:28
-SUB-0074,Formula Check Rework,2026-03-06 22:14:36
-SUB-0074,Comment Drafted,2026-03-06 23:23:10
-SUB-0074,Comment Draft Rework,2026-03-07 00:15:44
-SUB-0074,Feedback Returned,2026-03-07 01:06:01
-SUB-0075,Submission Received,2026-03-07 04:13:00
-SUB-0075,Initial Review Started,2026-03-11 08:45:58
-SUB-0075,Formula Check Pass 1,2026-03-11 09:39:59
-SUB-0075,Formula Check Rework,2026-03-11 09:57:13
-SUB-0075,Comment Drafted,2026-03-11 10:17:54
-SUB-0075,Comment Draft Rework,2026-03-11 10:33:46
-SUB-0075,Feedback Returned,2026-03-11 10:48:57
-SUB-0076,Submission Received,2026-03-05 04:01:00
-SUB-0076,Initial Review Started,2026-03-17 02:33:51
-SUB-0076,Formula Check Pass 1,2026-03-17 02:54:31
-SUB-0076,Formula Check Rework,2026-03-17 02:57:38
-SUB-0076,Comment Drafted,2026-03-17 03:01:24
-SUB-0076,Comment Draft Rework,2026-03-17 03:04:16
-SUB-0076,Feedback Returned,2026-03-17 03:07:02
-SUB-0077,Submission Received,2026-03-07 00:12:00
-SUB-0077,Initial Review Started,2026-03-13 15:57:28
-SUB-0077,Formula Check Pass 1,2026-03-13 16:33:10
-SUB-0077,Formula Check Rework,2026-03-13 17:14:13
-SUB-0077,Comment Drafted,2026-03-13 18:03:30
-SUB-0077,Comment Draft Rework,2026-03-13 18:41:16
-SUB-0077,Feedback Returned,2026-03-13 19:17:25
-SUB-0078,Submission Received,2026-03-06 02:31:00
-SUB-0078,Initial Review Started,2026-03-13 02:38:09
-SUB-0078,Formula Check Pass 1,2026-03-13 04:00:08
-SUB-0078,Formula Check Rework,2026-03-13 05:27:30
-SUB-0078,Comment Drafted,2026-03-13 07:12:21
-SUB-0078,Comment Draft Rework,2026-03-13 08:32:44
-SUB-0078,Feedback Returned,2026-03-13 09:49:38
-SUB-0079,Submission Received,2026-03-05 03:13:00
-SUB-0079,Initial Review Started,2026-03-16 22:34:51
-SUB-0079,Formula Check Pass 1,2026-03-16 23:17:31
-SUB-0079,Formula Check Rework,2026-03-17 00:32:40
-SUB-0079,Comment Drafted,2026-03-17 02:02:51
-SUB-0079,Comment Draft Rework,2026-03-17 03:12:00
-SUB-0079,Feedback Returned,2026-03-17 04:18:09
-SUB-0080,Submission Received,2026-03-03 22:22:00
-SUB-0080,Initial Review Started,2026-03-15 17:35:00
-SUB-0080,Formula Check Pass 1,2026-03-15 18:53:16
-SUB-0080,Formula Check Rework,2026-03-15 18:56:01
-SUB-0080,Comment Drafted,2026-03-15 18:59:20
-SUB-0080,Comment Draft Rework,2026-03-15 19:01:53
-SUB-0080,Feedback Returned,2026-03-15 19:04:19
-SUB-0081,Submission Received,2026-03-04 22:10:00
-SUB-0081,Initial Review Started,2026-03-06 12:47:33
-SUB-0081,Formula Check Pass 1,2026-03-06 13:53:26
-SUB-0081,Formula Check Rework,2026-03-06 14:28:38
-SUB-0081,Comment Drafted,2026-03-06 15:10:53
-SUB-0081,Comment Draft Rework,2026-03-06 15:43:17
-SUB-0081,Feedback Returned,2026-03-06 16:14:16
-SUB-0082,Submission Received,2026-03-07 02:18:00
-SUB-0082,Initial Review Started,2026-03-14 16:22:39
-SUB-0082,Formula Check Pass 1,2026-03-14 17:30:31
-SUB-0082,Formula Check Rework,2026-03-14 17:36:01
-SUB-0082,Comment Drafted,2026-03-14 17:42:37
-SUB-0082,Comment Draft Rework,2026-03-14 17:47:41
-SUB-0082,Feedback Returned,2026-03-14 17:52:32
-SUB-0083,Submission Received,2026-03-03 18:17:00
-SUB-0083,Initial Review Started,2026-03-09 15:58:51
-SUB-0083,Formula Check Pass 1,2026-03-09 16:35:48
-SUB-0083,Formula Check Rework,2026-03-09 18:02:25
-SUB-0083,Comment Drafted,2026-03-09 19:46:21
-SUB-0083,Comment Draft Rework,2026-03-09 21:06:03
-SUB-0083,Feedback Returned,2026-03-09 22:22:17
-SUB-0084,Submission Received,2026-03-06 21:15:00
-SUB-0084,Initial Review Started,2026-03-08 06:20:38
-SUB-0084,Formula Check Pass 1,2026-03-08 07:42:10
-SUB-0084,Formula Check Rework,2026-03-08 08:02:56
-SUB-0084,Comment Drafted,2026-03-08 08:27:52
-SUB-0084,Comment Draft Rework,2026-03-08 08:46:59
-SUB-0084,Feedback Returned,2026-03-08 09:05:17
-SUB-0085,Submission Received,2026-03-03 16:21:00
-SUB-0085,Initial Review Started,2026-03-08 21:05:57
-SUB-0085,Formula Check Pass 1,2026-03-08 21:58:08
-SUB-0085,Formula Check Rework,2026-03-08 22:44:07
-SUB-0085,Comment Drafted,2026-03-08 23:39:19
-SUB-0085,Comment Draft Rework,2026-03-09 00:21:38
-SUB-0085,Feedback Returned,2026-03-09 01:02:07
-SUB-0086,Submission Received,2026-03-03 19:32:00
-SUB-0086,Initial Review Started,2026-03-13 08:27:36
-SUB-0086,Formula Check Pass 1,2026-03-13 08:52:09
-SUB-0086,Formula Check Rework,2026-03-13 10:05:57
-SUB-0086,Comment Drafted,2026-03-13 11:34:31
-SUB-0086,Comment Draft Rework,2026-03-13 12:42:25
-SUB-0086,Feedback Returned,2026-03-13 13:47:23
-SUB-0087,Submission Received,2026-03-03 22:37:00
-SUB-0087,Initial Review Started,2026-03-05 09:37:00
-SUB-0087,Formula Check Pass 1,2026-03-05 09:56:37
-SUB-0087,Formula Check Rework,2026-03-05 10:25:02
-SUB-0087,Comment Drafted,2026-03-05 10:59:09
-SUB-0087,Comment Draft Rework,2026-03-05 11:25:18
-SUB-0087,Feedback Returned,2026-03-05 11:50:19
-SUB-0088,Submission Received,2026-03-03 17:37:00
-SUB-0088,Initial Review Started,2026-03-15 06:25:58
-SUB-0088,Formula Check Pass 1,2026-03-15 07:45:24
-SUB-0088,Formula Check Rework,2026-03-15 08:00:38
-SUB-0088,Comment Drafted,2026-03-15 08:18:55
-SUB-0088,Comment Draft Rework,2026-03-15 08:32:56
-SUB-0088,Feedback Returned,2026-03-15 08:46:21
-SUB-0089,Submission Received,2026-03-06 22:48:00
-SUB-0089,Initial Review Started,2026-03-11 12:53:58
-SUB-0089,Formula Check Pass 1,2026-03-11 14:22:52
-SUB-0089,Formula Check Rework,2026-03-11 14:37:35
-SUB-0089,Comment Drafted,2026-03-11 14:55:16
-SUB-0089,Comment Draft Rework,2026-03-11 15:08:49
-SUB-0089,Feedback Returned,2026-03-11 15:21:47
-SUB-0090,Submission Received,2026-03-07 02:09:00
-SUB-0090,Initial Review Started,2026-03-08 13:42:36
-SUB-0090,Formula Check Pass 1,2026-03-08 15:00:44
-SUB-0090,Formula Check Rework,2026-03-08 16:21:10
-SUB-0090,Comment Drafted,2026-03-08 17:57:41
-SUB-0090,Comment Draft Rework,2026-03-08 19:11:41
-SUB-0090,Feedback Returned,2026-03-08 20:22:29
-SUB-0091,Submission Received,2026-03-06 03:44:00
-SUB-0091,Initial Review Started,2026-03-16 02:09:32
-SUB-0091,Formula Check Pass 1,2026-03-16 02:37:34
-SUB-0091,Formula Check Rework,2026-03-16 03:25:25
-SUB-0091,Comment Drafted,2026-03-16 04:22:50
-SUB-0091,Comment Draft Rework,2026-03-16 05:06:52
-SUB-0091,Feedback Returned,2026-03-16 05:48:59
-SUB-0092,Submission Received,2026-03-07 01:53:00
-SUB-0092,Initial Review Started,2026-03-17 00:29:25
-SUB-0092,Formula Check Pass 1,2026-03-17 00:48:34
-SUB-0092,Formula Check Rework,2026-03-17 01:50:49
-SUB-0092,Comment Drafted,2026-03-17 03:05:31
-SUB-0092,Comment Draft Rework,2026-03-17 04:02:47
-SUB-0092,Feedback Returned,2026-03-17 04:57:35
-SUB-0093,Submission Received,2026-03-03 17:01:00
-SUB-0093,Initial Review Started,2026-03-05 04:04:05
-SUB-0093,Formula Check Pass 1,2026-03-05 05:07:58
-SUB-0093,Formula Check Rework,2026-03-05 06:34:23
-SUB-0093,Comment Drafted,2026-03-05 08:18:05
-SUB-0093,Comment Draft Rework,2026-03-05 09:37:35
-SUB-0093,Feedback Returned,2026-03-05 10:53:38
-SUB-0094,Submission Received,2026-03-05 23:35:00
-SUB-0094,Initial Review Started,2026-03-07 12:59:21
-SUB-0094,Formula Check Pass 1,2026-03-07 13:18:43
-SUB-0094,Formula Check Rework,2026-03-07 14:07:14
-SUB-0094,Comment Drafted,2026-03-07 15:05:28
-SUB-0094,Comment Draft Rework,2026-03-07 15:50:07
-SUB-0094,Feedback Returned,2026-03-07 16:32:50
-SUB-0095,Submission Received,2026-03-03 23:16:00
-SUB-0095,Initial Review Started,2026-03-05 00:08:29
-SUB-0095,Formula Check Pass 1,2026-03-05 01:23:55
-SUB-0095,Formula Check Rework,2026-03-05 02:31:38
-SUB-0095,Comment Drafted,2026-03-05 03:52:54
-SUB-0095,Comment Draft Rework,2026-03-05 04:55:13
-SUB-0095,Feedback Returned,2026-03-05 05:54:49
-SUB-0096,Submission Received,2026-03-07 00:05:00
-SUB-0096,Initial Review Started,2026-03-15 06:08:18
-SUB-0096,Formula Check Pass 1,2026-03-15 06:31:03
-SUB-0096,Formula Check Rework,2026-03-15 07:37:45
-SUB-0096,Comment Drafted,2026-03-15 08:57:47
-SUB-0096,Comment Draft Rework,2026-03-15 09:59:10
-SUB-0096,Feedback Returned,2026-03-15 10:57:52
-SUB-0097,Submission Received,2026-03-05 04:04:00
-SUB-0097,Initial Review Started,2026-03-15 11:26:45
-SUB-0097,Formula Check Pass 1,2026-03-15 12:01:39
-SUB-0097,Formula Check Rework,2026-03-15 13:10:05
-SUB-0097,Comment Drafted,2026-03-15 14:32:13
-SUB-0097,Comment Draft Rework,2026-03-15 15:35:12
-SUB-0097,Feedback Returned,2026-03-15 16:35:26
-SUB-0098,Submission Received,2026-03-04 03:41:00
-SUB-0098,Initial Review Started,2026-03-15 21:16:38
-SUB-0098,Formula Check Pass 1,2026-03-15 22:10:12
-SUB-0098,Formula Check Rework,2026-03-15 22:45:33
-SUB-0098,Comment Drafted,2026-03-15 23:27:59
-SUB-0098,Comment Draft Rework,2026-03-16 00:00:31
-SUB-0098,Feedback Returned,2026-03-16 00:31:38
-SUB-0099,Submission Received,2026-03-06 02:18:00
-SUB-0099,Initial Review Started,2026-03-15 12:46:48
-SUB-0099,Formula Check Pass 1,2026-03-15 13:49:13
-SUB-0099,Formula Check Rework,2026-03-15 14:47:36
-SUB-0099,Comment Drafted,2026-03-15 15:57:40
-SUB-0099,Comment Draft Rework,2026-03-15 16:51:23
-SUB-0099,Feedback Returned,2026-03-15 17:42:46
-SUB-0100,Submission Received,2026-03-03 01:09:00
-SUB-0100,Initial Review Started,2026-03-07 16:44:17
-SUB-0100,Formula Check Pass 1,2026-03-07 17:49:11
-SUB-0100,Formula Check Rework,2026-03-07 18:52:00
-SUB-0100,Comment Drafted,2026-03-07 20:07:23
-SUB-0100,Comment Draft Rework,2026-03-07 21:05:11
-SUB-0100,Feedback Returned,2026-03-07 22:00:28
-SUB-0101,Submission Received,2026-03-07 01:08:00
-SUB-0101,Initial Review Started,2026-03-08 04:25:30
-SUB-0101,Formula Check Pass 1,2026-03-08 04:47:52
-SUB-0101,Formula Check Rework,2026-03-08 05:13:09
-SUB-0101,Comment Drafted,2026-03-08 05:43:29
-SUB-0101,Comment Draft Rework,2026-03-08 06:06:45
-SUB-0101,Feedback Returned,2026-03-08 06:29:01
-SUB-0102,Submission Received,2026-03-03 03:13:00
-SUB-0102,Initial Review Started,2026-03-11 13:36:12
-SUB-0102,Formula Check Pass 1,2026-03-11 14:15:09
-SUB-0102,Formula Check Rework,2026-03-11 15:02:21
-SUB-0102,Comment Drafted,2026-03-11 15:59:01
-SUB-0102,Comment Draft Rework,2026-03-11 16:42:27
-SUB-0102,Feedback Returned,2026-03-11 17:24:00
-SUB-0103,Submission Received,2026-03-05 23:29:00
-SUB-0103,Initial Review Started,2026-03-15 10:00:58
-SUB-0103,Formula Check Pass 1,2026-03-15 11:30:29
-SUB-0103,Formula Check Rework,2026-03-15 12:20:34
-SUB-0103,Comment Drafted,2026-03-15 13:20:41
-SUB-0103,Comment Draft Rework,2026-03-15 14:06:46
-SUB-0103,Feedback Returned,2026-03-15 14:50:51
-SUB-0104,Submission Received,2026-03-04 17:59:00
-SUB-0104,Initial Review Started,2026-03-10 22:50:27
-SUB-0104,Formula Check Pass 1,2026-03-10 23:29:18
-SUB-0104,Formula Check Rework,2026-03-10 23:37:34
-SUB-0104,Comment Drafted,2026-03-10 23:47:29
-SUB-0104,Comment Draft Rework,2026-03-10 23:55:05
-SUB-0104,Feedback Returned,2026-03-11 00:02:22
-SUB-0105,Submission Received,2026-03-06 23:17:00
-SUB-0105,Initial Review Started,2026-03-12 05:24:40
-SUB-0105,Formula Check Pass 1,2026-03-12 06:48:40
-SUB-0105,Formula Check Rework,2026-03-12 08:12:31
-SUB-0105,Comment Drafted,2026-03-12 09:53:08
-SUB-0105,Comment Draft Rework,2026-03-12 11:10:16
-SUB-0105,Feedback Returned,2026-03-12 12:24:04
-SUB-0106,Submission Received,2026-03-03 01:05:00
-SUB-0106,Initial Review Started,2026-03-05 14:30:10
-SUB-0106,Formula Check Pass 1,2026-03-05 15:25:54
-SUB-0106,Formula Check Rework,2026-03-05 16:51:43
-SUB-0106,Comment Drafted,2026-03-05 18:34:41
-SUB-0106,Comment Draft Rework,2026-03-05 19:53:38
-SUB-0106,Feedback Returned,2026-03-05 21:09:10
-SUB-0107,Submission Received,2026-03-04 01:52:00
-SUB-0107,Initial Review Started,2026-03-12 00:37:37
-SUB-0107,Formula Check Pass 1,2026-03-12 01:15:45
-SUB-0107,Formula Check Rework,2026-03-12 01:27:13
-SUB-0107,Comment Drafted,2026-03-12 01:40:59
-SUB-0107,Comment Draft Rework,2026-03-12 01:51:32
-SUB-0107,Feedback Returned,2026-03-12 02:01:38
-SUB-0108,Submission Received,2026-03-11 19:31:00
-SUB-0108,Initial Review Started,2026-03-14 12:38:32
-SUB-0108,Formula Check Pass 1,2026-03-14 13:31:33
-SUB-0108,Formula Check Rework,2026-03-14 13:35:14
-SUB-0108,Comment Drafted,2026-03-14 13:39:40
-SUB-0108,Comment Draft Rework,2026-03-14 13:43:04
-SUB-0108,Feedback Returned,2026-03-14 13:46:20
-SUB-0109,Submission Received,2026-03-09 23:43:00
-SUB-0109,Initial Review Started,2026-03-11 10:48:27
-SUB-0109,Formula Check Pass 1,2026-03-11 11:28:12
-SUB-0109,Formula Check Rework,2026-03-11 11:42:09
-SUB-0109,Comment Drafted,2026-03-11 11:58:53
-SUB-0109,Comment Draft Rework,2026-03-11 12:11:43
-SUB-0109,Feedback Returned,2026-03-11 12:24:00
-SUB-0110,Submission Received,2026-03-11 22:20:00
-SUB-0110,Initial Review Started,2026-03-12 11:15:30
-SUB-0110,Formula Check Pass 1,2026-03-12 11:57:21
-SUB-0110,Formula Check Rework,2026-03-12 12:27:34
-SUB-0110,Comment Drafted,2026-03-12 13:03:50
-SUB-0110,Comment Draft Rework,2026-03-12 13:31:39
-SUB-0110,Feedback Returned,2026-03-12 13:58:15
-SUB-0111,Submission Received,2026-03-11 22:07:00
-SUB-0111,Initial Review Started,2026-03-14 18:04:36
-SUB-0111,Formula Check Pass 1,2026-03-14 18:36:41
-SUB-0111,Formula Check Rework,2026-03-14 18:39:13
-SUB-0111,Comment Drafted,2026-03-14 18:42:15
-SUB-0111,Comment Draft Rework,2026-03-14 18:44:36
-SUB-0111,Feedback Returned,2026-03-14 18:46:50
-SUB-0112,Submission Received,2026-03-11 20:23:00
-SUB-0112,Initial Review Started,2026-03-12 05:32:59
-SUB-0112,Formula Check Pass 1,2026-03-12 06:19:04
-SUB-0112,Formula Check Rework,2026-03-12 07:37:33
-SUB-0112,Comment Drafted,2026-03-12 09:11:45
-SUB-0112,Comment Draft Rework,2026-03-12 10:23:58
-SUB-0112,Feedback Returned,2026-03-12 11:33:03
-SUB-0113,Submission Received,2026-03-09 21:59:00
-SUB-0113,Initial Review Started,2026-03-11 07:32:54
-SUB-0113,Formula Check Pass 1,2026-03-11 08:10:43
-SUB-0113,Formula Check Rework,2026-03-11 08:16:29
-SUB-0113,Comment Drafted,2026-03-11 08:23:24
-SUB-0113,Comment Draft Rework,2026-03-11 08:28:43
-SUB-0113,Feedback Returned,2026-03-11 08:33:48
-SUB-0114,Submission Received,2026-03-09 16:53:00
-SUB-0114,Initial Review Started,2026-03-11 18:10:05
-SUB-0114,Formula Check Pass 1,2026-03-11 19:13:48
-SUB-0114,Formula Check Rework,2026-03-11 19:28:28
-SUB-0114,Comment Drafted,2026-03-11 19:46:05
-SUB-0114,Comment Draft Rework,2026-03-11 19:59:35
-SUB-0114,Feedback Returned,2026-03-11 20:12:31
-SUB-0115,Submission Received,2026-03-18 22:32:00
-SUB-0115,Initial Review Started,2026-03-20 00:32:30
-SUB-0115,Formula Check Pass 1,2026-03-20 01:46:10
-SUB-0115,Formula Check Rework,2026-03-20 02:57:09
-SUB-0115,Comment Drafted,2026-03-20 04:22:19
-SUB-0115,Comment Draft Rework,2026-03-20 05:27:38
-SUB-0115,Feedback Returned,2026-03-20 06:30:06
-SUB-0116,Submission Received,2026-03-19 16:51:00
-SUB-0116,Initial Review Started,2026-03-22 00:49:59
-SUB-0116,Formula Check Pass 1,2026-03-22 01:36:47
-SUB-0116,Formula Check Rework,2026-03-22 02:55:47
-SUB-0116,Comment Drafted,2026-03-22 04:30:35
-SUB-0116,Comment Draft Rework,2026-03-22 05:43:16
-SUB-0116,Feedback Returned,2026-03-22 06:52:48
-SUB-0117,Submission Received,2026-03-21 00:13:00
-SUB-0117,Initial Review Started,2026-03-23 05:22:18
-SUB-0117,Formula Check Pass 1,2026-03-23 05:43:52
-SUB-0117,Formula Check Rework,2026-03-23 06:50:10
-SUB-0117,Comment Drafted,2026-03-23 08:09:45
-SUB-0117,Comment Draft Rework,2026-03-23 09:10:45
-SUB-0117,Feedback Returned,2026-03-23 10:09:07
-SUB-0118,Submission Received,2026-03-20 01:48:00
-SUB-0118,Initial Review Started,2026-03-20 15:54:43
-SUB-0118,Formula Check Pass 1,2026-03-20 17:15:19
-SUB-0118,Formula Check Rework,2026-03-20 17:59:47
-SUB-0118,Comment Drafted,2026-03-20 18:53:09
-SUB-0118,Comment Draft Rework,2026-03-20 19:34:04
-SUB-0118,Feedback Returned,2026-03-20 20:13:13
-SUB-0119,Submission Received,2026-03-20 18:10:00
-SUB-0119,Initial Review Started,2026-03-22 06:41:50
-SUB-0119,Formula Check Pass 1,2026-03-22 07:24:35
-SUB-0119,Formula Check Rework,2026-03-22 07:52:26
-SUB-0119,Comment Drafted,2026-03-22 08:25:51
-SUB-0119,Comment Draft Rework,2026-03-22 08:51:29
-SUB-0119,Feedback Returned,2026-03-22 09:16:00
-SUB-0120,Submission Received,2026-03-18 22:41:00
-SUB-0120,Initial Review Started,2026-03-19 19:31:17
-SUB-0120,Formula Check Pass 1,2026-03-19 20:24:05
-SUB-0120,Formula Check Rework,2026-03-19 21:24:46
-SUB-0120,Comment Drafted,2026-03-19 22:37:36
-SUB-0120,Comment Draft Rework,2026-03-19 23:33:27
-SUB-0120,Feedback Returned,2026-03-20 00:26:52
-SUB-0121,Submission Received,2026-03-23 18:41:00
-SUB-0121,Initial Review Started,2026-03-24 10:20:48
-SUB-0121,Formula Check Pass 1,2026-03-24 10:53:46
-SUB-0121,Formula Check Rework,2026-03-24 12:15:26
-SUB-0121,Comment Drafted,2026-03-24 13:53:27
-SUB-0121,Comment Draft Rework,2026-03-24 15:08:35
-SUB-0121,Feedback Returned,2026-03-24 16:20:28
-SUB-0122,Submission Received,2026-03-27 00:14:00
-SUB-0122,Initial Review Started,2026-03-28 11:28:26
-SUB-0122,Formula Check Pass 1,2026-03-28 12:10:24
-SUB-0122,Formula Check Rework,2026-03-28 13:19:05
-SUB-0122,Comment Drafted,2026-03-28 14:41:31
-SUB-0122,Comment Draft Rework,2026-03-28 15:44:43
-SUB-0122,Feedback Returned,2026-03-28 16:45:10
-SUB-0123,Submission Received,2026-03-26 18:35:00
-SUB-0123,Initial Review Started,2026-03-27 12:18:47
-SUB-0123,Formula Check Pass 1,2026-03-27 12:43:19
-SUB-0123,Formula Check Rework,2026-03-27 13:15:04
-SUB-0123,Comment Drafted,2026-03-27 13:53:11
-SUB-0123,Comment Draft Rework,2026-03-27 14:22:24
-SUB-0123,Feedback Returned,2026-03-27 14:50:22
-SUB-0124,Submission Received,2026-03-23 21:15:00
-SUB-0124,Initial Review Started,2026-03-25 02:48:00
-SUB-0124,Formula Check Pass 1,2026-03-25 04:04:16
-SUB-0124,Formula Check Rework,2026-03-25 04:23:39
-SUB-0124,Comment Drafted,2026-03-25 04:46:55
-SUB-0124,Comment Draft Rework,2026-03-25 05:04:46
-SUB-0124,Feedback Returned,2026-03-25 05:21:50
-SUB-0125,Submission Received,2026-03-24 03:55:00
-SUB-0125,Initial Review Started,2026-03-25 12:27:20
-SUB-0125,Formula Check Pass 1,2026-03-25 13:15:08
-SUB-0125,Formula Check Rework,2026-03-25 14:03:01
-SUB-0125,Comment Drafted,2026-03-25 15:00:29
-SUB-0125,Comment Draft Rework,2026-03-25 15:44:32
-SUB-0125,Feedback Returned,2026-03-25 16:26:41
-SUB-0126,Submission Received,2026-04-02 20:21:00
-SUB-0126,Initial Review Started,2026-04-12 02:54:26
-SUB-0126,Formula Check Pass 1,2026-04-12 03:48:18
-SUB-0126,Formula Check Rework,2026-04-12 04:40:37
-SUB-0126,Comment Drafted,2026-04-12 05:43:24
-SUB-0126,Comment Draft Rework,2026-04-12 06:31:33
-SUB-0126,Feedback Returned,2026-04-12 07:17:36
-SUB-0127,Submission Received,2026-04-01 18:43:00
-SUB-0127,Initial Review Started,2026-04-08 07:36:47
-SUB-0127,Formula Check Pass 1,2026-04-08 08:40:07
-SUB-0127,Formula Check Rework,2026-04-08 09:57:58
-SUB-0127,Comment Drafted,2026-04-08 11:31:24
-SUB-0127,Comment Draft Rework,2026-04-08 12:43:02
-SUB-0127,Feedback Returned,2026-04-08 13:51:34
-SUB-0128,Submission Received,2026-03-31 17:17:00
-SUB-0128,Initial Review Started,2026-04-11 14:02:09
-SUB-0128,Formula Check Pass 1,2026-04-11 14:47:50
-SUB-0128,Formula Check Rework,2026-04-11 15:46:29
-SUB-0128,Comment Drafted,2026-04-11 16:56:52
-SUB-0128,Comment Draft Rework,2026-04-11 17:50:50
-SUB-0128,Feedback Returned,2026-04-11 18:42:27
-SUB-0129,Submission Received,2026-04-02 20:54:00
-SUB-0129,Initial Review Started,2026-04-12 19:53:07
-SUB-0129,Formula Check Pass 1,2026-04-12 21:20:49
-SUB-0129,Formula Check Rework,2026-04-12 21:33:34
-SUB-0129,Comment Drafted,2026-04-12 21:48:53
-SUB-0129,Comment Draft Rework,2026-04-12 22:00:38
-SUB-0129,Feedback Returned,2026-04-12 22:11:52
-SUB-0130,Submission Received,2026-04-03 03:48:00
-SUB-0130,Initial Review Started,2026-04-14 00:15:49
-SUB-0130,Formula Check Pass 1,2026-04-14 01:07:54
-SUB-0130,Formula Check Rework,2026-04-14 02:01:22
-SUB-0130,Comment Drafted,2026-04-14 03:05:31
-SUB-0130,Comment Draft Rework,2026-04-14 03:54:42
-SUB-0130,Feedback Returned,2026-04-14 04:41:46
-SUB-0131,Submission Received,2026-03-30 17:25:00
-SUB-0131,Initial Review Started,2026-04-10 22:59:58
-SUB-0131,Formula Check Pass 1,2026-04-11 00:24:48
-SUB-0131,Formula Check Rework,2026-04-11 01:13:01
-SUB-0131,Comment Drafted,2026-04-11 02:10:52
-SUB-0131,Comment Draft Rework,2026-04-11 02:55:14
-SUB-0131,Feedback Returned,2026-04-11 03:37:40
-SUB-0132,Submission Received,2026-04-02 23:15:00
-SUB-0132,Initial Review Started,2026-04-12 13:59:25
-SUB-0132,Formula Check Pass 1,2026-04-12 14:33:31
-SUB-0132,Formula Check Rework,2026-04-12 14:48:28
-SUB-0132,Comment Drafted,2026-04-12 15:06:25
-SUB-0132,Comment Draft Rework,2026-04-12 15:20:11
-SUB-0132,Feedback Returned,2026-04-12 15:33:21
-SUB-0133,Submission Received,2026-03-31 03:44:00
-SUB-0133,Initial Review Started,2026-04-08 06:37:59
-SUB-0133,Formula Check Pass 1,2026-04-08 07:51:03
-SUB-0133,Formula Check Rework,2026-04-08 08:33:01
-SUB-0133,Comment Drafted,2026-04-08 09:23:23
-SUB-0133,Comment Draft Rework,2026-04-08 10:02:00
-SUB-0133,Feedback Returned,2026-04-08 10:38:57
-SUB-0134,Submission Received,2026-04-04 04:02:00
-SUB-0134,Initial Review Started,2026-04-05 04:23:38
-SUB-0134,Formula Check Pass 1,2026-04-05 04:50:41
-SUB-0134,Formula Check Rework,2026-04-05 05:42:34
-SUB-0134,Comment Drafted,2026-04-05 06:44:50
-SUB-0134,Comment Draft Rework,2026-04-05 07:32:34
-SUB-0134,Feedback Returned,2026-04-05 08:18:14
-SUB-0135,Submission Received,2026-03-31 02:45:00
-SUB-0135,Initial Review Started,2026-04-04 10:56:54
-SUB-0135,Formula Check Pass 1,2026-04-04 11:24:07
-SUB-0135,Formula Check Rework,2026-04-04 11:47:54
-SUB-0135,Comment Drafted,2026-04-04 12:16:26
-SUB-0135,Comment Draft Rework,2026-04-04 12:38:19
-SUB-0135,Feedback Returned,2026-04-04 12:59:15
-SUB-0136,Submission Received,2026-04-03 03:48:00
-SUB-0136,Initial Review Started,2026-04-05 09:24:10
-SUB-0136,Formula Check Pass 1,2026-04-05 09:47:14
-SUB-0136,Formula Check Rework,2026-04-05 10:35:08
-SUB-0136,Comment Drafted,2026-04-05 11:32:38
-SUB-0136,Comment Draft Rework,2026-04-05 12:16:43
-SUB-0136,Feedback Returned,2026-04-05 12:58:53
-SUB-0137,Submission Received,2026-04-03 19:24:00
-SUB-0137,Initial Review Started,2026-04-07 16:16:22
-SUB-0137,Formula Check Pass 1,2026-04-07 17:31:17
-SUB-0137,Formula Check Rework,2026-04-07 17:32:53
-SUB-0137,Comment Drafted,2026-04-07 17:34:48
-SUB-0137,Comment Draft Rework,2026-04-07 17:36:16
-SUB-0137,Feedback Returned,2026-04-07 17:37:41
-SUB-0138,Submission Received,2026-04-03 20:29:00
-SUB-0138,Initial Review Started,2026-04-07 22:02:04
-SUB-0138,Formula Check Pass 1,2026-04-07 22:42:51
-SUB-0138,Formula Check Rework,2026-04-07 23:58:38
-SUB-0138,Comment Drafted,2026-04-08 01:29:34
-SUB-0138,Comment Draft Rework,2026-04-08 02:39:18
-SUB-0138,Feedback Returned,2026-04-08 03:46:00
-SUB-0139,Submission Received,2026-03-31 23:33:00
-SUB-0139,Initial Review Started,2026-04-04 13:31:43
-SUB-0139,Formula Check Pass 1,2026-04-04 14:07:30
-SUB-0139,Formula Check Rework,2026-04-04 15:34:01
-SUB-0139,Comment Drafted,2026-04-04 17:17:50
-SUB-0139,Comment Draft Rework,2026-04-04 18:37:25
-SUB-0139,Feedback Returned,2026-04-04 19:53:34
-SUB-0140,Submission Received,2026-04-01 16:01:00
-SUB-0140,Initial Review Started,2026-04-04 19:15:47
-SUB-0140,Formula Check Pass 1,2026-04-04 20:37:29
-SUB-0140,Formula Check Rework,2026-04-04 21:36:15
-SUB-0140,Comment Drafted,2026-04-04 22:46:47
-SUB-0140,Comment Draft Rework,2026-04-04 23:40:51
-SUB-0140,Feedback Returned,2026-04-05 00:32:35
-SUB-0141,Submission Received,2026-03-30 20:14:00
-SUB-0141,Initial Review Started,2026-04-08 04:24:54
-SUB-0141,Formula Check Pass 1,2026-04-08 05:49:30
-SUB-0141,Formula Check Rework,2026-04-08 06:11:04
-SUB-0141,Comment Drafted,2026-04-08 06:36:57
-SUB-0141,Comment Draft Rework,2026-04-08 06:56:48
-SUB-0141,Feedback Returned,2026-04-08 07:15:47
-SUB-0142,Submission Received,2026-03-31 03:21:00
-SUB-0142,Initial Review Started,2026-04-09 00:59:22
-SUB-0142,Formula Check Pass 1,2026-04-09 01:43:28
-SUB-0142,Formula Check Rework,2026-04-09 02:20:02
-SUB-0142,Comment Drafted,2026-04-09 03:03:55
-SUB-0142,Comment Draft Rework,2026-04-09 03:37:34
-SUB-0142,Feedback Returned,2026-04-09 04:09:46
-SUB-0143,Submission Received,2026-03-31 04:18:00
-SUB-0143,Initial Review Started,2026-04-09 07:25:48
-SUB-0143,Formula Check Pass 1,2026-04-09 08:20:09
-SUB-0143,Formula Check Rework,2026-04-09 08:39:48
-SUB-0143,Comment Drafted,2026-04-09 09:03:24
-SUB-0143,Comment Draft Rework,2026-04-09 09:21:29
-SUB-0143,Feedback Returned,2026-04-09 09:38:48
-SUB-0144,Submission Received,2026-03-31 20:49:00
-SUB-0144,Initial Review Started,2026-04-10 21:17:52
-SUB-0144,Formula Check Pass 1,2026-04-10 21:52:29
-SUB-0144,Formula Check Rework,2026-04-10 22:13:34
-SUB-0144,Comment Drafted,2026-04-10 22:38:53
-SUB-0144,Comment Draft Rework,2026-04-10 22:58:18
-SUB-0144,Feedback Returned,2026-04-10 23:16:52
-SUB-0145,Submission Received,2026-04-01 17:39:00
-SUB-0145,Initial Review Started,2026-04-08 04:31:54
-SUB-0145,Formula Check Pass 1,2026-04-08 05:03:23
-SUB-0145,Formula Check Rework,2026-04-08 05:24:39
-SUB-0145,Comment Drafted,2026-04-08 05:50:10
-SUB-0145,Comment Draft Rework,2026-04-08 06:09:44
-SUB-0145,Feedback Returned,2026-04-08 06:28:27
-SUB-0146,Submission Received,2026-04-03 02:03:00
-SUB-0146,Initial Review Started,2026-04-14 12:31:22
-SUB-0146,Formula Check Pass 1,2026-04-14 12:59:55
-SUB-0146,Formula Check Rework,2026-04-14 13:36:14
-SUB-0146,Comment Drafted,2026-04-14 14:19:49
-SUB-0146,Comment Draft Rework,2026-04-14 14:53:14
-SUB-0146,Feedback Returned,2026-04-14 15:25:12
-SUB-0147,Submission Received,2026-03-31 16:38:00
-SUB-0147,Initial Review Started,2026-04-03 06:05:52
-SUB-0147,Formula Check Pass 1,2026-04-03 06:27:36
-SUB-0147,Formula Check Rework,2026-04-03 06:34:25
-SUB-0147,Comment Drafted,2026-04-03 06:42:36
-SUB-0147,Comment Draft Rework,2026-04-03 06:48:52
-SUB-0147,Feedback Returned,2026-04-03 06:54:53
-SUB-0148,Submission Received,2026-04-02 23:57:00
-SUB-0148,Initial Review Started,2026-04-11 19:55:37
-SUB-0148,Formula Check Pass 1,2026-04-11 20:36:15
-SUB-0148,Formula Check Rework,2026-04-11 20:47:46
-SUB-0148,Comment Drafted,2026-04-11 21:01:35
-SUB-0148,Comment Draft Rework,2026-04-11 21:12:10
-SUB-0148,Feedback Returned,2026-04-11 21:22:19
-SUB-0149,Submission Received,2026-03-30 18:21:00
-SUB-0149,Initial Review Started,2026-04-02 20:41:25
-SUB-0149,Formula Check Pass 1,2026-04-02 21:46:24
-SUB-0149,Formula Check Rework,2026-04-02 22:34:20
-SUB-0149,Comment Drafted,2026-04-02 23:31:52
-SUB-0149,Comment Draft Rework,2026-04-03 00:15:58
-SUB-0149,Feedback Returned,2026-04-03 00:58:10
-SUB-0150,Submission Received,2026-04-02 16:19:00
-SUB-0150,Initial Review Started,2026-04-10 23:43:34
-SUB-0150,Formula Check Pass 1,2026-04-11 00:28:49
-SUB-0150,Formula Check Rework,2026-04-11 01:03:24
-SUB-0150,Comment Drafted,2026-04-11 01:44:55
-SUB-0150,Comment Draft Rework,2026-04-11 02:16:44
-SUB-0150,Feedback Returned,2026-04-11 02:47:11
-SUB-0151,Submission Received,2026-04-01 23:10:00
-SUB-0151,Initial Review Started,2026-04-04 03:55:53
-SUB-0151,Formula Check Pass 1,2026-04-04 04:19:31
-SUB-0151,Formula Check Rework,2026-04-04 04:28:09
-SUB-0151,Comment Drafted,2026-04-04 04:38:32
-SUB-0151,Comment Draft Rework,2026-04-04 04:46:29
-SUB-0151,Feedback Returned,2026-04-04 04:54:06
-SUB-0152,Submission Received,2026-04-02 17:35:00
-SUB-0152,Initial Review Started,2026-04-14 08:09:03
-SUB-0152,Formula Check Pass 1,2026-04-14 08:41:59
-SUB-0152,Formula Check Rework,2026-04-14 09:15:02
-SUB-0152,Comment Drafted,2026-04-14 09:54:43
-SUB-0152,Comment Draft Rework,2026-04-14 10:25:08
-SUB-0152,Feedback Returned,2026-04-14 10:54:14
-SUB-0153,Submission Received,2026-04-02 04:27:00
-SUB-0153,Initial Review Started,2026-04-04 03:37:07
-SUB-0153,Formula Check Pass 1,2026-04-04 04:45:54
-SUB-0153,Formula Check Rework,2026-04-04 05:04:43
-SUB-0153,Comment Drafted,2026-04-04 05:27:18
-SUB-0153,Comment Draft Rework,2026-04-04 05:44:37
-SUB-0153,Feedback Returned,2026-04-04 06:01:11
-SUB-0154,Submission Received,2026-04-03 23:12:00
-SUB-0154,Initial Review Started,2026-04-08 12:33:13
-SUB-0154,Formula Check Pass 1,2026-04-08 13:44:18
-SUB-0154,Formula Check Rework,2026-04-08 14:27:47
-SUB-0154,Comment Drafted,2026-04-08 15:19:59
-SUB-0154,Comment Draft Rework,2026-04-08 16:00:00
-SUB-0154,Feedback Returned,2026-04-08 16:38:17
-SUB-0155,Submission Received,2026-04-02 19:51:00
-SUB-0155,Initial Review Started,2026-04-10 16:57:28
-SUB-0155,Formula Check Pass 1,2026-04-10 17:44:36
-SUB-0155,Formula Check Rework,2026-04-10 18:19:20
-SUB-0155,Comment Drafted,2026-04-10 19:01:01
-SUB-0155,Comment Draft Rework,2026-04-10 19:32:58
-SUB-0155,Feedback Returned,2026-04-10 20:03:33
-SUB-0156,Submission Received,2026-04-02 17:51:00
-SUB-0156,Initial Review Started,2026-04-13 20:45:00
-SUB-0156,Formula Check Pass 1,2026-04-13 21:21:31
-SUB-0156,Formula Check Rework,2026-04-13 22:29:09
-SUB-0156,Comment Drafted,2026-04-13 23:50:18
-SUB-0156,Comment Draft Rework,2026-04-14 00:52:31
-SUB-0156,Feedback Returned,2026-04-14 01:52:03
-SUB-0157,Submission Received,2026-04-03 21:23:00
-SUB-0157,Initial Review Started,2026-04-07 21:16:27
-SUB-0157,Formula Check Pass 1,2026-04-07 22:43:25
-SUB-0157,Formula Check Rework,2026-04-07 23:39:31
-SUB-0157,Comment Drafted,2026-04-08 00:46:50
-SUB-0157,Comment Draft Rework,2026-04-08 01:38:26
-SUB-0157,Feedback Returned,2026-04-08 02:27:49
-SUB-0158,Submission Received,2026-04-02 03:45:00
-SUB-0158,Initial Review Started,2026-04-10 17:47:54
-SUB-0158,Formula Check Pass 1,2026-04-10 19:12:26
-SUB-0158,Formula Check Rework,2026-04-10 19:40:15
-SUB-0158,Comment Drafted,2026-04-10 20:13:38
-SUB-0158,Comment Draft Rework,2026-04-10 20:39:14
-SUB-0158,Feedback Returned,2026-04-10 21:03:43
-SUB-0159,Submission Received,2026-04-04 04:40:00
-SUB-0159,Initial Review Started,2026-04-15 14:32:21
-SUB-0159,Formula Check Pass 1,2026-04-15 14:55:04
-SUB-0159,Formula Check Rework,2026-04-15 16:09:40
-SUB-0159,Comment Drafted,2026-04-15 17:39:11
-SUB-0159,Comment Draft Rework,2026-04-15 18:47:49
-SUB-0159,Feedback Returned,2026-04-15 19:53:28
-SUB-0160,Submission Received,2026-03-30 23:45:00
-SUB-0160,Initial Review Started,2026-04-11 12:20:21
-SUB-0160,Formula Check Pass 1,2026-04-11 13:47:02
-SUB-0160,Formula Check Rework,2026-04-11 14:22:44
-SUB-0160,Comment Drafted,2026-04-11 15:05:34
-SUB-0160,Comment Draft Rework,2026-04-11 15:38:25
-SUB-0160,Feedback Returned,2026-04-11 16:09:51
-SUB-0161,Submission Received,2026-04-01 22:52:00
-SUB-0161,Initial Review Started,2026-04-08 09:08:37
-SUB-0161,Formula Check Pass 1,2026-04-08 10:33:26
-SUB-0161,Formula Check Rework,2026-04-08 10:51:07
-SUB-0161,Comment Drafted,2026-04-08 11:12:21
-SUB-0161,Comment Draft Rework,2026-04-08 11:28:37
-SUB-0161,Feedback Returned,2026-04-08 11:44:12
-SUB-0162,Submission Received,2026-04-02 03:49:00
-SUB-0162,Initial Review Started,2026-04-04 19:45:49
-SUB-0162,Formula Check Pass 1,2026-04-04 20:20:50
-SUB-0162,Formula Check Rework,2026-04-04 21:38:33
-SUB-0162,Comment Drafted,2026-04-04 23:11:48
-SUB-0162,Comment Draft Rework,2026-04-05 00:23:18
-SUB-0162,Feedback Returned,2026-04-05 01:31:42
-SUB-0163,Submission Received,2026-04-02 21:50:00
-SUB-0163,Initial Review Started,2026-04-12 12:20:49
-SUB-0163,Formula Check Pass 1,2026-04-12 12:44:30
-SUB-0163,Formula Check Rework,2026-04-12 13:03:27
-SUB-0163,Comment Drafted,2026-04-12 13:26:13
-SUB-0163,Comment Draft Rework,2026-04-12 13:43:39
-SUB-0163,Feedback Returned,2026-04-12 14:00:21
-SUB-0164,Submission Received,2026-03-31 19:26:00
-SUB-0164,Initial Review Started,2026-04-02 12:31:22
-SUB-0164,Formula Check Pass 1,2026-04-02 12:51:48
-SUB-0164,Formula Check Rework,2026-04-02 13:42:12
-SUB-0164,Comment Drafted,2026-04-02 14:42:41
-SUB-0164,Comment Draft Rework,2026-04-02 15:29:03
-SUB-0164,Feedback Returned,2026-04-02 16:13:25
-SUB-0165,Submission Received,2026-04-01 18:27:00
-SUB-0165,Initial Review Started,2026-04-12 11:41:14
-SUB-0165,Formula Check Pass 1,2026-04-12 13:10:21
-SUB-0165,Formula Check Rework,2026-04-12 13:35:17
-SUB-0165,Comment Drafted,2026-04-12 14:05:13
-SUB-0165,Comment Draft Rework,2026-04-12 14:28:10
-SUB-0165,Feedback Returned,2026-04-12 14:50:07
-SUB-0166,Submission Received,2026-03-30 19:06:00
-SUB-0166,Initial Review Started,2026-04-05 10:15:35
-SUB-0166,Formula Check Pass 1,2026-04-05 11:44:45
-SUB-0166,Formula Check Rework,2026-04-05 13:12:17
-SUB-0166,Comment Drafted,2026-04-05 14:57:19
-SUB-0166,Comment Draft Rework,2026-04-05 16:17:51
-SUB-0166,Feedback Returned,2026-04-05 17:34:53
-SUB-0167,Submission Received,2026-03-31 19:08:00
-SUB-0167,Initial Review Started,2026-04-06 09:10:45
-SUB-0167,Formula Check Pass 1,2026-04-06 10:13:25
-SUB-0167,Formula Check Rework,2026-04-06 11:14:34
-SUB-0167,Comment Drafted,2026-04-06 12:27:57
-SUB-0167,Comment Draft Rework,2026-04-06 13:24:13
-SUB-0167,Feedback Returned,2026-04-06 14:18:03
-SUB-0168,Submission Received,2026-04-11 04:42:00
-SUB-0168,Initial Review Started,2026-04-13 12:32:34
-SUB-0168,Formula Check Pass 1,2026-04-13 13:46:42
-SUB-0168,Formula Check Rework,2026-04-13 14:14:12
-SUB-0168,Comment Drafted,2026-04-13 14:47:13
-SUB-0168,Comment Draft Rework,2026-04-13 15:12:32
-SUB-0168,Feedback Returned,2026-04-13 15:36:45
-SUB-0169,Submission Received,2026-04-09 01:17:00
-SUB-0169,Initial Review Started,2026-04-10 07:08:49
-SUB-0169,Formula Check Pass 1,2026-04-10 08:19:57
-SUB-0169,Formula Check Rework,2026-04-10 08:39:04
-SUB-0169,Comment Drafted,2026-04-10 09:02:02
-SUB-0169,Comment Draft Rework,2026-04-10 09:19:37
-SUB-0169,Feedback Returned,2026-04-10 09:36:28
-SUB-0170,Submission Received,2026-04-07 18:15:00
-SUB-0170,Initial Review Started,2026-04-08 14:52:33
-SUB-0170,Formula Check Pass 1,2026-04-08 15:30:48
-SUB-0170,Formula Check Rework,2026-04-08 16:52:37
-SUB-0170,Comment Drafted,2026-04-08 18:30:48
-SUB-0170,Comment Draft Rework,2026-04-08 19:46:04
-SUB-0170,Feedback Returned,2026-04-08 20:58:05
-SUB-0171,Submission Received,2026-04-07 21:04:00
-SUB-0171,Initial Review Started,2026-04-09 04:28:57
-SUB-0171,Formula Check Pass 1,2026-04-09 05:58:24
-SUB-0171,Formula Check Rework,2026-04-09 06:44:48
-SUB-0171,Comment Drafted,2026-04-09 07:40:28
-SUB-0171,Comment Draft Rework,2026-04-09 08:23:10
-SUB-0171,Feedback Returned,2026-04-09 09:04:00
-SUB-0172,Submission Received,2026-04-08 02:51:00
-SUB-0172,Initial Review Started,2026-04-08 14:24:23
-SUB-0172,Formula Check Pass 1,2026-04-08 15:15:47
-SUB-0172,Formula Check Rework,2026-04-08 15:20:33
-SUB-0172,Comment Drafted,2026-04-08 15:26:17
-SUB-0172,Comment Draft Rework,2026-04-08 15:30:40
-SUB-0172,Feedback Returned,2026-04-08 15:34:53
-SUB-0173,Submission Received,2026-04-06 23:56:00
-SUB-0173,Initial Review Started,2026-04-09 11:46:37
-SUB-0173,Formula Check Pass 1,2026-04-09 13:05:08
-SUB-0173,Formula Check Rework,2026-04-09 14:27:33
-SUB-0173,Comment Drafted,2026-04-09 16:06:27
-SUB-0173,Comment Draft Rework,2026-04-09 17:22:17
-SUB-0173,Feedback Returned,2026-04-09 18:34:49
-SUB-0174,Submission Received,2026-04-06 20:14:00
-SUB-0174,Initial Review Started,2026-04-07 09:02:40
-SUB-0174,Formula Check Pass 1,2026-04-07 09:34:19
-SUB-0174,Formula Check Rework,2026-04-07 11:01:55
-SUB-0174,Comment Drafted,2026-04-07 12:47:03
-SUB-0174,Comment Draft Rework,2026-04-07 14:07:39
-SUB-0174,Feedback Returned,2026-04-07 15:24:45
-SUB-0175,Submission Received,2026-04-10 19:59:00
-SUB-0175,Initial Review Started,2026-04-11 05:49:52
-SUB-0175,Formula Check Pass 1,2026-04-11 06:44:46
-SUB-0175,Formula Check Rework,2026-04-11 07:02:00
-SUB-0175,Comment Drafted,2026-04-11 07:22:40
-SUB-0175,Comment Draft Rework,2026-04-11 07:38:32
-SUB-0175,Feedback Returned,2026-04-11 07:53:42
-SUB-0176,Submission Received,2026-04-17 20:49:00
-SUB-0176,Initial Review Started,2026-04-20 05:52:59
-SUB-0176,Formula Check Pass 1,2026-04-20 07:19:05
-SUB-0176,Formula Check Rework,2026-04-20 07:29:56
-SUB-0176,Comment Drafted,2026-04-20 07:42:58
-SUB-0176,Comment Draft Rework,2026-04-20 07:52:57
-SUB-0176,Feedback Returned,2026-04-20 08:02:31
-SUB-0177,Submission Received,2026-04-18 03:39:00
-SUB-0177,Initial Review Started,2026-04-19 07:56:59
-SUB-0177,Formula Check Pass 1,2026-04-19 08:17:41
-SUB-0177,Formula Check Rework,2026-04-19 08:49:16
-SUB-0177,Comment Drafted,2026-04-19 09:27:11
-SUB-0177,Comment Draft Rework,2026-04-19 09:56:14
-SUB-0177,Feedback Returned,2026-04-19 10:24:03
-SUB-0178,Submission Received,2026-04-13 19:16:00
-SUB-0178,Initial Review Started,2026-04-14 02:38:10
-SUB-0178,Formula Check Pass 1,2026-04-14 03:48:53
-SUB-0178,Formula Check Rework,2026-04-14 05:11:16
-SUB-0178,Comment Drafted,2026-04-14 06:50:07
-SUB-0178,Comment Draft Rework,2026-04-14 08:05:55
-SUB-0178,Feedback Returned,2026-04-14 09:18:25
-SUB-0179,Submission Received,2026-04-13 21:26:00
-SUB-0179,Initial Review Started,2026-04-15 23:48:59
-SUB-0179,Formula Check Pass 1,2026-04-16 00:20:18
-SUB-0179,Formula Check Rework,2026-04-16 00:49:25
-SUB-0179,Comment Drafted,2026-04-16 01:24:23
-SUB-0179,Comment Draft Rework,2026-04-16 01:51:10
-SUB-0179,Feedback Returned,2026-04-16 02:16:49
-SUB-0180,Submission Received,2026-04-14 16:50:00
-SUB-0180,Initial Review Started,2026-04-16 06:56:21
-SUB-0180,Formula Check Pass 1,2026-04-16 07:49:10
-SUB-0180,Formula Check Rework,2026-04-16 08:26:47
-SUB-0180,Comment Drafted,2026-04-16 09:11:55
-SUB-0180,Comment Draft Rework,2026-04-16 09:46:32
-SUB-0180,Feedback Returned,2026-04-16 10:19:39
-SUB-0181,Submission Received,2026-04-17 02:35:00
-SUB-0181,Initial Review Started,2026-04-17 17:46:09
-SUB-0181,Formula Check Pass 1,2026-04-17 18:42:36
-SUB-0181,Formula Check Rework,2026-04-17 19:41:53
-SUB-0181,Comment Drafted,2026-04-17 20:53:03
-SUB-0181,Comment Draft Rework,2026-04-17 21:47:36
-SUB-0181,Feedback Returned,2026-04-17 22:39:47
+SUB-0001,Submission Received,2026-01-13 14:09:00
+SUB-0001,Formula Check,2026-01-15 08:09:00
+SUB-0001,Visual / Presentation Review,2026-01-15 08:34:00
+SUB-0001,Feedback Approved,2026-01-15 08:43:00
+SUB-0001,Feedback Returned,2026-01-15 08:46:00
+SUB-0002,Submission Received,2026-01-13 18:08:00
+SUB-0002,Formula Check,2026-01-16 14:08:00
+SUB-0002,Visual / Presentation Review,2026-01-16 14:42:00
+SUB-0002,Feedback Approved,2026-01-16 14:46:00
+SUB-0002,Feedback Returned,2026-01-16 14:48:00
+SUB-0003,Submission Received,2026-01-13 22:44:00
+SUB-0003,Formula Check,2026-01-16 15:44:00
+SUB-0003,Visual / Presentation Review,2026-01-16 16:01:00
+SUB-0003,Feedback Approved,2026-01-16 16:05:00
+SUB-0003,Feedback Returned,2026-01-16 16:07:00
+SUB-0004,Submission Received,2026-01-14 02:47:00
+SUB-0004,Formula Check,2026-01-14 22:47:00
+SUB-0004,Visual / Presentation Review,2026-01-14 23:15:00
+SUB-0004,Feedback Approved,2026-01-14 23:22:00
+SUB-0004,Feedback Returned,2026-01-14 23:29:00
+SUB-0005,Submission Received,2026-01-16 11:48:00
+SUB-0005,Formula Check,2026-01-19 09:48:00
+SUB-0005,Visual / Presentation Review,2026-01-19 10:22:00
+SUB-0005,Feedback Approved,2026-01-19 10:30:00
+SUB-0005,Feedback Returned,2026-01-19 10:34:00
+SUB-0006,Submission Received,2026-01-16 23:38:00
+SUB-0006,Formula Check,2026-01-19 22:38:00
+SUB-0006,Visual / Presentation Review,2026-01-19 23:05:00
+SUB-0006,Feedback Approved,2026-01-19 23:12:00
+SUB-0006,Feedback Returned,2026-01-19 23:19:00
+SUB-0007,Submission Received,2026-01-16 17:26:00
+SUB-0007,Formula Check,2026-01-18 18:26:00
+SUB-0007,Visual / Presentation Review,2026-01-18 19:00:00
+SUB-0007,Feedback Approved,2026-01-18 19:06:00
+SUB-0007,Feedback Returned,2026-01-18 19:13:00
+SUB-0008,Submission Received,2026-01-16 13:16:00
+SUB-0008,Formula Check,2026-01-17 21:16:00
+SUB-0008,Visual / Presentation Review,2026-01-17 21:40:00
+SUB-0008,Feedback Approved,2026-01-17 21:44:00
+SUB-0008,Feedback Returned,2026-01-17 21:49:00
+SUB-0009,Submission Received,2026-01-17 01:52:00
+SUB-0009,Formula Check,2026-01-19 23:52:00
+SUB-0009,Visual / Presentation Review,2026-01-20 00:19:00
+SUB-0009,Feedback Approved,2026-01-20 00:24:00
+SUB-0009,Feedback Returned,2026-01-20 00:26:00
+SUB-0010,Submission Received,2026-01-20 09:12:00
+SUB-0010,Formula Check,2026-01-22 09:12:00
+SUB-0010,Visual / Presentation Review,2026-01-22 09:33:00
+SUB-0010,Feedback Approved,2026-01-22 09:42:00
+SUB-0010,Feedback Returned,2026-01-22 09:46:00
+SUB-0011,Submission Received,2026-01-20 18:09:00
+SUB-0011,Formula Check,2026-01-21 17:09:00
+SUB-0011,Visual / Presentation Review,2026-01-21 17:40:00
+SUB-0011,Feedback Approved,2026-01-21 17:46:00
+SUB-0011,Feedback Returned,2026-01-21 17:53:00
+SUB-0012,Submission Received,2026-01-21 00:00:00
+SUB-0012,Formula Check,2026-01-22 06:00:00
+SUB-0012,Visual / Presentation Review,2026-01-22 06:18:00
+SUB-0012,Feedback Approved,2026-01-22 06:22:00
+SUB-0012,Feedback Returned,2026-01-22 06:26:00
+SUB-0013,Submission Received,2026-01-20 23:49:00
+SUB-0013,Formula Check,2026-01-22 03:49:00
+SUB-0013,Visual / Presentation Review,2026-01-22 04:12:00
+SUB-0013,Feedback Approved,2026-01-22 04:22:00
+SUB-0013,Feedback Returned,2026-01-22 04:28:00
+SUB-0014,Submission Received,2026-01-23 10:30:00
+SUB-0014,Formula Check,2026-01-25 16:30:00
+SUB-0014,Visual / Presentation Review,2026-01-25 16:48:00
+SUB-0014,Feedback Approved,2026-01-25 16:56:00
+SUB-0014,Feedback Returned,2026-01-25 17:02:00
+SUB-0015,Submission Received,2026-01-24 01:27:00
+SUB-0015,Formula Check,2026-01-26 15:27:00
+SUB-0015,Visual / Presentation Review,2026-01-26 15:47:00
+SUB-0015,Feedback Approved,2026-01-26 15:55:00
+SUB-0015,Feedback Returned,2026-01-26 15:57:00
+SUB-0016,Submission Received,2026-01-24 03:36:00
+SUB-0016,Formula Check,2026-01-25 15:36:00
+SUB-0016,Visual / Presentation Review,2026-01-25 15:55:00
+SUB-0016,Feedback Approved,2026-01-25 16:05:00
+SUB-0016,Feedback Returned,2026-01-25 16:08:00
+SUB-0017,Submission Received,2026-01-24 03:06:00
+SUB-0017,Formula Check,2026-01-25 15:06:00
+SUB-0017,Visual / Presentation Review,2026-01-25 15:24:00
+SUB-0017,Feedback Approved,2026-01-25 15:31:00
+SUB-0017,Feedback Returned,2026-01-25 15:37:00
+SUB-0018,Submission Received,2026-01-23 16:51:00
+SUB-0018,Formula Check,2026-01-26 07:51:00
+SUB-0018,Visual / Presentation Review,2026-01-26 08:09:00
+SUB-0018,Feedback Approved,2026-01-26 08:18:00
+SUB-0018,Feedback Returned,2026-01-26 08:21:00
+SUB-0019,Submission Received,2026-01-27 12:59:00
+SUB-0019,Formula Check,2026-01-30 07:59:00
+SUB-0019,Visual / Presentation Review,2026-01-30 08:21:00
+SUB-0019,Feedback Approved,2026-01-30 08:25:00
+SUB-0019,Feedback Returned,2026-01-30 08:30:00
+SUB-0020,Submission Received,2026-01-28 03:40:00
+SUB-0020,Formula Check,2026-01-29 09:40:00
+SUB-0020,Visual / Presentation Review,2026-01-29 09:55:00
+SUB-0020,Feedback Approved,2026-01-29 10:03:00
+SUB-0020,Feedback Returned,2026-01-29 10:09:00
+SUB-0021,Submission Received,2026-01-27 10:19:00
+SUB-0021,Formula Check,2026-01-29 13:19:00
+SUB-0021,Visual / Presentation Review,2026-01-29 13:36:00
+SUB-0021,Feedback Approved,2026-01-29 13:40:00
+SUB-0021,Feedback Returned,2026-01-29 13:44:00
+SUB-0022,Submission Received,2026-01-28 03:49:00
+SUB-0022,Formula Check,2026-01-29 22:49:00
+SUB-0022,Visual / Presentation Review,2026-01-29 23:12:00
+SUB-0022,Feedback Approved,2026-01-29 23:22:00
+SUB-0022,Feedback Returned,2026-01-29 23:26:00
+SUB-0023,Submission Received,2026-01-30 13:03:00
+SUB-0023,Formula Check,2026-02-01 14:03:00
+SUB-0023,Visual / Presentation Review,2026-02-01 14:34:00
+SUB-0023,Feedback Approved,2026-02-01 14:42:00
+SUB-0023,Feedback Returned,2026-02-01 14:49:00
+SUB-0024,Submission Received,2026-01-30 22:12:00
+SUB-0024,Formula Check,2026-02-02 12:12:00
+SUB-0024,Visual / Presentation Review,2026-02-02 12:35:00
+SUB-0024,Feedback Approved,2026-02-02 12:43:00
+SUB-0024,Feedback Returned,2026-02-02 12:48:00
+SUB-0025,Submission Received,2026-01-31 02:10:00
+SUB-0025,Formula Check,2026-02-02 07:10:00
+SUB-0025,Visual / Presentation Review,2026-02-02 07:27:00
+SUB-0025,Feedback Approved,2026-02-02 07:32:00
+SUB-0025,Feedback Returned,2026-02-02 07:38:00
+SUB-0026,Submission Received,2026-01-30 13:44:00
+SUB-0026,Formula Check,2026-02-02 10:44:00
+SUB-0026,Visual / Presentation Review,2026-02-02 11:07:00
+SUB-0026,Feedback Approved,2026-02-02 11:14:00
+SUB-0026,Feedback Returned,2026-02-02 11:18:00
+SUB-0027,Submission Received,2026-01-30 21:50:00
+SUB-0027,Formula Check,2026-01-31 18:50:00
+SUB-0027,Visual / Presentation Review,2026-01-31 19:11:00
+SUB-0027,Feedback Approved,2026-01-31 19:16:00
+SUB-0027,Feedback Returned,2026-01-31 19:18:00
+SUB-0028,Submission Received,2026-02-03 18:41:00
+SUB-0028,Formula Check,2026-02-05 00:41:00
+SUB-0028,Visual / Presentation Review,2026-02-05 01:10:00
+SUB-0028,Feedback Approved,2026-02-05 01:16:00
+SUB-0028,Feedback Returned,2026-02-05 01:23:00
+SUB-0029,Submission Received,2026-02-04 02:07:00
+SUB-0029,Formula Check,2026-02-05 16:07:00
+SUB-0029,Visual / Presentation Review,2026-02-05 16:21:00
+SUB-0029,Feedback Approved,2026-02-05 16:28:00
+SUB-0029,Feedback Returned,2026-02-05 16:30:00
+SUB-0030,Submission Received,2026-02-03 09:47:00
+SUB-0030,Formula Check,2026-02-04 19:47:00
+SUB-0030,Visual / Presentation Review,2026-02-04 20:04:00
+SUB-0030,Feedback Approved,2026-02-04 20:11:00
+SUB-0030,Feedback Returned,2026-02-04 20:13:00
+SUB-0031,Submission Received,2026-02-03 23:08:00
+SUB-0031,Formula Check,2026-02-05 08:08:00
+SUB-0031,Visual / Presentation Review,2026-02-05 08:27:00
+SUB-0031,Feedback Approved,2026-02-05 08:34:00
+SUB-0031,Feedback Returned,2026-02-05 08:37:00
+SUB-0032,Submission Received,2026-02-06 19:40:00
+SUB-0032,Formula Check,2026-02-08 21:40:00
+SUB-0032,Visual / Presentation Review,2026-02-08 22:14:00
+SUB-0032,Feedback Approved,2026-02-08 22:20:00
+SUB-0032,Feedback Returned,2026-02-08 22:24:00
+SUB-0033,Submission Received,2026-02-06 10:58:00
+SUB-0033,Formula Check,2026-02-08 05:58:00
+SUB-0033,Visual / Presentation Review,2026-02-08 06:16:00
+SUB-0033,Feedback Approved,2026-02-08 06:20:00
+SUB-0033,Feedback Returned,2026-02-08 06:27:00
+SUB-0034,Submission Received,2026-02-06 19:00:00
+SUB-0034,Formula Check,2026-02-08 04:00:00
+SUB-0034,Visual / Presentation Review,2026-02-08 04:34:00
+SUB-0034,Feedback Approved,2026-02-08 04:42:00
+SUB-0034,Feedback Returned,2026-02-08 04:47:00
+SUB-0035,Submission Received,2026-02-06 23:01:00
+SUB-0035,Formula Check,2026-02-08 16:01:00
+SUB-0035,Visual / Presentation Review,2026-02-08 16:29:00
+SUB-0035,Feedback Approved,2026-02-08 16:36:00
+SUB-0035,Feedback Returned,2026-02-08 16:40:00
+SUB-0036,Submission Received,2026-02-06 18:09:00
+SUB-0036,Formula Check,2026-02-08 21:09:00
+SUB-0036,Visual / Presentation Review,2026-02-08 21:32:00
+SUB-0036,Feedback Approved,2026-02-08 21:40:00
+SUB-0036,Feedback Returned,2026-02-08 21:43:00
+SUB-0037,Submission Received,2026-02-10 15:30:00
+SUB-0037,Formula Check,2026-02-12 09:30:00
+SUB-0037,Visual / Presentation Review,2026-02-12 10:04:00
+SUB-0037,Feedback Approved,2026-02-12 10:12:00
+SUB-0037,Feedback Returned,2026-02-12 10:19:00
+SUB-0038,Submission Received,2026-02-10 11:05:00
+SUB-0038,Formula Check,2026-02-13 02:05:00
+SUB-0038,Visual / Presentation Review,2026-02-13 02:30:00
+SUB-0038,Feedback Approved,2026-02-13 02:38:00
+SUB-0038,Feedback Returned,2026-02-13 02:41:00
+SUB-0039,Submission Received,2026-02-10 09:03:00
+SUB-0039,Formula Check,2026-02-12 20:03:00
+SUB-0039,Visual / Presentation Review,2026-02-12 20:23:00
+SUB-0039,Feedback Approved,2026-02-12 20:33:00
+SUB-0039,Feedback Returned,2026-02-12 20:38:00
+SUB-0040,Submission Received,2026-02-10 09:56:00
+SUB-0040,Formula Check,2026-02-12 04:56:00
+SUB-0040,Visual / Presentation Review,2026-02-12 05:20:00
+SUB-0040,Feedback Approved,2026-02-12 05:26:00
+SUB-0040,Feedback Returned,2026-02-12 05:32:00
+SUB-0041,Submission Received,2026-02-13 10:02:00
+SUB-0041,Formula Check,2026-02-15 03:02:00
+SUB-0041,Visual / Presentation Review,2026-02-15 03:29:00
+SUB-0041,Feedback Approved,2026-02-15 03:37:00
+SUB-0041,Feedback Returned,2026-02-15 03:39:00
+SUB-0042,Submission Received,2026-02-13 09:32:00
+SUB-0042,Formula Check,2026-02-15 18:32:00
+SUB-0042,Visual / Presentation Review,2026-02-15 18:47:00
+SUB-0042,Feedback Approved,2026-02-15 18:51:00
+SUB-0042,Feedback Returned,2026-02-15 18:53:00
+SUB-0043,Submission Received,2026-02-13 10:41:00
+SUB-0043,Formula Check,2026-02-15 15:41:00
+SUB-0043,Visual / Presentation Review,2026-02-15 16:00:00
+SUB-0043,Feedback Approved,2026-02-15 16:09:00
+SUB-0043,Feedback Returned,2026-02-15 16:13:00
+SUB-0044,Submission Received,2026-02-13 19:23:00
+SUB-0044,Formula Check,2026-02-14 14:23:00
+SUB-0044,Visual / Presentation Review,2026-02-14 14:43:00
+SUB-0044,Feedback Approved,2026-02-14 14:52:00
+SUB-0044,Feedback Returned,2026-02-14 14:56:00
+SUB-0045,Submission Received,2026-02-13 10:21:00
+SUB-0045,Formula Check,2026-02-14 09:21:00
+SUB-0045,Visual / Presentation Review,2026-02-14 09:40:00
+SUB-0045,Feedback Approved,2026-02-14 09:46:00
+SUB-0045,Feedback Returned,2026-02-14 09:50:00
+SUB-0046,Submission Received,2026-02-17 16:09:00
+SUB-0046,Formula Check,2026-02-19 17:09:00
+SUB-0046,Visual / Presentation Review,2026-02-19 17:39:00
+SUB-0046,Feedback Approved,2026-02-19 17:48:00
+SUB-0046,Feedback Returned,2026-02-19 17:54:00
+SUB-0047,Submission Received,2026-02-17 18:30:00
+SUB-0047,Formula Check,2026-02-18 13:30:00
+SUB-0047,Visual / Presentation Review,2026-02-18 13:44:00
+SUB-0047,Feedback Approved,2026-02-18 13:53:00
+SUB-0047,Feedback Returned,2026-02-18 13:58:00
+SUB-0048,Submission Received,2026-02-17 18:11:00
+SUB-0048,Formula Check,2026-02-19 00:11:00
+SUB-0048,Visual / Presentation Review,2026-02-19 00:33:00
+SUB-0048,Feedback Approved,2026-02-19 00:37:00
+SUB-0048,Feedback Returned,2026-02-19 00:43:00
+SUB-0049,Submission Received,2026-02-17 20:07:00
+SUB-0049,Formula Check,2026-02-19 19:07:00
+SUB-0049,Visual / Presentation Review,2026-02-19 19:35:00
+SUB-0049,Feedback Approved,2026-02-19 19:41:00
+SUB-0049,Feedback Returned,2026-02-19 19:44:00
+SUB-0050,Submission Received,2026-02-21 00:00:00
+SUB-0050,Formula Check,2026-02-22 11:00:00
+SUB-0050,Visual / Presentation Review,2026-02-22 11:14:00
+SUB-0050,Feedback Approved,2026-02-22 11:24:00
+SUB-0050,Feedback Returned,2026-02-22 11:28:00
+SUB-0051,Submission Received,2026-02-20 20:57:00
+SUB-0051,Formula Check,2026-02-22 19:57:00
+SUB-0051,Visual / Presentation Review,2026-02-22 20:27:00
+SUB-0051,Feedback Approved,2026-02-22 20:32:00
+SUB-0051,Feedback Returned,2026-02-22 20:35:00
+SUB-0052,Submission Received,2026-02-20 11:36:00
+SUB-0052,Formula Check,2026-02-23 02:36:00
+SUB-0052,Visual / Presentation Review,2026-02-23 02:52:00
+SUB-0052,Feedback Approved,2026-02-23 03:01:00
+SUB-0052,Feedback Returned,2026-02-23 03:04:00
+SUB-0053,Submission Received,2026-02-20 18:14:00
+SUB-0053,Formula Check,2026-02-23 11:14:00
+SUB-0053,Visual / Presentation Review,2026-02-23 11:32:00
+SUB-0053,Feedback Approved,2026-02-23 11:37:00
+SUB-0053,Feedback Returned,2026-02-23 11:40:00
+SUB-0054,Submission Received,2026-02-20 09:25:00
+SUB-0054,Formula Check,2026-02-21 18:25:00
+SUB-0054,Visual / Presentation Review,2026-02-21 18:51:00
+SUB-0054,Feedback Approved,2026-02-21 18:55:00
+SUB-0054,Feedback Returned,2026-02-21 19:02:00
+SUB-0055,Submission Received,2026-02-24 23:55:00
+SUB-0055,Formula Check,2026-02-27 08:55:00
+SUB-0055,Visual / Presentation Review,2026-02-27 09:17:00
+SUB-0055,Feedback Approved,2026-02-27 09:25:00
+SUB-0055,Feedback Returned,2026-02-27 09:32:00
+SUB-0056,Submission Received,2026-02-24 20:12:00
+SUB-0056,Formula Check,2026-02-27 10:12:00
+SUB-0056,Visual / Presentation Review,2026-02-27 10:38:00
+SUB-0056,Feedback Approved,2026-02-27 10:46:00
+SUB-0056,Feedback Returned,2026-02-27 10:49:00
+SUB-0057,Submission Received,2026-02-24 09:46:00
+SUB-0057,Formula Check,2026-02-25 16:46:00
+SUB-0057,Visual / Presentation Review,2026-02-25 17:10:00
+SUB-0057,Feedback Approved,2026-02-25 17:18:00
+SUB-0057,Feedback Returned,2026-02-25 17:20:00
+SUB-0058,Submission Received,2026-02-24 15:41:00
+SUB-0058,Formula Check,2026-02-26 18:41:00
+SUB-0058,Visual / Presentation Review,2026-02-26 19:05:00
+SUB-0058,Feedback Approved,2026-02-26 19:09:00
+SUB-0058,Feedback Returned,2026-02-26 19:13:00
+SUB-0059,Submission Received,2026-02-27 13:55:00
+SUB-0059,Formula Check,2026-03-01 08:55:00
+SUB-0059,Visual / Presentation Review,2026-03-01 09:19:00
+SUB-0059,Feedback Approved,2026-03-01 09:24:00
+SUB-0059,Feedback Returned,2026-03-01 09:30:00
+SUB-0060,Submission Received,2026-02-27 15:34:00
+SUB-0060,Formula Check,2026-03-01 23:34:00
+SUB-0060,Visual / Presentation Review,2026-03-02 00:01:00
+SUB-0060,Feedback Approved,2026-03-02 00:11:00
+SUB-0060,Feedback Returned,2026-03-02 00:16:00
+SUB-0061,Submission Received,2026-02-27 11:08:00
+SUB-0061,Formula Check,2026-03-02 00:08:00
+SUB-0061,Visual / Presentation Review,2026-03-02 00:38:00
+SUB-0061,Feedback Approved,2026-03-02 00:47:00
+SUB-0061,Feedback Returned,2026-03-02 00:54:00
+SUB-0062,Submission Received,2026-02-28 03:44:00
+SUB-0062,Formula Check,2026-03-02 07:44:00
+SUB-0062,Visual / Presentation Review,2026-03-02 07:58:00
+SUB-0062,Feedback Approved,2026-03-02 08:02:00
+SUB-0062,Feedback Returned,2026-03-02 08:07:00
+SUB-0063,Submission Received,2026-02-27 15:22:00
+SUB-0063,Formula Check,2026-03-02 07:22:00
+SUB-0063,Visual / Presentation Review,2026-03-02 07:37:00
+SUB-0063,Feedback Approved,2026-03-02 07:45:00
+SUB-0063,Feedback Returned,2026-03-02 07:52:00
+SUB-0064,Submission Received,2026-03-03 21:47:00
+SUB-0064,Formula Check,2026-03-06 13:47:00
+SUB-0064,Visual / Presentation Review,2026-03-06 14:19:00
+SUB-0064,Feedback Approved,2026-03-06 14:23:00
+SUB-0064,Feedback Returned,2026-03-06 14:25:00
+SUB-0065,Submission Received,2026-03-03 21:00:00
+SUB-0065,Formula Check,2026-03-06 11:00:00
+SUB-0065,Visual / Presentation Review,2026-03-06 11:27:00
+SUB-0065,Feedback Approved,2026-03-06 11:33:00
+SUB-0065,Feedback Returned,2026-03-06 11:36:00
+SUB-0066,Submission Received,2026-03-03 23:18:00
+SUB-0066,Formula Check,2026-03-05 11:18:00
+SUB-0066,Visual / Presentation Review,2026-03-05 11:43:00
+SUB-0066,Feedback Approved,2026-03-05 11:48:00
+SUB-0066,Feedback Returned,2026-03-05 11:55:00
+SUB-0067,Submission Received,2026-03-04 00:08:00
+SUB-0067,Formula Check,2026-03-06 18:08:00
+SUB-0067,Visual / Presentation Review,2026-03-06 18:25:00
+SUB-0067,Feedback Approved,2026-03-06 18:33:00
+SUB-0067,Feedback Returned,2026-03-06 18:40:00
+SUB-0068,Submission Received,2026-03-06 15:11:00
+SUB-0068,Formula Check,2026-03-09 05:11:00
+SUB-0068,Visual / Presentation Review,2026-03-09 05:33:00
+SUB-0068,Feedback Approved,2026-03-09 05:43:00
+SUB-0068,Feedback Returned,2026-03-09 05:46:00
+SUB-0069,Submission Received,2026-03-06 16:37:00
+SUB-0069,Formula Check,2026-03-09 12:37:00
+SUB-0069,Visual / Presentation Review,2026-03-09 13:10:00
+SUB-0069,Feedback Approved,2026-03-09 13:19:00
+SUB-0069,Feedback Returned,2026-03-09 13:22:00
+SUB-0070,Submission Received,2026-03-06 17:21:00
+SUB-0070,Formula Check,2026-03-08 14:21:00
+SUB-0070,Visual / Presentation Review,2026-03-08 14:39:00
+SUB-0070,Feedback Approved,2026-03-08 14:49:00
+SUB-0070,Feedback Returned,2026-03-08 14:55:00
+SUB-0071,Submission Received,2026-03-07 03:05:00
+SUB-0071,Formula Check,2026-03-10 00:05:00
+SUB-0071,Visual / Presentation Review,2026-03-10 00:35:00
+SUB-0071,Feedback Approved,2026-03-10 00:45:00
+SUB-0071,Feedback Returned,2026-03-10 00:49:00
+SUB-0072,Submission Received,2026-03-06 11:21:00
+SUB-0072,Formula Check,2026-03-08 14:21:00
+SUB-0072,Visual / Presentation Review,2026-03-08 14:40:00
+SUB-0072,Feedback Approved,2026-03-08 14:44:00
+SUB-0072,Feedback Returned,2026-03-08 14:51:00
+SUB-0073,Submission Received,2026-03-10 16:16:00
+SUB-0073,Formula Check,2026-03-11 20:16:00
+SUB-0073,Visual / Presentation Review,2026-03-11 20:34:00
+SUB-0073,Feedback Approved,2026-03-11 20:44:00
+SUB-0073,Feedback Returned,2026-03-11 20:46:00
+SUB-0074,Submission Received,2026-03-11 03:09:00
+SUB-0074,Formula Check,2026-03-13 22:09:00
+SUB-0074,Visual / Presentation Review,2026-03-13 22:26:00
+SUB-0074,Feedback Approved,2026-03-13 22:31:00
+SUB-0074,Feedback Returned,2026-03-13 22:38:00
+SUB-0075,Submission Received,2026-03-11 02:49:00
+SUB-0075,Formula Check,2026-03-12 06:49:00
+SUB-0075,Visual / Presentation Review,2026-03-12 07:21:00
+SUB-0075,Feedback Approved,2026-03-12 07:29:00
+SUB-0075,Feedback Returned,2026-03-12 07:31:00
+SUB-0076,Submission Received,2026-03-11 02:17:00
+SUB-0076,Formula Check,2026-03-13 05:17:00
+SUB-0076,Visual / Presentation Review,2026-03-13 05:43:00
+SUB-0076,Feedback Approved,2026-03-13 05:50:00
+SUB-0076,Feedback Returned,2026-03-13 05:54:00
+SUB-0077,Submission Received,2026-03-14 03:43:00
+SUB-0077,Formula Check,2026-03-16 06:43:00
+SUB-0077,Visual / Presentation Review,2026-03-16 06:58:00
+SUB-0077,Feedback Approved,2026-03-16 07:08:00
+SUB-0077,Feedback Returned,2026-03-16 07:11:00
+SUB-0078,Submission Received,2026-03-14 01:23:00
+SUB-0078,Formula Check,2026-03-15 04:23:00
+SUB-0078,Visual / Presentation Review,2026-03-15 04:52:00
+SUB-0078,Feedback Approved,2026-03-15 04:58:00
+SUB-0078,Feedback Returned,2026-03-15 05:01:00
+SUB-0079,Submission Received,2026-03-13 15:52:00
+SUB-0079,Formula Check,2026-03-16 12:52:00
+SUB-0079,Visual / Presentation Review,2026-03-16 13:09:00
+SUB-0079,Feedback Approved,2026-03-16 13:14:00
+SUB-0079,Feedback Returned,2026-03-16 13:21:00
+SUB-0080,Submission Received,2026-03-13 15:29:00
+SUB-0080,Formula Check,2026-03-14 12:29:00
+SUB-0080,Visual / Presentation Review,2026-03-14 13:03:00
+SUB-0080,Feedback Approved,2026-03-14 13:10:00
+SUB-0080,Feedback Returned,2026-03-14 13:15:00
+SUB-0081,Submission Received,2026-03-13 13:34:00
+SUB-0081,Formula Check,2026-03-16 12:34:00
+SUB-0081,Visual / Presentation Review,2026-03-16 12:52:00
+SUB-0081,Feedback Approved,2026-03-16 13:01:00
+SUB-0081,Feedback Returned,2026-03-16 13:07:00
+SUB-0082,Submission Received,2026-03-17 12:32:00
+SUB-0082,Formula Check,2026-03-19 16:32:00
+SUB-0082,Visual / Presentation Review,2026-03-19 16:48:00
+SUB-0082,Feedback Approved,2026-03-19 16:58:00
+SUB-0082,Feedback Returned,2026-03-19 17:05:00
+SUB-0083,Submission Received,2026-03-17 17:36:00
+SUB-0083,Formula Check,2026-03-19 15:36:00
+SUB-0083,Visual / Presentation Review,2026-03-19 16:01:00
+SUB-0083,Feedback Approved,2026-03-19 16:11:00
+SUB-0083,Feedback Returned,2026-03-19 16:17:00
+SUB-0084,Submission Received,2026-03-18 02:07:00
+SUB-0084,Formula Check,2026-03-20 11:07:00
+SUB-0084,Visual / Presentation Review,2026-03-20 11:39:00
+SUB-0084,Feedback Approved,2026-03-20 11:46:00
+SUB-0084,Feedback Returned,2026-03-20 11:48:00
+SUB-0085,Submission Received,2026-03-17 15:27:00
+SUB-0085,Formula Check,2026-03-18 20:27:00
+SUB-0085,Visual / Presentation Review,2026-03-18 20:54:00
+SUB-0085,Feedback Approved,2026-03-18 21:01:00
+SUB-0085,Feedback Returned,2026-03-18 21:06:00
+SUB-0086,Submission Received,2026-03-20 18:11:00
+SUB-0086,Formula Check,2026-03-21 15:11:00
+SUB-0086,Visual / Presentation Review,2026-03-21 15:34:00
+SUB-0086,Feedback Approved,2026-03-21 15:43:00
+SUB-0086,Feedback Returned,2026-03-21 15:45:00
+SUB-0087,Submission Received,2026-03-20 23:29:00
+SUB-0087,Formula Check,2026-03-21 20:29:00
+SUB-0087,Visual / Presentation Review,2026-03-21 20:57:00
+SUB-0087,Feedback Approved,2026-03-21 21:04:00
+SUB-0087,Feedback Returned,2026-03-21 21:08:00
+SUB-0088,Submission Received,2026-03-20 18:01:00
+SUB-0088,Formula Check,2026-03-22 20:01:00
+SUB-0088,Visual / Presentation Review,2026-03-22 20:32:00
+SUB-0088,Feedback Approved,2026-03-22 20:42:00
+SUB-0088,Feedback Returned,2026-03-22 20:44:00
+SUB-0089,Submission Received,2026-03-21 01:22:00
+SUB-0089,Formula Check,2026-03-22 20:22:00
+SUB-0089,Visual / Presentation Review,2026-03-22 20:56:00
+SUB-0089,Feedback Approved,2026-03-22 21:06:00
+SUB-0089,Feedback Returned,2026-03-22 21:13:00
+SUB-0090,Submission Received,2026-03-20 13:15:00
+SUB-0090,Formula Check,2026-03-22 17:15:00
+SUB-0090,Visual / Presentation Review,2026-03-22 17:42:00
+SUB-0090,Feedback Approved,2026-03-22 17:48:00
+SUB-0090,Feedback Returned,2026-03-22 17:55:00
+SUB-0091,Submission Received,2026-03-24 23:53:00
+SUB-0091,Formula Check,2026-03-26 05:53:00
+SUB-0091,Visual / Presentation Review,2026-03-26 06:10:00
+SUB-0091,Feedback Approved,2026-03-26 06:19:00
+SUB-0091,Feedback Returned,2026-03-26 06:26:00
+SUB-0092,Submission Received,2026-03-24 13:29:00
+SUB-0092,Formula Check,2026-03-25 20:29:00
+SUB-0092,Visual / Presentation Review,2026-03-25 20:59:00
+SUB-0092,Feedback Approved,2026-03-25 21:06:00
+SUB-0092,Feedback Returned,2026-03-25 21:13:00
+SUB-0093,Submission Received,2026-03-25 00:46:00
+SUB-0093,Formula Check,2026-03-26 12:46:00
+SUB-0093,Visual / Presentation Review,2026-03-26 13:09:00
+SUB-0093,Feedback Approved,2026-03-26 13:16:00
+SUB-0093,Feedback Returned,2026-03-26 13:21:00
+SUB-0094,Submission Received,2026-03-24 21:53:00
+SUB-0094,Formula Check,2026-03-26 12:53:00
+SUB-0094,Visual / Presentation Review,2026-03-26 13:07:00
+SUB-0094,Feedback Approved,2026-03-26 13:13:00
+SUB-0094,Feedback Returned,2026-03-26 13:19:00
+SUB-0095,Submission Received,2026-03-27 15:41:00
+SUB-0095,Formula Check,2026-03-29 19:41:00
+SUB-0095,Visual / Presentation Review,2026-03-29 19:56:00
+SUB-0095,Feedback Approved,2026-03-29 20:03:00
+SUB-0095,Feedback Returned,2026-03-29 20:08:00
+SUB-0096,Submission Received,2026-03-27 19:40:00
+SUB-0096,Formula Check,2026-03-29 04:40:00
+SUB-0096,Visual / Presentation Review,2026-03-29 05:01:00
+SUB-0096,Feedback Approved,2026-03-29 05:05:00
+SUB-0096,Feedback Returned,2026-03-29 05:12:00
+SUB-0097,Submission Received,2026-03-27 13:59:00
+SUB-0097,Formula Check,2026-03-28 13:59:00
+SUB-0097,Visual / Presentation Review,2026-03-28 14:27:00
+SUB-0097,Feedback Approved,2026-03-28 14:33:00
+SUB-0097,Feedback Returned,2026-03-28 14:36:00
+SUB-0098,Submission Received,2026-03-27 17:54:00
+SUB-0098,Formula Check,2026-03-29 01:54:00
+SUB-0098,Visual / Presentation Review,2026-03-29 02:25:00
+SUB-0098,Feedback Approved,2026-03-29 02:35:00
+SUB-0098,Feedback Returned,2026-03-29 02:41:00
+SUB-0099,Submission Received,2026-03-27 13:20:00
+SUB-0099,Formula Check,2026-03-30 10:20:00
+SUB-0099,Visual / Presentation Review,2026-03-30 10:50:00
+SUB-0099,Feedback Approved,2026-03-30 10:57:00
+SUB-0099,Feedback Returned,2026-03-30 10:59:00
+SUB-0100,Submission Received,2026-04-01 03:53:00
+SUB-0100,Formula Check,2026-04-03 23:53:00
+SUB-0100,Visual / Presentation Review,2026-04-04 00:23:00
+SUB-0100,Feedback Approved,2026-04-04 00:27:00
+SUB-0100,Feedback Returned,2026-04-04 00:34:00
+SUB-0101,Submission Received,2026-03-31 22:07:00
+SUB-0101,Formula Check,2026-04-03 22:07:00
+SUB-0101,Visual / Presentation Review,2026-04-03 22:31:00
+SUB-0101,Feedback Approved,2026-04-03 22:36:00
+SUB-0101,Feedback Returned,2026-04-03 22:39:00
+SUB-0102,Submission Received,2026-03-31 10:11:00
+SUB-0102,Formula Check,2026-04-01 18:11:00
+SUB-0102,Visual / Presentation Review,2026-04-01 18:32:00
+SUB-0102,Feedback Approved,2026-04-01 18:37:00
+SUB-0102,Feedback Returned,2026-04-01 18:44:00
+SUB-0103,Submission Received,2026-04-01 01:23:00
+SUB-0103,Formula Check,2026-04-03 01:23:00
+SUB-0103,Visual / Presentation Review,2026-04-03 01:53:00
+SUB-0103,Feedback Approved,2026-04-03 02:02:00
+SUB-0103,Feedback Returned,2026-04-03 02:05:00
+SUB-0104,Submission Received,2026-04-03 10:19:00
+SUB-0104,Formula Check,2026-04-05 09:19:00
+SUB-0104,Visual / Presentation Review,2026-04-05 09:40:00
+SUB-0104,Feedback Approved,2026-04-05 09:48:00
+SUB-0104,Feedback Returned,2026-04-05 09:53:00
+SUB-0105,Submission Received,2026-04-03 12:59:00
+SUB-0105,Formula Check,2026-04-05 16:59:00
+SUB-0105,Visual / Presentation Review,2026-04-05 17:29:00
+SUB-0105,Feedback Approved,2026-04-05 17:36:00
+SUB-0105,Feedback Returned,2026-04-05 17:40:00
+SUB-0106,Submission Received,2026-04-03 10:02:00
+SUB-0106,Formula Check,2026-04-06 07:02:00
+SUB-0106,Visual / Presentation Review,2026-04-06 07:28:00
+SUB-0106,Feedback Approved,2026-04-06 07:32:00
+SUB-0106,Feedback Returned,2026-04-06 07:38:00
+SUB-0107,Submission Received,2026-04-04 01:59:00
+SUB-0107,Formula Check,2026-04-05 18:59:00
+SUB-0107,Visual / Presentation Review,2026-04-05 19:20:00
+SUB-0107,Feedback Approved,2026-04-05 19:29:00
+SUB-0107,Feedback Returned,2026-04-05 19:35:00
+SUB-0108,Submission Received,2026-04-03 20:11:00
+SUB-0108,Formula Check,2026-04-06 10:11:00
+SUB-0108,Visual / Presentation Review,2026-04-06 10:36:00
+SUB-0108,Feedback Approved,2026-04-06 10:41:00
+SUB-0108,Feedback Returned,2026-04-06 10:46:00
+SUB-0109,Submission Received,2026-04-07 23:29:00
+SUB-0109,Formula Check,2026-04-08 23:29:00
+SUB-0109,Visual / Presentation Review,2026-04-08 23:57:00
+SUB-0109,Feedback Approved,2026-04-09 00:06:00
+SUB-0109,Feedback Returned,2026-04-09 00:08:00
+SUB-0110,Submission Received,2026-04-07 10:50:00
+SUB-0110,Formula Check,2026-04-08 14:50:00
+SUB-0110,Visual / Presentation Review,2026-04-08 15:12:00
+SUB-0110,Feedback Approved,2026-04-08 15:21:00
+SUB-0110,Feedback Returned,2026-04-08 15:28:00
+SUB-0111,Submission Received,2026-04-08 01:06:00
+SUB-0111,Formula Check,2026-04-10 13:06:00
+SUB-0111,Visual / Presentation Review,2026-04-10 13:26:00
+SUB-0111,Feedback Approved,2026-04-10 13:31:00
+SUB-0111,Feedback Returned,2026-04-10 13:33:00
+SUB-0112,Submission Received,2026-04-08 01:55:00
+SUB-0112,Formula Check,2026-04-08 23:55:00
+SUB-0112,Visual / Presentation Review,2026-04-09 00:15:00
+SUB-0112,Feedback Approved,2026-04-09 00:19:00
+SUB-0112,Feedback Returned,2026-04-09 00:26:00
+SUB-0113,Submission Received,2026-04-10 13:23:00
+SUB-0113,Formula Check,2026-04-12 18:23:00
+SUB-0113,Visual / Presentation Review,2026-04-12 18:43:00
+SUB-0113,Feedback Approved,2026-04-12 18:47:00
+SUB-0113,Feedback Returned,2026-04-12 18:52:00
+SUB-0114,Submission Received,2026-04-11 01:39:00
+SUB-0114,Formula Check,2026-04-13 04:39:00
+SUB-0114,Visual / Presentation Review,2026-04-13 04:54:00
+SUB-0114,Feedback Approved,2026-04-13 05:04:00
+SUB-0114,Feedback Returned,2026-04-13 05:11:00
+SUB-0115,Submission Received,2026-04-11 02:40:00
+SUB-0115,Formula Check,2026-04-12 15:40:00
+SUB-0115,Visual / Presentation Review,2026-04-12 16:14:00
+SUB-0115,Feedback Approved,2026-04-12 16:23:00
+SUB-0115,Feedback Returned,2026-04-12 16:30:00
+SUB-0116,Submission Received,2026-04-10 19:02:00
+SUB-0116,Formula Check,2026-04-13 06:02:00
+SUB-0116,Visual / Presentation Review,2026-04-13 06:28:00
+SUB-0116,Feedback Approved,2026-04-13 06:32:00
+SUB-0116,Feedback Returned,2026-04-13 06:37:00
+SUB-0117,Submission Received,2026-04-10 09:01:00
+SUB-0117,Formula Check,2026-04-11 20:01:00
+SUB-0117,Visual / Presentation Review,2026-04-11 20:29:00
+SUB-0117,Feedback Approved,2026-04-11 20:38:00
+SUB-0117,Feedback Returned,2026-04-11 20:43:00
+SUB-0118,Submission Received,2026-04-14 09:05:00
+SUB-0118,Formula Check,2026-04-15 19:05:00
+SUB-0118,Visual / Presentation Review,2026-04-15 19:20:00
+SUB-0118,Feedback Approved,2026-04-15 19:29:00
+SUB-0118,Feedback Returned,2026-04-15 19:32:00
+SUB-0119,Submission Received,2026-04-15 00:59:00
+SUB-0119,Formula Check,2026-04-17 23:59:00
+SUB-0119,Visual / Presentation Review,2026-04-18 00:16:00
+SUB-0119,Feedback Approved,2026-04-18 00:25:00
+SUB-0119,Feedback Returned,2026-04-18 00:32:00
+SUB-0120,Submission Received,2026-04-14 11:56:00
+SUB-0120,Formula Check,2026-04-16 07:56:00
+SUB-0120,Visual / Presentation Review,2026-04-16 08:15:00
+SUB-0120,Feedback Approved,2026-04-16 08:25:00
+SUB-0120,Feedback Returned,2026-04-16 08:27:00

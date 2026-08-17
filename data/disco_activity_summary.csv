@@ -1,6 +1,6 @@
-Activity,Median duration from prior activity (hours),Bottleneck type,Interpretation
+Activity,Median duration from prior activity (minutes),Bottleneck type,Interpretation
 Submission Received,,Entry,Student upload enters the flow
-Initial Review Started,71.1,Waiting,Queue before the instructor starts work
-Formula Check Rework,0.8,Repeated work,Formula checking and re-checking against the rubric
-Comment Draft Rework,0.7,Repeated work,Repeated individualized comment drafting and revision
-Feedback Returned,3.1,Return,Feedback packaging and LMS return
+Formula Check,2880,Waiting,Staggered arrivals create a queue before the formula check begins
+Visual / Presentation Review,23,Active bottleneck,Manual formula and logic checking against the rubric
+Feedback Approved,7,Human judgment,Visual and presentation review remains instructor-owned
+Feedback Returned,4,Return,Standard formula comments plus individualized feedback are returned
