@@ -4,7 +4,7 @@ Interactive process-improvement site for automating Excel project grading.
 
 ## View it
 
-The site is a no-build React page. Open `index.html` directly, or publish the repository root through GitHub Pages. React and Babel load from CDNs, while the editable source stays in `src/main.jsx`.
+The site is a no-build React page. Open `index.html` directly, or publish the repository root through GitHub Pages. React and Babel load from CDNs; `index.html` fetches the JS/JSX files under `src/` in order, concatenates them, and compiles the result with Babel in the browser.
 
 1. Push this folder's contents to a repo.
 2. Repo Settings → Pages → Deploy from branch → `main` / root.
@@ -23,7 +23,12 @@ The site is a no-build React page. Open `index.html` directly, or publish the re
   together. "Before" in Sheet 6 always isolates the automation effect by
   re-running the same model with automation coverage forced to 0%, so the
   comparison stays fair as you change other inputs.
-- **`src/App.jsx`** — editable React components and the live queueing model.
+- **`src/lib/simulate.js`** — the live queueing model (`simulate`, arrival data).
+- **`src/lib/csv.js`** — CSV parsing and Disco event-log derivation.
+- **`src/components/`** — one React component per file (`Metric`, `QueueChart`,
+  `DynamicFlowChart`, `Controls`, `NetlifyInspiredSections`, `DetailedAnalysis`).
+- **`src/App.jsx`** — the root component that assembles the page.
+- **`src/main.jsx`** — entry point; mounts `<App />` into `#root`.
 - **`src/styles.css`** — editable site styling and responsive layout.
 - **`index_v1_static_backup.html`** — the earlier static version, kept for
   reference only; not part of the live site.
