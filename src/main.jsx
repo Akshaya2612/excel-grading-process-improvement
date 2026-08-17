@@ -417,16 +417,11 @@ function App() {
               />
             </div>
             <div className="efficiency">
-              <div
-                className="efficiency-work"
-                style={{ width: `${eventData.percentages.formula}%` }}
-              ></div>
-              <span>
-                formula-check work {`${eventData.percentages.formula.toFixed(1)}%`} of active effort
-              </span>
-              <b>
-                human judgment {`${(eventData.percentages.visual + eventData.percentages.approval).toFixed(1)}%`}
-              </b>
+              <div className="efficiency-work efficiency-formula" style={{ width: `${eventData.percentages.formula}%` }}></div>
+              <div className="efficiency-work efficiency-visual" style={{ width: `${eventData.percentages.visual}%` }}></div>
+              <div className="efficiency-work efficiency-approval" style={{ width: `${eventData.percentages.approval}%` }}></div>
+              <span>formula check {`${eventData.percentages.formula.toFixed(1)}%`}</span>
+              <b>human judgment {`${(eventData.percentages.visual + eventData.percentages.approval).toFixed(1)}%`}</b>
             </div>
             <DynamicFlowChart
               arrivals={eventData.daily}

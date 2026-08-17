@@ -19,7 +19,8 @@ function gradingDataToJson(rows) {
   caseList.forEach(c => { daily[dayOf(c['Submission Received']['Complete Timestamp'])].incoming++; daily[dayOf(c['Feedback Returned']['Complete Timestamp'])].graded++; daily[dayOf(c['Formula Check']['Complete Timestamp'])].formula++; daily[dayOf(c['Visual / Presentation Review']['Complete Timestamp'])].visual++; daily[dayOf(c['Feedback Approval']['Complete Timestamp'])].approval++; });
   const median = values => values.slice().sort((a,b)=>a-b)[Math.floor(values.length/2)] || 0;
   const metrics = { formulaMedian: median(formula), visualMedian: median(visual), approvalMedian: median(approval), queueMedian: median(queue), formulaHours: formula.reduce((a,b)=>a+b,0)/60 };
-  const percentages = { waiting: queue.reduce((a,b)=>a+b,0)/total*100, formula: formula.reduce((a,b)=>a+b,0)/total*100, visual: visual.reduce((a,b)=>a+b,0)/total*100, approval: approval.reduce((a,b)=>a+b,0)/total*100 };
+  const activeTotal = [...formula, ...visual, ...approval].reduce((a,b)=>a+b,0);
+  const percentages = { waiting: queue.reduce((a,b)=>a+b,0)/total*100, formula: formula.reduce((a,b)=>a+b,0)/activeTotal*100, visual: visual.reduce((a,b)=>a+b,0)/activeTotal*100, approval: approval.reduce((a,b)=>a+b,0)/activeTotal*100 };
   return { cases: caseList.length, weekly: Object.entries(weekly).sort(([a],[b])=>a.localeCompare(b,undefined,{numeric:true})).map(([week, values])=>({week:week.slice(1),...values})), daily, metrics, percentages, ...metrics };
 }
 
