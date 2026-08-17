@@ -33,7 +33,7 @@ function QueueChart({ data }) {
       </div>
       <div className="legend">
         <span className="incoming-dot" /> submissions received{" "}
-        <span className="graded-dot" /> formula checks started
+        <span className="graded-dot" /> assignments graded and returned
       </div>
     </div>
   );

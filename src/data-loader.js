@@ -13,7 +13,7 @@ function gradingDataToJson(rows) {
   const queue = caseList.map(c => c['Formula Check'] ? (new Date(c['Formula Check']['Start Timestamp']) - new Date(c['Submission Received']['Complete Timestamp'])) / 60000 : 0);
   const total = [...queue, ...formula, ...visual, ...approval].reduce((a,b)=>a+b,0);
   const weekly = {};
-  caseList.forEach(c => { const week = date => `W${Math.floor((date - new Date('2026-01-12T00:00:00')) / 604800000) + 1}`; const arrival = week(new Date(c['Submission Received']['Complete Timestamp'])); const check = week(new Date(c['Formula Check']['Start Timestamp'])); (weekly[arrival] ||= { incoming: 0, graded: 0 }).incoming++; (weekly[check] ||= { incoming: 0, graded: 0 }).graded++; });
+  caseList.forEach(c => { const week = date => `W${Math.floor((date - new Date('2026-02-12T00:00:00')) / 604800000) + 1}`; const arrival = week(new Date(c['Submission Received']['Complete Timestamp'])); const returned = week(new Date(c['Feedback Returned']['Complete Timestamp'])); (weekly[arrival] ||= { incoming: 0, graded: 0 }).incoming++; (weekly[returned] ||= { incoming: 0, graded: 0 }).graded++; });
   const median = values => values.slice().sort((a,b)=>a-b)[Math.floor(values.length/2)] || 0;
   const metrics = { formulaMedian: median(formula), visualMedian: median(visual), approvalMedian: median(approval), queueMedian: median(queue), formulaHours: formula.reduce((a,b)=>a+b,0)/60 };
   const percentages = { waiting: queue.reduce((a,b)=>a+b,0)/total*100, formula: formula.reduce((a,b)=>a+b,0)/total*100, visual: visual.reduce((a,b)=>a+b,0)/total*100, approval: approval.reduce((a,b)=>a+b,0)/total*100 };
