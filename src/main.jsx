@@ -430,6 +430,7 @@ function App() {
               arrivals={eventData.weekly}
               model={model}
               automation={state.automation}
+              eventData={eventData}
             />
             <div className="formula">
               Observed submissions are the deadline burst. Automated checks

@@ -38,22 +38,27 @@ function QueueChart({ data }) {
     </div>
   );
 }
-function DynamicFlowChart({ arrivals, model, automation }) {
-  const canvas = React.useRef(null);
-  const chart = React.useRef(null);
+function DynamicFlowChart({ arrivals, model, automation, eventData }) {
+  const flowCanvas = React.useRef(null);
+  const workloadCanvas = React.useRef(null);
+  const flowChart = React.useRef(null);
+  const workloadChart = React.useRef(null);
   useEffect(() => {
-    if (!window.Chart || !canvas.current) return;
-    if (chart.current) chart.current.destroy();
-    const labels = model.weekly.map((item) => `W${item.week}`);
+    if (!window.Chart || !flowCanvas.current || !workloadCanvas.current) return;
+    flowChart.current?.destroy();
+    workloadChart.current?.destroy();
+    const labels = arrivals.map((item) => `W${item.week}`);
     const observed = labels.map((label) => {
       const row = arrivals.find((item) => `W${item.week}` === label);
       return row ? row.incoming : 0;
     });
-    const automated = observed.map((value) => (value * automation) / 100);
-    const manual = model.weekly.map(
-      (item) => item.graded * (1 - automation / 100)
-    );
-    chart.current = new Chart(canvas.current, {
+    const completed = labels.map((label) => {
+      const row = arrivals.find((item) => `W${item.week}` === label);
+      return row ? row.graded : 0;
+    });
+    const automated = completed.map((value) => (value * automation) / 100);
+    const manual = completed.map((value) => value * (1 - automation / 100));
+    flowChart.current = new Chart(flowCanvas.current, {
       type: "line",
       data: {
         labels,
@@ -75,7 +80,7 @@ function DynamicFlowChart({ arrivals, model, automation }) {
             fill: false,
           },
           {
-            label: "Manual checks completed",
+            label: "Human review completed",
             data: manual,
             borderColor: "#3454d1",
             backgroundColor: "#e9edfc",
@@ -101,11 +106,40 @@ function DynamicFlowChart({ arrivals, model, automation }) {
         },
       },
     });
-    return () => chart.current?.destroy();
-  }, [arrivals, model, automation]);
+    const cases = eventData?.cases || 120;
+    const formulaMinutes = eventData?.formulaMedian || 24;
+    const visualMinutes = eventData?.visualMedian || 7;
+    const approvalMinutes = eventData?.approvalMedian || 4;
+    const formulaHours = (cases * formulaMinutes * (1 - automation / 100)) / 60;
+    const visualHours = (cases * visualMinutes) / 60;
+    const approvalHours = (cases * approvalMinutes) / 60;
+    workloadChart.current = new Chart(workloadCanvas.current, {
+      type: "bar",
+      data: {
+        labels: ["Deadline week"],
+        datasets: [
+          { label: "Formula-check hours", data: [formulaHours], backgroundColor: "#d98e2c" },
+          { label: "Visual review hours", data: [visualHours], backgroundColor: "#3454d1" },
+          { label: "Feedback approval hours", data: [approvalHours], backgroundColor: "#7b61a8" },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 250 },
+        scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, title: { display: true, text: "Hours" } } },
+        plugins: { legend: { position: "bottom" }, tooltip: { mode: "index", intersect: false } },
+      },
+    });
+    return () => {
+      flowChart.current?.destroy();
+      workloadChart.current?.destroy();
+    };
+  }, [arrivals, model, automation, eventData]);
   return (
-    <div className="chart chart-library">
-      <canvas ref={canvas}></canvas>
+    <div className="chart-stack">
+      <div className="chart chart-library"><canvas ref={flowCanvas}></canvas></div>
+      <div className="chart chart-library"><canvas ref={workloadCanvas}></canvas></div>
     </div>
   );
 }
