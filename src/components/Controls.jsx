@@ -1,6 +1,27 @@
 function Controls({ state, setState, model }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const start = document.getElementById('group-1');
+    const end = document.getElementById('group-4');
+    if (!start || !end) return;
+    const navOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset')) || 0;
+    const check = () => {
+      const pastStart = start.getBoundingClientRect().top <= navOffset + 8;
+      const pastEnd = end.getBoundingClientRect().top <= navOffset + 8;
+      setVisible(pastStart && !pastEnd);
+    };
+    check();
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    return () => {
+      window.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    };
+  }, []);
+
   return (
-    <section className="control-panel sticky-controls">
+    <aside className={`control-sidebar${visible ? ' control-sidebar--visible' : ''}`}>
       <div>
         <b>Scenario controls</b>
         <span>Observed baseline stays fixed; these levers change the modeled scenario.</span>
@@ -50,6 +71,6 @@ function Controls({ state, setState, model }) {
         <span>scenario peak flow time</span>
       </div>
       <button onClick={() => setState(DEFAULTS)}>Reset</button>
-    </section>
+    </aside>
   );
 }
