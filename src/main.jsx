@@ -427,7 +427,7 @@ function App() {
               </b>
             </div>
             <DynamicFlowChart
-              arrivals={eventData.weekly}
+              arrivals={eventData.daily}
               model={model}
               automation={state.automation}
               eventData={eventData}

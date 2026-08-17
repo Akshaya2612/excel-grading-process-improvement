@@ -47,13 +47,13 @@ function DynamicFlowChart({ arrivals, model, automation, eventData }) {
     if (!window.Chart || !flowCanvas.current || !workloadCanvas.current) return;
     flowChart.current?.destroy();
     workloadChart.current?.destroy();
-    const labels = arrivals.map((item) => `W${item.week}`);
+    const labels = arrivals.map((item) => `Day ${item.week}`);
     const observed = labels.map((label) => {
-      const row = arrivals.find((item) => `W${item.week}` === label);
+      const row = arrivals.find((item) => `Day ${item.week}` === label);
       return row ? row.incoming : 0;
     });
     const completed = labels.map((label) => {
-      const row = arrivals.find((item) => `W${item.week}` === label);
+      const row = arrivals.find((item) => `Day ${item.week}` === label);
       return row ? row.graded : 0;
     });
     const automated = completed.map((value) => (value * automation) / 100);
@@ -110,17 +110,17 @@ function DynamicFlowChart({ arrivals, model, automation, eventData }) {
     const formulaMinutes = eventData?.formulaMedian || 24;
     const visualMinutes = eventData?.visualMedian || 7;
     const approvalMinutes = eventData?.approvalMedian || 4;
-    const formulaHours = (cases * formulaMinutes * (1 - automation / 100)) / 60;
-    const visualHours = (cases * visualMinutes) / 60;
-    const approvalHours = (cases * approvalMinutes) / 60;
+    const formulaHours = arrivals.map(day => (day.formula * formulaMinutes * (1 - automation / 100)) / 60);
+    const visualHours = arrivals.map(day => (day.visual * visualMinutes) / 60);
+    const approvalHours = arrivals.map(day => (day.approval * approvalMinutes) / 60);
     workloadChart.current = new Chart(workloadCanvas.current, {
       type: "bar",
       data: {
-        labels: ["Deadline week"],
+        labels,
         datasets: [
-          { label: "Formula-check hours", data: [formulaHours], backgroundColor: "#d98e2c" },
-          { label: "Visual review hours", data: [visualHours], backgroundColor: "#3454d1" },
-          { label: "Feedback approval hours", data: [approvalHours], backgroundColor: "#7b61a8" },
+          { label: "Formula-check hours", data: formulaHours, backgroundColor: "#d98e2c" },
+          { label: "Visual review hours", data: visualHours, backgroundColor: "#3454d1" },
+          { label: "Feedback approval hours", data: approvalHours, backgroundColor: "#7b61a8" },
         ],
       },
       options: {
