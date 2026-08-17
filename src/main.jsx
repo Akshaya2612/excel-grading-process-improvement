@@ -10,6 +10,7 @@ const DEFAULTS = {
   variability: 100,
 };
 const arrivals = [5, 5, 5, 40, 5, 5, 5, 40, 5, 5, 5, 40, 5, 5];
+const TA_RATE = 22;
 
 function simulate({
   automation,
@@ -50,6 +51,13 @@ function simulate({
     ),
     feedback: Math.round(40 + (automation / 100) * 80),
     autoFrac: automation / 100,
+    laborHours: (120 * avgMinutes) / 60,
+    laborCost: ((120 * avgMinutes) / 60) * TA_RATE,
+    productivity: 120 / ((120 * avgMinutes) / 60),
+    utilization: Math.min(100, (((120 * avgMinutes) / 60) / (resources * hours)) * 100),
+    inventory: peakBacklog,
+    waitingHours: Math.max(0, (peakBacklog / capacity) * 7 * 24 - avgMinutes / 60),
+    qualityAccuracy: accuracy,
   };
 }
 
@@ -212,12 +220,13 @@ function DetailedAnalysis({ model, before }) {
               `${before.capacity} / week`,
               `${model.capacity} / week`,
             ],
-            [
-              "Feedback depth",
-              `${before.feedback} words`,
-              `${model.feedback} words`,
-            ],
-            ["Consistency", `${before.consistency}%`, `${model.consistency}%`],
+            ["Cost per assignment", `$${(before.laborCost / 120).toFixed(2)}`, `$${(model.laborCost / 120).toFixed(2)}`],
+            ["Assignments / labor hour", `${before.productivity.toFixed(1)}`, `${model.productivity.toFixed(1)}`],
+            ["TA utilization", `${before.utilization.toFixed(0)}%`, `${model.utilization.toFixed(0)}%`],
+            ["Work in process", `${before.inventory} files`, `${model.inventory} files`],
+            ["Student lead time", `${before.flowTime.toFixed(1)} days`, `${model.flowTime.toFixed(1)} days`],
+            ["Waiting consequence", `${before.waitingHours.toFixed(1)} h`, `${model.waitingHours.toFixed(1)} h`],
+            ["Quality proxy: checker accuracy", `${before.qualityAccuracy}%`, `${model.qualityAccuracy}%`],
           ].map((row) => (
             <div className="table-row" key={row[0]}>
               {row.map((cell, i) =>
@@ -231,9 +240,9 @@ function DetailedAnalysis({ model, before }) {
           ))}
         </div>
         <p className="callout">
-          Rushing the manual process would reduce flow time by sacrificing
-          quality. Automation breaks that trade-off while keeping the instructor
-          as grade-of-record.
+          Cost uses a synthetic TA rate of $22/hour. Quality is represented by
+          checker accuracy for now; DPMO and Sigma require formula-cell defect
+          and opportunity data that this event log does not yet contain.
         </p>
       </section>
       <section className="section">
