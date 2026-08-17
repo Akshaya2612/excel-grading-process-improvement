@@ -4,12 +4,12 @@ const DEFAULTS = {
   automation: 0,
   manualMinutes: 24,
   quickMinutes: 6,
-  hours: 6,
+  hours: 40,
   accuracy: 85,
   resources: 1,
   variability: 100,
 };
-const arrivals = [5, 5, 5, 40, 5, 5, 5, 40, 5, 5, 5, 40, 5, 5];
+const arrivals = [120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const TA_RATE = 22;
 
 function simulate({
@@ -58,6 +58,7 @@ function simulate({
     inventory: peakBacklog,
     waitingHours: Math.max(0, (peakBacklog / capacity) * 7 * 24 - avgMinutes / 60),
     qualityAccuracy: accuracy,
+    hours,
   };
 }
 
@@ -65,7 +66,7 @@ function NetlifyInspiredSections({ model, before }) {
   return (
     <>
       <section className="section">
-        <span className="eyebrow">04 · Time breakdown</span>
+        <span className="eyebrow">Supporting analysis · Active work</span>
         <h2>
           {before.avgMinutes.toFixed(0)} minutes of repeated technical work per file
         </h2>
@@ -109,7 +110,7 @@ function NetlifyInspiredSections({ model, before }) {
         </div>
       </section>
       <section className="section">
-        <span className="eyebrow">05 · Improvement ideas</span>
+        <span className="eyebrow">Supporting analysis · Improvement ideas</span>
         <h2>Remove repetition, keep the teaching</h2>
         <div className="idea-grid">
           <article>
@@ -158,7 +159,7 @@ function DetailedAnalysis({ model, before }) {
   return (
     <>
       <section className="section">
-        <span className="eyebrow">06 · Capacity analysis</span>
+        <span className="eyebrow">Supporting analysis · Capacity</span>
         <h2>The average hides the burst</h2>
         <p>
           As automated coverage increases, the average handling time falls and
@@ -191,17 +192,17 @@ function DetailedAnalysis({ model, before }) {
         </div>
         <div className="formula">
           Capacity = 1 resource × (60 / {model.avgMinutes.toFixed(1)} minutes) ×{" "}
-          {model.capacity > before.capacity ? "6" : "6"} hours ={" "}
+          {model.hours} hours ={" "}
           {model.capacity} files/week
           <br />
           <em>
             Automation reduces work per file; the deadline burst remains visible
-            in the backlog chart.
+            in the seven-day workload chart.
           </em>
         </div>
       </section>
       <section className="section">
-        <span className="eyebrow">07 · Metrics and trade-offs</span>
+        <span className="eyebrow">Supporting analysis · Scorecard</span>
         <h2>Automation should improve the whole system</h2>
         <div className="table">
           <div className="table-row head">
@@ -246,7 +247,7 @@ function DetailedAnalysis({ model, before }) {
         </p>
       </section>
       <section className="section">
-        <span className="eyebrow">08 · TIMWOOD waste</span>
+        <span className="eyebrow">Supporting analysis · TIMWOOD</span>
         <h2>Where the waste appears</h2>
         <div className="table">
           <div className="table-row head">
@@ -282,7 +283,7 @@ function DetailedAnalysis({ model, before }) {
         </div>
       </section>
       <section className="section">
-        <span className="eyebrow">09 · SAFER + human in the loop</span>
+        <span className="eyebrow">Supporting analysis · Human in the loop</span>
         <h2>Automate structured work, audit judgment</h2>
         <div className="safer-grid">
           <article>
@@ -333,14 +334,15 @@ function App() {
           queueing theory, and a human-in-the-loop checker.
         </p>
         <div className="byline">
-          Synthetic 14-week term · ~120 projects per year
+          Synthetic 120-assignment deadline burst · one-week grading target
         </div>
       </header>
       <nav>
         {[
           "Current state",
+          "Flow definition",
           "Baseline",
-          "Disco diagnosis",
+          "Diagnosis",
           "Redesign",
           "Results",
         ].map((x, i) => (
@@ -377,10 +379,50 @@ function App() {
             </article>
           </div>
         </section>
+        <section id="section-2" className="section">
+          <span className="eyebrow">02 · Flow definition & scope</span>
+          <h2>Define the unit, boundaries, resources, and customer</h2>
+          <div className="idea-grid">
+            <article>
+              <span className="idea-tag">Flow-unit</span>
+              <h3>One submitted workbook</h3>
+              <p>
+                The flow-unit is one completed student Excel assignment. Scope
+                begins at submission received and ends when feedback is returned.
+                Assignment creation and post-grade appeals are outside scope.
+              </p>
+            </article>
+            <article>
+              <span className="idea-tag">Resources</span>
+              <h3>Who performs the work?</h3>
+              <p>
+                The LMS collects files, the automated checker evaluates formulas,
+                the TA reviews presentation, and the instructor approves
+                exceptions and individualized feedback.
+              </p>
+            </article>
+            <article>
+              <span className="idea-tag">Customer outcome</span>
+              <h3>Faster, accurate, specific feedback</h3>
+              <p>
+                Students are the customer: they need accurate grading, useful
+                comments, and feedback returned within seven days.
+              </p>
+            </article>
+          </div>
+          <div className="callout">
+            <b>Flow variation and metric priority:</b> standard work follows
+            submission → automated formula check → visual review → feedback.
+            Low-confidence or unusual work follows an exception path to full
+            manual review. The primary target is formula-check effort; the
+            guardrails are seven-day lead time, grading quality, and instructor
+            approval.
+          </div>
+        </section>
         <Controls state={state} setState={setState} model={model} />
         {eventData && (
-          <section id="section-2" className="section">
-            <span className="eyebrow">02 · Baseline</span>
+          <section id="section-3" className="section">
+            <span className="eyebrow">03 · Baseline</span>
             <h2>
               The deadline creates the burst; formula checking creates the
               bottleneck
@@ -439,10 +481,21 @@ function App() {
                 submissions.
               </em>
             </div>
+            <div className="metrics">
+              <Metric label="Arrival variability (Ca)" value={eventData.metrics.ca.toFixed(2)} note="inter-submission timing" />
+              <Metric label="Service variability (Cs)" value={eventData.metrics.cs.toFixed(2)} note="formula-check duration" />
+              <Metric label="Formula service rate" value={`${eventData.metrics.formulaServiceRate.toFixed(1)} / hour`} note="one resource" tone="amber" />
+              <Metric label="Seven-day target rate" value={`${eventData.metrics.requiredHourlyThroughput.toFixed(1)} / hour`} note="120 files across 40 hours" tone="amber" />
+            </div>
+            <p className="callout">
+              The deadline burst makes Ca high, while variation in checking time
+              makes Cs nonzero. Capacity must exceed the target throughput with
+              enough buffer to absorb both sources of variability.
+            </p>
           </section>
         )}
-        <section id="section-3" className="section">
-          <span className="eyebrow">03 · Diagnosis</span>
+        <section id="section-4" className="section">
+          <span className="eyebrow">04 · Diagnosis</span>
           <h2>Process mining shows where formula work is concentrated</h2>
           <p>
             Import <code>data/event_log_synthetic.csv</code> into Disco using
@@ -496,8 +549,8 @@ function App() {
           </p>
         </section>
         <NetlifyInspiredSections model={model} before={before} />
-        <section id="section-4" className="section">
-          <span className="eyebrow">04 · Redesign</span>
+        <section id="section-5" className="section">
+          <span className="eyebrow">05 · Redesign</span>
           <h2>Maker–checker: automate the first pass, preserve judgment</h2>
           <p>
             Files flow linearly from submission to automated formula/logic
@@ -539,8 +592,8 @@ function App() {
             />
           </div>
         </section>
-        <section id="section-5" className="section">
-          <span className="eyebrow">05 · Results</span>
+        <section id="section-6" className="section">
+          <span className="eyebrow">06 · Results</span>
           <h2>Before / after, controlled by the same model</h2>
           <p>
             Move the automation slider above. “Before” stays fixed at 0%

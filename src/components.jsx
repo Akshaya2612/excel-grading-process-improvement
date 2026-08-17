@@ -180,7 +180,7 @@ function Controls({ state, setState, model }) {
         <input
           type="range"
           min="2"
-          max="16"
+          max="60"
           value={state.hours}
           onChange={(e) => setState({ ...state, hours: +e.target.value })}
         />
