@@ -30,7 +30,7 @@ The site is a no-build React page. Open `index.html` directly, or publish the re
 - **`data/event_log_synthetic.csv`** — synthetic Disco-ready event log
   (Case ID, Activity, Timestamp) covering a 14-week term, four activities per
   submission: *Submission Received → Formula Check → Visual / Presentation
-  Review → Feedback Approved → Feedback Returned*. The log includes separate `start` and `complete` lifecycle events for timed activities. Import directly into Disco to reproduce the process map
+  Review → Feedback Approved → Feedback Returned*. Each row includes both `Start Timestamp` and `Complete Timestamp`. Import directly into Disco to reproduce the process map
   used in the diagnosis section.
 - **`data/disco_activity_summary.csv`** — compact interpretation of the Disco
   performance view, highlighting the queue before formula checking.
