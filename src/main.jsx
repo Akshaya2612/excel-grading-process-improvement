@@ -54,54 +54,49 @@ function simulate({
 }
 
 function NetlifyInspiredSections({ model, before }) {
-  const waiting = Math.max(0, before.flowTime * 24 * 60 - before.avgMinutes);
   return (
     <>
       <section className="section">
         <span className="eyebrow">04 · Time breakdown</span>
         <h2>
-          {before.avgMinutes.toFixed(0)} minutes of work trapped inside a{" "}
-          {before.flowTime.toFixed(1)}-day flow
+          {before.avgMinutes.toFixed(0)} minutes of repeated technical work per file
         </h2>
         <p>
-          The active work is small compared with the time a submission waits.
-          That contrast is the central Disco insight and the reason a faster
-          first pass matters.
+          The immediate target is the repeated formula and logic check—not the
+          deadline burst itself. Automating that first pass reduces technical
+          effort while preserving human review for presentation and pedagogy.
         </p>
         <div className="breakdown">
           <div className="breakdown-row">
-            <b>Waiting before review</b>
+            <b>Formula / logic check</b>
             <div
               className="breakdown-bar queue"
               style={{ width: "100%" }}
             ></div>
-            <strong>{(waiting / 1440).toFixed(1)} days</strong>
+            <strong>{before.avgMinutes.toFixed(0)} min</strong>
           </div>
           <div className="breakdown-row">
-            <b>Formula / logic check</b>
+            <b>Visual / presentation review</b>
             <div
               className="breakdown-bar work"
               style={{
-                width: `${Math.max(
-                  8,
-                  (before.avgMinutes / (before.flowTime * 24 * 60)) * 100
-                )}%`,
+                width: "30%",
               }}
             ></div>
-            <strong>{Math.max(0, before.avgMinutes - 6).toFixed(0)} min</strong>
+            <strong>7 min</strong>
           </div>
           <div className="breakdown-row">
-            <b>Feedback writing</b>
+            <b>Feedback approval</b>
             <div
               className="breakdown-bar feedback"
               style={{
                 width: `${Math.max(
                   5,
-                  (6 / (before.flowTime * 24 * 60)) * 100
+                  18
                 )}%`,
               }}
             ></div>
-            <strong>6 min</strong>
+            <strong>4 min</strong>
           </div>
         </div>
       </section>
@@ -251,9 +246,9 @@ function DetailedAnalysis({ model, before }) {
             <b>Removal idea</b>
           </div>
           {[
-            ["Waiting", "Files sit 2–4 weeks", "Trigger auto-check on upload"],
-            ["Inventory", "170–440 files in flight", "Reduce service time"],
-            ["Motion", "Re-deriving formulas", "Diff against solved reference"],
+            ["Waiting", "Deadline burst can create a queue", "Monitor SLA after automating the target"],
+            ["Inventory", "Many files arrive at once", "Process the technical first pass immediately"],
+            ["Motion", "Re-deriving formulas cell by cell", "Diff against solved reference"],
             [
               "Overprocessing",
               "Repeated comments from scratch",
@@ -415,15 +410,13 @@ function App() {
             <div className="efficiency">
               <div
                 className="efficiency-work"
-                style={{ width: `${100 - eventData.percentages.waiting}%` }}
+                style={{ width: `${eventData.percentages.formula}%` }}
               ></div>
               <span>
-                formula + human review{" "}
-                {`${(100 - eventData.percentages.waiting).toFixed(1)}%`}
+                formula-check work {`${eventData.percentages.formula.toFixed(1)}%`} of active effort
               </span>
               <b>
-                queue consequence{" "}
-                {`${eventData.percentages.waiting.toFixed(1)}%`}
+                human judgment {`${(eventData.percentages.visual + eventData.percentages.approval).toFixed(1)}%`}
               </b>
             </div>
             <DynamicFlowChart
@@ -450,8 +443,8 @@ function App() {
           <p>
             Import <code>data/event_log_synthetic.csv</code> into Disco using
             Case ID, Activity, and Timestamp. The performance view should show
-            the queue before Formula Check and the active formula-check
-            bottleneck.
+            the repeated Formula Check activity and the human-owned review
+            activities that follow it.
           </p>
           <div className="disco-media">
             <video
@@ -494,8 +487,8 @@ function App() {
           </div>
           <p className="callout">
             The processed workflow separates arrival variability from the
-            formula-check bottleneck; the sticky controls below model automating
-            that step while preserving human review.
+            target waste: repeated formula and logic checking. The controls
+            model automating that step while preserving human review.
           </p>
         </section>
         <NetlifyInspiredSections model={model} before={before} />
