@@ -31,20 +31,24 @@ confidence work to a human, and keeps the instructor as the grade-of-record.
 
 ## What the interactive site shows
 
-The page follows this sequence:
+The page is grouped into four sections, each with its own scroll anchor:
 
-1. Current-state process
-2. Flow-unit, scope, resources, and customer outcome
-3. Baseline event-log evidence and the seven-day feedback target
-4. Disco diagnosis, variability, and interactive scenario analysis
-5. Redesign and human-in-the-loop guardrails
-6. Flow-performance scorecard and TIMWOOD wastes
-7. Results and conclusion
+1. **Current state & diagnosis** — the current-state process, flow-unit/scope/
+   resources/customer definition, baseline event-log evidence with the
+   seven-day feedback target, and the Disco diagnosis with an interactive
+   scenario chart
+2. **Redesign** — the seven-day time breakdown, improvement ideas, and the
+   maker–checker redesign
+3. **Results & analysis** — before/after results, the capacity analysis, and
+   the flow-performance scorecard
+4. **Waste & guardrails** — TIMWOOD waste, SAFER human-in-the-loop guardrails,
+   and the conclusion
 
 The baseline graph is fixed to the observed synthetic event log. The scenario
-graph responds to the sticky controls. Automation changes formula-check effort,
-capacity, cost, productivity, utilization, and modeled flow time; visual review
-and feedback approval remain human-owned work.
+graph responds to the floating scenario controls, which stay pinned to the
+left of the page while sections 1–3 are in view. Automation changes
+formula-check effort, capacity, cost, productivity, utilization, and modeled
+flow time; visual review and feedback approval remain human-owned work.
 
 ## Flow-performance measures
 
@@ -89,13 +93,18 @@ Import the event log into Disco using:
 
 ## Project source files
 
-- `index.html` — static entry point that loads React, ReactDOM, Chart.js, and
-  Babel.
-- `src/main.jsx` — page composition, scenario model, and project narrative.
-- `src/components.jsx` — reusable metrics, controls, and charts.
-- `src/data-loader.js` — converts the CSV event log into structured data in the
+- `index.html` — static entry point that loads React, ReactDOM, Chart.js,
+  Babel, and anime.js, then fetches and compiles the sources below.
+- `src/App.jsx` — page composition and the four grouped sections.
+- `src/components/` — one file per reusable piece: `Metric`, `QueueChart`,
+  `DynamicFlowChart`, `Controls` (the floating scenario sidebar),
+  `NetlifyInspiredSections`, `DetailedAnalysis`, `WasteAndGuardrails`.
+- `src/lib/simulate.js` — the scenario model (`DEFAULTS`, `simulate`,
+  `automationTone`).
+- `src/lib/csv.js` — converts the CSV event log into structured data in the
   browser. The CSV remains the source of truth; changing it changes the charts
   and derived metrics on reload.
+- `src/lib/anime.js` — hero text reveal and scroll-triggered card animations.
 - `src/styles.css` and `src/analysis.css` — page and analysis styling.
 - `package.json` — npm scripts for local development and packaging without Vite.
 

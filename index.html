@@ -10,25 +10,33 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="module">
+    import * as anime from 'https://cdn.jsdelivr.net/npm/animejs@4/+esm';
+    window.anime = anime;
+    window.dispatchEvent(new Event('animeready'));
+  </script>
 </head>
 <body>
   <div id="root"></div>
   <script>
-    fetch('./src/data-loader.js')
-      .then(response => response.text())
-      .then(source => {
-        window.eval(source);
-        return fetch('./src/components.jsx');
-      })
-      .then(response => response.text())
-      .then(source => {
-        const compiled = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code;
-        new Function('React', 'ReactDOM', compiled)(React, ReactDOM);
-        return fetch('./src/main.jsx');
-      })
-      .then(response => response.text())
-      .then(source => {
-        const compiled = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code
+    const sources = [
+      './src/lib/simulate.js',
+      './src/lib/csv.js',
+      './src/lib/anime.js',
+      './src/components/Metric.jsx',
+      './src/components/QueueChart.jsx',
+      './src/components/DynamicFlowChart.jsx',
+      './src/components/Controls.jsx',
+      './src/components/NetlifyInspiredSections.jsx',
+      './src/components/DetailedAnalysis.jsx',
+      './src/components/WasteAndGuardrails.jsx',
+      './src/App.jsx',
+      './src/main.jsx',
+    ];
+
+    Promise.all(sources.map(path => fetch(path).then(response => response.text())))
+      .then(parts => {
+        const compiled = Babel.transform(parts.join('\n'), { presets: [['react', { runtime: 'classic' }]] }).code
           .replace(/^\s*import[\s\S]*?;\s*/gm, '')
           .replace(/^\s*export\s+(default\s+)?/gm, '');
         new Function('React', 'ReactDOM', compiled)(React, ReactDOM);
