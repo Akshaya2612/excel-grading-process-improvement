@@ -33,7 +33,7 @@ function App() {
         <span className="eyebrow">Process improvement · interactive</span>
         <h1>The rubric was automatable. The judgment wasn’t.</h1>
         <p>Redesigning Excel project grading with process mining, automation, queueing theory, and a human-in-the-loop checker.</p>
-        <div className="byline">Synthetic 14-week term · ~120 projects per year</div>
+        <div className="byline">Synthetic 120-assignment deadline burst · one-week grading target</div>
       </header>
       <nav>
         {NAV_LINKS.map(({ id, label }) => (
@@ -64,6 +64,28 @@ function App() {
               </article>
             </div>
 
+            <div className="subsection">
+              <h3>Define the unit, boundaries, resources, and customer</h3>
+              <div className="idea-grid">
+                <article>
+                  <span className="idea-tag">Flow-unit</span>
+                  <h3>One submitted workbook</h3>
+                  <p>The flow-unit is one completed student Excel assignment. Scope begins at submission received and ends when feedback is returned. Assignment creation and post-grade appeals are outside scope.</p>
+                </article>
+                <article>
+                  <span className="idea-tag">Resources</span>
+                  <h3>Who performs the work?</h3>
+                  <p>The LMS collects files, the automated checker evaluates formulas, the TA reviews presentation, and the instructor approves exceptions and individualized feedback.</p>
+                </article>
+                <article>
+                  <span className="idea-tag">Customer outcome</span>
+                  <h3>Faster, accurate, specific feedback</h3>
+                  <p>Students are the customer: they need accurate grading, useful comments, and feedback returned within seven days.</p>
+                </article>
+              </div>
+              <p className="callout"><b>Flow variation and metric priority:</b> standard work follows submission → automated formula check → visual review → feedback. Low-confidence or unusual work follows an exception path to full manual review. The primary target is formula-check effort; the guardrails are seven-day lead time, grading quality, and instructor approval.</p>
+            </div>
+
             <div id="section-2" className="subsection">
               {eventData && (
                 <>
@@ -76,12 +98,21 @@ function App() {
                     <Metric label="Human review / file" value={`${(eventData.visualMedian + eventData.approvalMedian).toFixed(0)} min`} note="visual review + approval" />
                   </div>
                   <div className="efficiency">
-                    <div className="efficiency-work" style={{ width: `${100 - eventData.percentages.waiting}%` }}></div>
-                    <span>formula + human review {`${(100 - eventData.percentages.waiting).toFixed(1)}%`}</span>
-                    <b>queue consequence {`${eventData.percentages.waiting.toFixed(1)}%`}</b>
+                    <div className="efficiency-work efficiency-formula" style={{ width: `${eventData.percentages.formula}%` }}></div>
+                    <div className="efficiency-work efficiency-visual" style={{ width: `${eventData.percentages.visual}%` }}></div>
+                    <div className="efficiency-work efficiency-approval" style={{ width: `${eventData.percentages.approval}%` }}></div>
+                    <span>formula check {`${eventData.percentages.formula.toFixed(1)}%`}</span>
+                    <b>human judgment {`${(eventData.percentages.visual + eventData.percentages.approval).toFixed(1)}%`}</b>
                   </div>
-                  <DynamicFlowChart arrivals={eventData.weekly} model={model} automation={state.automation} />
+                  <DynamicFlowChart arrivals={eventData.daily} model={before} automation={0} eventData={eventData} />
                   <div className="formula">Observed submissions are the deadline burst. Automated checks launch with that burst; only the remaining manual-check line is capacity constrained.<br /><em>At 100% automation, the automated-check line coincides with submissions.</em></div>
+                  <div className="metrics">
+                    <Metric label="Arrival variability (Ca)" value={eventData.metrics.ca.toFixed(2)} note="inter-submission timing" />
+                    <Metric label="Service variability (Cs)" value={eventData.metrics.cs.toFixed(2)} note="formula-check duration" />
+                    <Metric label="Formula service rate" value={`${eventData.metrics.formulaServiceRate.toFixed(1)} / hour`} note="one resource" tone="amber" />
+                    <Metric label="Seven-day target rate" value={`${eventData.metrics.requiredHourlyThroughput.toFixed(1)} / hour`} note="120 files across 40 hours" tone="amber" />
+                  </div>
+                  <p className="callout">The deadline burst makes Ca high, while variation in checking time makes Cs nonzero. Capacity must exceed the target throughput with enough buffer to absorb both sources of variability.</p>
                 </>
               )}
             </div>
@@ -89,6 +120,13 @@ function App() {
             <div className="subsection">
               <h3>Process mining shows where formula work is concentrated</h3>
               <p>Import <code>data/event_log_synthetic.csv</code> into Disco using Case ID, Activity, and Timestamp. The performance view should show the queue before Formula Check and the active formula-check bottleneck.</p>
+              {eventData && (
+                <>
+                  <h3>Interactive scenario: change the automation coverage</h3>
+                  <p>This scenario chart is separate from the fixed baseline above. The controls on the left change this view and the results further down the page.</p>
+                  <DynamicFlowChart arrivals={eventData.daily} model={model} automation={state.automation} eventData={eventData} />
+                </>
+              )}
               <div className="disco-media">
                 <video controls preload="metadata" aria-label="Animated Disco process view">
                   <source src="./data/Disco%20animation%20for%20event_log_synthetic.mp4" type="video/mp4" />
@@ -135,9 +173,9 @@ function App() {
                 <div>Feedback returned</div>
               </div>
               <div className="metrics">
-                <Metric label="Average handling time" value={`${model.avgMinutes.toFixed(1)} min`} note={`vs ${before.avgMinutes} min manual`} tone="green" />
-                <Metric label="Capacity" value={`${model.capacity} / week`} note="synthetic model" tone="green" />
-                <Metric label="Flow time" value={`${model.flowTime.toFixed(1)} days`} note="peak week" tone="green" />
+                <Metric label="Average handling time" value={`${model.avgMinutes.toFixed(1)} min`} note={`vs ${before.avgMinutes} min manual`} tone={automationTone(state.automation)} />
+                <Metric label="Capacity" value={`${model.capacity} / week`} note="synthetic model" tone={automationTone(state.automation)} />
+                <Metric label="Flow time" value={`${model.flowTime.toFixed(1)} days`} note="peak week" tone={automationTone(state.automation)} />
               </div>
             </div>
           </section>
@@ -147,10 +185,10 @@ function App() {
             <h2>Before / after, controlled by the same model</h2>
             <p>Move the automation slider on the left. “Before” stays fixed at 0% automation so the comparison remains fair.</p>
             <div className="compare">
-              <div><small>Peak flow time</small><b>{before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days</b></div>
-              <div><small>Weekly capacity</small><b>{before.capacity} → {model.capacity}</b></div>
-              <div><small>Consistency</small><b>{before.consistency}% → {model.consistency}%</b></div>
-              <div><small>Feedback depth</small><b>{before.feedback} → {model.feedback} words</b></div>
+              <div><small>Peak flow time</small><b className={automationTone(state.automation)}>{before.flowTime.toFixed(1)} → {model.flowTime.toFixed(1)} days</b></div>
+              <div><small>Weekly capacity</small><b className={automationTone(state.automation)}>{before.capacity} → {model.capacity}</b></div>
+              <div><small>Consistency</small><b className={automationTone(state.automation)}>{before.consistency}% → {model.consistency}%</b></div>
+              <div><small>Feedback depth</small><b className={automationTone(state.automation)}>{before.feedback} → {model.feedback} words</b></div>
             </div>
             <h3>Takeaway</h3>
             <p className="callout">The tool does not replace instructor judgment. It removes repetitive technical checking so the instructor can spend more time on specific, individualized mentorship.</p>

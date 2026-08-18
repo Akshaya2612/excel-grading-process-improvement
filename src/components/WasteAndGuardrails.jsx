@@ -9,8 +9,8 @@ function WasteAndGuardrails() {
           <b>Removal idea</b>
         </div>
         {[
-          ['Waiting', 'Files sit 2–4 weeks', 'Trigger auto-check on upload'],
-          ['Inventory', '170–440 files in flight', 'Reduce service time'],
+          ['Waiting', 'Deadline burst can create a queue', 'Monitor SLA after automating the target'],
+          ['Inventory', 'Many files arrive at once', 'Process the technical first pass immediately'],
           ['Motion', 'Re-deriving formulas', 'Diff against solved reference'],
           ['Overprocessing', 'Repeated comments from scratch', 'Draft from detected errors'],
           ['Defects / rework', 'Rubric drift under pressure', 'Apply identical rules'],
@@ -35,6 +35,19 @@ function WasteAndGuardrails() {
             <p>AI can draft from detected errors, but the instructor must edit and approve tone, emphasis, and pedagogy.</p>
           </article>
         </div>
+        <div className="table table-2col">
+          <div className="table-row head"><b>Criterion</b><b>Why formula checking fits</b></div>
+          {[
+            ['S · Structured', 'The checker compares known cells, formulas, named ranges, and expected outputs.'],
+            ['A · Algorithmic', 'Rules can evaluate correctness consistently without interpreting presentation quality.'],
+            ['F · Frequent', 'The same technical checks repeat across every submitted workbook.'],
+            ['E · Enduring', 'The rubric and reference workbook can be reused across assignments and terms.'],
+            ['R · Reversible', 'Flags can be audited, corrected, and routed back to a human reviewer.'],
+            ['V · Valuable', 'Students receive faster, more consistent technical feedback while instructor time shifts to coaching.'],
+          ].map(([criterion, reason]) => (
+            <div className="table-row" key={criterion}><b>{criterion}</b><span>{reason}</span></div>
+          ))}
+        </div>
         <div className="guardrails">
           <b>Guardrails</b>
           <span>Show the exact cell/formula that triggered a flag.</span>
@@ -42,6 +55,12 @@ function WasteAndGuardrails() {
           <span>Require instructor approval before any grade is returned.</span>
           <span>Pilot on one lab before scaling.</span>
         </div>
+      </div>
+
+      <div className="subsection">
+        <h3>Automate the repeatable work; protect the judgment</h3>
+        <p>The deadline burst is predictable, but the immediate opportunity is the repeated formula and logic check on every workbook. Automating that structured first pass reduces cost and effort while preserving human review for presentation quality, exceptions, and individualized feedback.</p>
+        <div className="callout">Success means formula-check hours fall, the seven-day feedback target remains protected, and grading quality does not decline.</div>
       </div>
     </>
   );

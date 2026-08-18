@@ -2,13 +2,20 @@ const DEFAULTS = {
   automation: 0,
   manualMinutes: 24,
   quickMinutes: 6,
-  hours: 6,
+  hours: 40,
   accuracy: 85,
   resources: 1,
   variability: 100,
 };
 
-const arrivals = [5, 5, 5, 40, 5, 5, 5, 40, 5, 5, 5, 40, 5, 5];
+const arrivals = [120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const TA_RATE = 22;
+
+function automationTone(automation) {
+  if (automation >= 70) return 'result-good';
+  if (automation >= 30) return 'result-watch';
+  return 'result-risk';
+}
 
 function simulate({ automation, manualMinutes, quickMinutes, hours, accuracy, resources = 1, variability = 100 }) {
   const avgMinutes = (automation / 100) * quickMinutes + (1 - automation / 100) * manualMinutes;
@@ -16,10 +23,7 @@ function simulate({ automation, manualMinutes, quickMinutes, hours, accuracy, re
 
   let backlog = 0;
   const weekly = arrivals.map((base, i) => {
-    const isBurstWeek = i === 3 || i === 7 || i === 11;
-    const incoming = isBurstWeek
-      ? Math.round(5 + 35 * variability / 100)
-      : Math.max(1, Math.round(5 + (1 - variability / 100) * (i % 2)));
+    const incoming = base;
     const available = backlog + incoming;
     const graded = Math.min(available, capacity);
     backlog = available - graded;
@@ -27,15 +31,24 @@ function simulate({ automation, manualMinutes, quickMinutes, hours, accuracy, re
   });
 
   const peakBacklog = Math.max(...weekly.map(x => x.backlog));
+  const laborHours = (120 * avgMinutes) / 60;
 
   return {
     avgMinutes,
     capacity,
     weekly,
     peakBacklog,
-    flowTime: (peakBacklog / capacity) * 7,
+    flowTime: (120 / capacity) * 7,
     consistency: Math.min(99, Math.round(72 + automation / 100 * accuracy / 100 * 27)),
     feedback: Math.round(40 + automation / 100 * 80),
     autoFrac: automation / 100,
+    laborHours,
+    laborCost: laborHours * TA_RATE,
+    productivity: 120 / laborHours,
+    utilization: Math.min(100, laborHours / (resources * hours) * 100),
+    inventory: peakBacklog,
+    waitingHours: Math.max(0, (120 / capacity) * 7 * 24 - avgMinutes / 60),
+    qualityAccuracy: accuracy,
+    hours,
   };
 }
